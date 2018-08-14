@@ -273,10 +273,10 @@
 					<li >
 						<a href="counseling_applications_list.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">상담신청 목록</span></a>
 					</li>
-					<li class="active">
+					<li >
 						<a href="hot_deal_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">핫딜 관리</span></a>
 					</li>
-					<li >
+					<li class="active">
 						<a href="car_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">차량 관리</span></a>
 					</li>
 					<li >
@@ -347,6 +347,46 @@
 
 			<!-- MAIN CONTENT -->
 			<div id="content">
+				<!-- widget content -->
+				<!--div class="widget-body" id="brandList">
+					<a href="javascript:void(0);" class="btn btn-default btn-primary btn-xs" brand-name="">전체</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="현대">현대</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="기아">기아</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="삼성">삼성</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="쉐보레">쉐보레</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="쌍용">쌍용</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="제네시스">제네시스</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="벤츠">벤츠</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="BMW">BMW</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="아우디">아우디</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="폭스바겐">폭스바겐</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="랜드로버">랜드로버</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="볼보">볼보</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="렉서스">렉서스</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="포르쉐">포르쉐</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="링컨">링컨</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="재규어">재규어</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="마세라티">마세라티</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="미니">미니</a>
+
+				</div-->
+				<!-- end widget content -->
+
+				<!--div class="row">
+					<//!-- col --//>
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+						<h1 class="page-title txt-color-blueDark">
+							PAGE HEADER
+							<i class="fa-fw fa fa-puzzle-piece"></i> 
+								차량관리 
+							<span>>  
+								차량목록
+							</span>
+						</h1>
+					</div>
+					<//!-- end col --//>
+				</div-->
+
 				<!-- end widget div -->
 				<section id="widget-grid" class="">
 				
@@ -354,27 +394,10 @@
 					<div class="row">
 
 						<!-- NEW WIDGET START -->
-						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<div class="alert alert-info">
-								<div class="row">
-									<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-										<!-- <h3 class="no-margin">Dygraphs is a fast, flexible open source JavaScript charting library.</h3>
-							      		<h5>test</h5>
-							      		<ul>
-									        <li>desc</li>
-									      </ul> -->
-									</div>
-									<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 fix-right"> 
-										<a class="btn btn-primary" type="submit" href="hot_deal_write.html">
-										<i class="fa fa-pencil-square-o"></i>
-										핫딜등록
-									</a>
-									</div>
-								</div>
-							</div>
+						<article class="col-sm-12 col-md-12 col-lg-12">
 				
 							<!-- Widget ID (each widget will need unique ID)-->
-							<div class="jarviswidget jarviswidget-color-red" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-deletebutton="false">
+							<div class="jarviswidget jarviswidget-color-red" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-togglebutton="false">
 								<!-- widget options:
 								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 				
@@ -389,238 +412,169 @@
 				
 								-->
 								<header>
-									<!-- <span class="widget-icon"> <i class="fa fa-table"></i> </span>
-									<h2>Standard Data Tables </h2> -->
+									<!--span class="widget-icon"> <i class="fa fa-eye"></i> </span>
+									<h2>Default Elements</h2-->
 				
 								</header>
 				
 								<!-- widget div-->
 								<div>
-									
+				
 									<!-- widget edit box -->
 									<div class="jarviswidget-editbox">
 										<!-- This area used as dropdown edit box -->
-										<input class="form-control" type="text">	
+				
 									</div>
 									<!-- end widget edit box -->
-									
+				
 									<!-- widget content -->
 									<div class="widget-body">
-										<table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
-											<thead>			                
-												<tr>
-													<th data-hide="phone,tablet">번호</th>
-													<th data-hide="phone">순서</th>
-													<th>메인게시여부</th>
-													<th>차명</th>
-													<th data-class="expand">핫딜명</th>
-													<th data-hide="phone,tablet">등록일</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>9</td>
-													<td>1</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>129</td>
-													<td>2</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>95</td>
-													<td>3</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>64</td>
-													<td>4</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>41</td>
-													<td>4</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>33</td>
-													<td>4</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>36</td>
-													<td>4</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>77</td>
-													<td>4</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>68</td>
-													<td>4</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>7</td>
-													<td>5</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>25</td>
-													<td>5</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>47</td>
-													<td>6</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>66</td>
-													<td>6</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>10</td>
-													<td>6</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>94</td>
-													<td>6</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>16</td>
-													<td>6</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>87</td>
-													<td>6</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>39</td>
-													<td>7</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>16</td>
-													<td>7</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>84</td>
-													<td>7</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>34</td>
-													<td>8</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>12</td>
-													<td>8</td>
-													<td>Y</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>9</td>
-													<td></td>
-													<td>N</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>9</td>
-													<td></td>
-													<td>N</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-												<tr>
-													<td>9</td>
-													<td></td>
-													<td>N</td>
-													<td>쏘렌토 더마스터</td>
-													<td><a href="hot_deal_view.html">[장기렌트]무보증 48개월 핫딜!</a></td>
-													<td>03/04/14</td>
-												</tr>
-											</tbody>
-										</table>
+				
+										<form class="form-horizontal">
+											
+											<fieldset>
+												<legend>차량등록</legend>
+												<div class="form-group">
+													<label class="col-md-2 control-label">브랜드</label>
+													<div class="col-md-10">
+									                    <input class="form-control" id="brandInput" placeholder="선택하세요." type="text"  list="brand-list">
+														<datalist id="brand-list">
+									                        <option vlaue="현대">현대</option>
+															<option vlaue="기아">기아</option>
+															<option vlaue="제네니스">제네니스</option>
+															<option vlaue="BMW">BMW</option>
+															<option vlaue="아우디">아우디</option>
+															<option vlaue="링컨">링컨</option>
+															<option vlaue="포르쉐">포르쉐</option>
+									                    </datalist>
+														<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
+												</div>
+
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">차량명</label>
+													<div class="col-md-10">
+														<input class="form-control" id="carInput" disabled="disabled" placeholder="브랜드를 선택하세요." type="text"  list="car-list">
+														<datalist id="car-list">
+									                        <option vlaue="싼타페TM">싼타페TM</option>
+															<option vlaue="아반떼">아반떼</option>
+															<option vlaue="그랜저IG">그랜저IG</option>
+															<option vlaue="투싼">투싼</option>
+															<option vlaue="LF쏘나타 뉴라이즈">LF쏘나타 뉴라이즈</option>
+															<option vlaue="코나">코나</option>
+															<option vlaue="i30">i30</option>
+									                    </datalist>
+														<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">차량등급</label>
+													<div class="col-md-10">
+														<select multiple style="width:100%" class="select2">
+															<option value="2.0">2.0</option>
+															<option value="2.2">2.2</option>
+															<option value="2.5">2.5</option>
+															<option value="3.6">3.6</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">연료타입</label>
+													<div class="col-md-10">
+														<select multiple style="width:100%" class="select2">
+															<option value="가솔린">가솔린</option>
+															<option value="디젤">디젤</option>
+															<option value="하이브리드">하이브리드</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-md-2 control-label">연비</label>
+													<div class="col-md-10">
+														<input class="form-control" placeholder="연비" type="text">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">차량정보</label>
+													<div class="col-md-10">
+														<input class="form-control" placeholder="차량정보" type="text">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">신차시작가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													</div>
+													<label class="col-md-2 control-label">신차종료가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">렌트시작가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													</div>
+													<label class="col-md-2 control-label">렌트종료가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">리스시작가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													</div>
+													<label class="col-md-2 control-label">리스종료가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">메인게시</label>
+													<div class="col-md-10">
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="main-yn" checked="checked" >
+															<span>예</span>
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="main-yn">
+															<span>아니오</span>  
+														</label>
+													</div>
+
+												</div>
+											
+											
+											</fieldset>
+
+											<div class="form-actions">
+												<div class="row">
+													<div class="col-md-4 fix-left">
+														<a class="btn btn-default" type="submit" href="car_management.html">
+															<i class="fa fa-list"></i>
+															목록으로
+														</a>
+													</div>
+													<div class="col-md-8">
+														<a class="btn btn-danger" type="submit">
+															<i class="fa fa-trash-o"></i>
+															삭제
+														</a>
+														<a class="btn btn-primary" type="submit">
+															<i class="fa fa-save"></i>
+															저장
+														</a>
+													</div>
+												</div>
+											</div>
+				
+										</form>
+				
 									</div>
+									<!-- end widget content -->
+				
 								</div>
 								<!-- end widget div -->
 				
@@ -849,12 +803,34 @@
 			
 			Also see: http://legacy.datatables.net/usage/features
 			*/	
+
+			/* BRAND BUTTONS ;*/
+			$("#brandList a").on("click", function() {
+				$("#brandList").children().removeClass("btn-primary");
+				$(this).addClass("btn-primary");
+
+				$('#dt_basic').DataTable().column( 1 ).search(
+			        $(this).attr("brand-name")
+			    ).draw();
+
+
+
+			  });
+			/* BRAND BUTTONS */
+
+			/* BRAND INPUT ;*/
+			$("#brandInput").on("change", function() {
+				if(this.value.length > 0)$("#carInput").removeAttr("disabled");
+				else{
+					$("#carInput").attr("disabled","disabled");
+					$("#carInput").val("")
+				}
+
+			});
+			/* BRAND INPUT */
 	
 			/* BASIC ;*/
 			var responsiveHelper_dt_basic = undefined;
-			var responsiveHelper_datatable_fixed_column = undefined;
-			var responsiveHelper_datatable_col_reorder = undefined;
-			var responsiveHelper_datatable_tabletools = undefined;
 			
 			var breakpointDefinition = {
 				tablet : 1024,
@@ -863,11 +839,10 @@
 			//"order": [[ 2, "desc" ],[ 1, "asc" ]],
 
 			$('#dt_basic').dataTable({
-				"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"+
+				"sDom": "<'dt-toolbar'<'col-sm-6 col-xs-12 hidden-xs'l><'col-xs-12 col-sm-6'f>r>"+
 					"t"+
 					"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 				"autoWidth" : true,
-				"order": [[ 1, "asc" ]],
 				"preDrawCallback" : function() {
 					// Initialize the responsive datatables helper once.
 					if (!responsiveHelper_dt_basic) {
@@ -883,8 +858,6 @@
 			});
 	
 			/* END BASIC */
-			
-
 		});
 
 		</script>

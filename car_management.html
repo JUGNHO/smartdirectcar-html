@@ -347,7 +347,245 @@
 
 			<!-- MAIN CONTENT -->
 			<div id="content">
-				차량 관리차량 관리차량 관리차량 관리
+				<!-- widget content -->
+				<!--div class="widget-body" id="brandList">
+					<a href="javascript:void(0);" class="btn btn-default btn-primary btn-xs" brand-name="">전체</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="현대">현대</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="기아">기아</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="삼성">삼성</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="쉐보레">쉐보레</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="쌍용">쌍용</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="제네시스">제네시스</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="벤츠">벤츠</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="BMW">BMW</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="아우디">아우디</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="폭스바겐">폭스바겐</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="랜드로버">랜드로버</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="볼보">볼보</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="렉서스">렉서스</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="포르쉐">포르쉐</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="링컨">링컨</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="재규어">재규어</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="마세라티">마세라티</a>
+					<a href="javascript:void(0);" class="btn btn-default btn-xs" brand-name="미니">미니</a>
+
+				</div-->
+				<!-- end widget content -->
+
+				<!--div class="row">
+					<//!-- col --//>
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+						<h1 class="page-title txt-color-blueDark">
+							PAGE HEADER
+							<i class="fa-fw fa fa-puzzle-piece"></i> 
+								차량관리 
+							<span>>  
+								차량목록
+							</span>
+						</h1>
+					</div>
+					<//!-- end col --//>
+				</div-->
+
+				<!-- end widget div -->
+				<section id="widget-grid" class="">
+					<!-- row -->
+					<div class="row">
+
+						<!-- NEW WIDGET START -->
+						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="alert alert-info">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+										<!-- <h3 class="no-margin">Dygraphs is a fast, flexible open source JavaScript charting library.</h3>
+							      		<h5>test</h5>
+							      		<ul>
+									        <li>desc</li>
+									      </ul> -->
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 fix-right"> 
+										<a class="btn btn-primary" type="submit" href="car_write.html">
+										<i class="fa fa-pencil-square-o"></i>
+										차량등록
+									</a>
+									</div>
+								</div>
+							</div>
+				
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-red" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-deletebutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+				
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+				
+								-->
+								<header>
+									<!-- <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+									<h2>Standard Data Tables </h2> -->
+				
+								</header>
+				
+								<!-- widget div-->
+								<div>
+									
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+										<input class="form-control" type="text">	
+									</div>
+									<!-- end widget edit box -->
+									
+									<!-- widget content -->
+									<div class="widget-body">
+										<table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
+											<thead>			                
+												<tr>
+													<th data-hide="phone">번호</th>
+													<th data-hide="phone">브랜드</th>
+													<th data-class="expand">차종</th>
+													<th>렌트가격</th>
+													<th>리스가격</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>현대</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>현대</td>
+													<td><a href="car_write.html;">i30</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>현대</td>
+													<td><a href="car_write.html;">쏘나타</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>현대</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>기아</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>삼성</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>쉐보레</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>쌍용</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>9</td>
+													<td>제네시스</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>10</td>
+													<td>벤츠</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>11</td>
+													<td>BMW</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>12</td>
+													<td>아우디</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>13</td>
+													<td>폭스바겐</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>14</td>
+													<td>랜드로버</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>15</td>
+													<td>볼보</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+												<tr>
+													<td>16</td>
+													<td>렉서스</td>
+													<td><a href="car_write.html">코나</a></td>
+													<td>31.3~ 50</td>
+													<td>25.5~ 45.8</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- end widget div -->
+				
+							</div>
+							<!-- end widget -->
+				
+						</article>
+						<!-- WIDGET END -->
+				
+					</div>
+				
+					<!-- end row -->
+				
+				</section>
+				<!-- end widget grid -->
 			</div>
 			<!-- END MAIN CONTENT -->
 
@@ -532,13 +770,80 @@
 		<script src="js/plugin/moment/moment.min.js"></script>
 		<script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
+		<!-- PAGE RELATED PLUGIN(S) -->
+		<script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+		<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+
 		<script>
-			$(document).ready(function() {
 
-				// DO NOT REMOVE : GLOBAL FUNCTIONS!
-				pageSetUp();
+		$(document).ready(function() {
 
+			// DO NOT REMOVE : GLOBAL FUNCTIONS!
+			pageSetUp();
+
+			/* // DOM Position key index //
+	
+			l - Length changing (dropdown)
+			f - Filtering input (search)
+			t - The Table! (datatable)
+			i - Information (records)
+			p - Pagination (paging)
+			r - pRocessing 
+			< and > - div elements
+			<"#id" and > - div with an id
+			<"class" and > - div with a class
+			<"#id.class" and > - div with an id and class
+			
+			Also see: http://legacy.datatables.net/usage/features
+			*/	
+
+			/* BRAND BUTTONS ;*/
+			$("#brandList a").on("click", function() {
+				$("#brandList").children().removeClass("btn-primary");
+				$(this).addClass("btn-primary");
+
+				$('#dt_basic').DataTable().column( 1 ).search(
+			        $(this).attr("brand-name")
+			    ).draw();
+
+
+
+			  });
+			/* BRAND BUTTONS */
+	
+			/* BASIC ;*/
+			var responsiveHelper_dt_basic = undefined;
+			
+			var breakpointDefinition = {
+				tablet : 1024,
+				phone : 480
+			};
+			//"order": [[ 2, "desc" ],[ 1, "asc" ]],
+
+			$('#dt_basic').dataTable({
+				"sDom": "<'dt-toolbar'<'col-sm-6 col-xs-12 hidden-xs'l><'col-xs-12 col-sm-6'f>r>"+
+					"t"+
+					"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+				"autoWidth" : true,
+				"preDrawCallback" : function() {
+					// Initialize the responsive datatables helper once.
+					if (!responsiveHelper_dt_basic) {
+						responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
+					}
+				},
+				"rowCallback" : function(nRow) {
+					responsiveHelper_dt_basic.createExpandIcon(nRow);
+				},
+				"drawCallback" : function(oSettings) {
+					responsiveHelper_dt_basic.respond();
+				}
 			});
+	
+			/* END BASIC */
+		});
 
 		</script>
 
