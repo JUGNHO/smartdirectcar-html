@@ -419,7 +419,7 @@
 					<article class="col-sm-12 sortable-grid ui-sortable">
 
 						<!-- Widget ID (each widget will need unique ID)-->
-						<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-x" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false" role="widget">
+						<div class="jarviswidget jarviswidget-color-blueDark widget-body" id="wid-id-x" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false" role="widget">
 							<!-- widget options:
 							usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 
@@ -437,130 +437,232 @@
 								<span class="widget-icon"> <i class="fa fa-align-justify"></i> </span>
 								<h2>직원별 상담신청 할당 및 처리 수 </h2>
 
-							<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span></header>
+								<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
+							</header>
 
-							<!-- widget div-->
-							<div role="content">
 
-								<!-- widget edit box -->
-								<div class="jarviswidget-editbox">
-									<!-- This area used as dropdown edit box -->
+							<ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#home">영업 1팀 </a></li>
+								<li><a data-toggle="tab" href="#menu1">영업 2팀</a></li>
+								<li><a data-toggle="tab" href="#menu2">영업 3팀</a></li>
+							</ul>
 
-								</div>
-								<!-- end widget edit box -->
+							<div class="tab-content">
+								<div id="home" class="tab-pane fade in active">
 
-								<!-- widget content -->
-								<div class="widget-body">
-									<p class="alert alert-info no-margin">
-										All progress bars contain a base class of
-										<code>
-											.progress
-										</code>
-										. Control the size of the progress bar with
-										<code>
-											.progress-xs
-										</code>
-										,
-										<code>
-											.progress-sm
-										</code>
-										,
-										<code>
-											.progress-lg
-										</code>
-										or leave as is for the default size.
-									</p>
-
-									<div class="row">
-
-										<div class="col-sm-12">
-											<h3></h3>
-											<p>
-												<span class="label bg-color-darken txt-color-white">JS required</span> This nifty animated progress bars run on CSS combined with javascript
-											</p>
-											<p>
-												You will simply need to add in the value
-												<code>
-													data-transitiongoal="25"
-												</code>
-												after the <strong>.progress-bar</strong> class
-											</p>
-											<div class="row">
-
-												<div class="col-sm-6">
-
-													<p>
-														For right alignment add class
-														<code>
-															.progress .right
-														</code>
-													</p>
-													<div class="well no-padding">
-
-														<div class="bar-holder">
-															<div class="progress right" rel="tooltip" data-original-title="25%" data-placement="top">
-																<div class="progress-bar bg-color-teal" data-transitiongoal="25" aria-valuenow="25" style="width: 25%;">25%</div>
-															</div>
-														</div>
-														<div class="bar-holder">
-															<div class="progress right">
-																<div class="progress-bar bg-color-blueLight" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">50%</div>
-															</div>
-														</div>
-														<div class="bar-holder">
-															<div class="progress right">
-																<div class="progress-bar bg-color-blue" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
-															</div>
-														</div>
-														<div class="bar-holder">
-															<div class="progress right">
-																<div class="progress-bar bg-color-redLight" data-transitiongoal="100" aria-valuenow="100" style="width: 100%;">100%</div>
-															</div>
-														</div>
-
-													</div>
+									<div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a1.jpg">
+												<h4>문선민</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="20%" data-placement="top">
+													<div class="progress-bar bg-color-teal" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
 												</div>
-
-												<div class="col-sm-6">
-													<p>
-														The default is left aligned.
-													</p>
-													<div class="well no-padding">
-
-														<div class="bar-holder">
-															<div class="progress">
-																<div class="progress-bar bg-color-teal" data-transitiongoal="25" aria-valuenow="25" style="width: 25%;">25%</div>
-															</div>
-														</div>
-														<div class="bar-holder">
-															<div class="progress">
-																<div class="progress-bar bg-color-blueLight" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">50%</div>
-															</div>
-														</div>
-														<div class="bar-holder">
-															<div class="progress">
-																<div class="progress-bar bg-color-blue" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
-															</div>
-														</div>
-														<div class="bar-holder">
-															<div class="progress">
-																<div class="progress-bar bg-color-redLight" data-transitiongoal="100" aria-valuenow="100" style="width: 100%;">100%</div>
-															</div>
-														</div>
-
-													</div>
-												</div>
-
+												<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 											</div>
 										</div>
+			                        </div>
 
-									</div>
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a2.jpg">
+												<h4>조진권</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="50%" data-placement="top">
+													<div class="progress-bar bg-color-blueLight" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">50%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a6.jpg">
+												<h4>이혜영</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="75%" data-placement="top">
+													<div class="progress-bar bg-color-blue" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a7.jpg">
+												<h4>Nicki Smith</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="75%" data-placement="top">
+													<div class="progress-bar bg-color-red" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+
+												<img alt="image" class="img-responsive" src="img/avatars/a5.jpg">
+
+												<h4>문선민</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="20%" data-placement="top">
+													<div class="progress-bar bg-color-teal" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+												</div>
+												<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a7.jpg">
+												<h4>조진권</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="50%" data-placement="top">
+													<div class="progress-bar bg-color-blueLight" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">50%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
 
 
 								</div>
-								<!-- end widget body-->
+								<div id="menu1" class="tab-pane fade">
+									<div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+
+												<img alt="image" class="img-responsive" src="img/avatars/a5.jpg">
+
+												<h4>문선민</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="20%" data-placement="top">
+													<div class="progress-bar bg-color-teal" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+												</div>
+												<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a7.jpg">
+												<h4>조진권</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="50%" data-placement="top">
+													<div class="progress-bar bg-color-blueLight" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">50%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a6.jpg">
+												<h4>이혜영</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="75%" data-placement="top">
+													<div class="progress-bar bg-color-blue" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a5.jpg">
+												<h4>Nicki Smith</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="75%" data-placement="top">
+													<div class="progress-bar bg-color-red" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a4.jpg">
+												<h4>문선민</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="20%" data-placement="top">
+													<div class="progress-bar bg-color-teal" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+												</div>
+												<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a2.jpg">
+												<h4>조진권</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="50%" data-placement="top">
+													<div class="progress-bar bg-color-blueLight" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">50%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a3.jpg">
+												<h4>이혜영</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="75%" data-placement="top">
+													<div class="progress-bar bg-color-blue" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+
+			                        <div class="col-lg-2 col-md-6 col-sm-6 col-sm-6">
+										<div class="panel panel-blue">
+											<div class="panel-body">
+												<img alt="image" class="img-responsive" src="img/avatars/a4.jpg">
+												<h4>Nicki Smith</h4>
+												<p>상담신청</p>
+												<p>20% 완료 2/ 전체 10</p>
+												<div class="progress" rel="tooltip" data-original-title="75%" data-placement="top">
+													<div class="progress-bar bg-color-red" data-transitiongoal="75" aria-valuenow="75" style="width: 75%;">75%</div>
+												</div>
+											</div>
+										</div>
+			                        </div>
+								</div>
+								<div id="menu2" class="tab-pane fade">
+									<h3>Menu 2</h3>
+									<p>Some content in menu 2.</p>
+								</div>
 							</div>
-							<!-- end widget content -->
+
+							
 						</div>
 						<!-- end widget -->
 					</article>
