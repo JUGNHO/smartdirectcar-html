@@ -430,15 +430,21 @@
 									<!-- widget content -->
 									<div class="widget-body">
 				
-										<form class="form-horizontal">
+										<form class="form-horizontal" id="writeForm" method="post">
 											
 											<fieldset>
 												<legend>핫딜등록</legend>
 												<div class="form-group">
+													<label class="col-md-2 control-label">핫딜명</label>
+													<div class="col-md-10">
+														<input class="form-control" placeholder="제목" type="text" id="stPrice">
+													</div>
+												</div>
+												<div class="form-group">
 													<label class="col-md-2 control-label">브랜드</label>
 													<div class="col-md-10">
-									                    <input class="form-control" id="brandInput" placeholder="선택하세요." type="text"  list="brand-list">
-														<datalist id="brand-list">
+									                    <input class="form-control" id="brandInput" placeholder="선택하세요." type="text"  list="brandList">
+														<datalist id="brandList">
 									                        <option vlaue="현대">현대</option>
 															<option vlaue="기아">기아</option>
 															<option vlaue="제네니스">제네니스</option>
@@ -454,8 +460,8 @@
 												<div class="form-group">
 													<label class="col-md-2 control-label">차량명</label>
 													<div class="col-md-5">
-														<input class="form-control" id="carInput" disabled="disabled" placeholder="브랜드를 선택하세요." type="text"  list="car-list">
-														<datalist id="car-list">
+														<input class="form-control" id="carInput" disabled="disabled" placeholder="브랜드를 선택하세요." type="text"  list="carList">
+														<datalist id="carList">
 									                        <option vlaue="싼타페TM">싼타페TM</option>
 															<option vlaue="아반떼">아반떼</option>
 															<option vlaue="그랜저IG">그랜저IG</option>
@@ -467,7 +473,7 @@
 														<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
 													</div>
 													<div class="col-md-5">
-														<input class="form-control" placeholder="모델명" type="text">
+														<input class="form-control" placeholder="모델명" id="model" type="text">
 													</div>
 												</div>
 												<!--div class="form-group">
@@ -477,36 +483,51 @@
 													</div>
 												</div-->
 												<div class="form-group">
-													<label class="col-md-2 control-label">핫딜시작가</label>
-													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
-													</div>
-													<label class="col-md-2 control-label">핫딜종료가</label>
-													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
-													</div>
-												</div>
-												<div class="form-group">
 													<label class="col-md-2 control-label">대표이미지</label>
 													<div class="col-md-10">
-														<input type="file" class="btn btn-default col-xs-12" id="exampleInputFile1">
+														<input type="file" class="btn btn-default col-xs-12" id="mainImg">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">리스트이미지</label>
 													<div class="col-md-10">
-														<input type="file" class="btn btn-default col-xs-12" id="exampleInputFile2">
+														<input type="file" class="btn btn-default col-xs-12" id=listImg">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">상세내용</label>
+													<!-- widget div-->
+													<div class="col-md-10">
+														<!-- widget edit box -->
+														<div class="jarviswidget-editbox">
+															<!-- This area used as dropdown edit box -->
+														</div>
+														<!-- end widget edit box -->
+														<!-- widget content -->
+														<div class="summernote"></div>
+														<!-- end widget content -->
+													</div>
+													<!-- end widget div -->
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">핫딜시작가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="stPrice">
+													</div>
+													<label class="col-md-2 control-label">핫딜종료가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="edPrice">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">메인게시</label>
 													<div class="col-md-10">
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="main-yn" checked="checked" >
+															<input type="radio" class="radiobox" name="mainYn" checked="checked" >
 															<span>예</span>
 														</label>
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="main-yn">
+															<input type="radio" class="radiobox" name="mainYn">
 															<span>아니오</span>  
 														</label>
 													</div>
@@ -525,14 +546,10 @@
 														</a>
 													</div>
 													<div class="col-md-8">
-														<a class="btn btn-danger" type="submit">
-															<i class="fa fa-trash-o"></i>
-															삭제
-														</a>
-														<a class="btn btn-primary" type="submit">
+														<button class="btn btn-primary" type="submit">
 															<i class="fa fa-save"></i>
 															저장
-														</a>
+														</button>
 													</div>
 												</div>
 											</div>
@@ -742,11 +759,7 @@
 		<script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
 		<!-- PAGE RELATED PLUGIN(S) -->
-		<script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
-		<script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
-		<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
-		<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
-		<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+		<script src="js/plugin/summernote/summernote.min.js"></script>
 
 		<script>
 
@@ -771,6 +784,16 @@
 			Also see: http://legacy.datatables.net/usage/features
 			*/	
 
+			/*
+			 * SUMMERNOTE EDITOR
+			 */
+			
+			$('.summernote').summernote({
+				height : 180,
+				focus : false,
+				tabsize : 2
+			});
+
 			/* BRAND INPUT ;*/
 			$("#brandInput").on("change", function() {
 				if(this.value.length > 0)$("#carInput").removeAttr("disabled");
@@ -782,36 +805,6 @@
 			});
 			/* BRAND INPUT */
 
-	
-			/* BASIC ;*/
-			var responsiveHelper_dt_basic = undefined;
-			
-			var breakpointDefinition = {
-				tablet : 1024,
-				phone : 480
-			};
-			//"order": [[ 2, "desc" ],[ 1, "asc" ]],
-
-			$('#dt_basic').dataTable({
-				"sDom": "<'dt-toolbar'<'col-sm-6 col-xs-12 hidden-xs'l><'col-xs-12 col-sm-6'f>r>"+
-					"t"+
-					"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
-				"autoWidth" : true,
-				"preDrawCallback" : function() {
-					// Initialize the responsive datatables helper once.
-					if (!responsiveHelper_dt_basic) {
-						responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
-					}
-				},
-				"rowCallback" : function(nRow) {
-					responsiveHelper_dt_basic.createExpandIcon(nRow);
-				},
-				"drawCallback" : function(oSettings) {
-					responsiveHelper_dt_basic.respond();
-				}
-			});
-	
-			/* END BASIC */
 		});
 
 		</script>

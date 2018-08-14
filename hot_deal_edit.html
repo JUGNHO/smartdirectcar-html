@@ -273,11 +273,11 @@
 					<li >
 						<a href="counseling_applications_list.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">상담신청 목록</span></a>
 					</li>
-					<li >
+					<li class="active">
 						<a href="hot_deal_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">핫딜 관리</span></a>
 					</li>
-					<li class="active">
-						<a href="car_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">차량 관리</span></a>
+					<li>
+						<a href="hot_deal_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">차량 관리</span></a>
 					</li>
 					<li >
 						<a href="post_goods_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">출고 후기 관리</span></a>
@@ -347,7 +347,7 @@
 
 			<!-- MAIN CONTENT -->
 			<div id="content">
-
+				
 				<!--div class="row">
 					<//!-- col --//>
 					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
@@ -406,15 +406,21 @@
 									<!-- widget content -->
 									<div class="widget-body">
 				
-										<form class="form-horizontal">
+										<form class="form-horizontal" id="writeForm" method="post">
 											
 											<fieldset>
-												<legend>차량등록</legend>
+												<legend>핫딜수정</legend>
+												<div class="form-group">
+													<label class="col-md-2 control-label">핫딜명</label>
+													<div class="col-md-10">
+														<input class="form-control" placeholder="제목" type="text" id="title">
+													</div>
+												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">브랜드</label>
 													<div class="col-md-10">
-									                    <input class="form-control" id="brandInput" placeholder="선택하세요." type="text"  list="brand-list">
-														<datalist id="brand-list">
+									                    <input class="form-control" id="brand" placeholder="선택하세요." type="text"  list="brandList">
+														<datalist id="brandList" >
 									                        <option vlaue="현대">현대</option>
 															<option vlaue="기아">기아</option>
 															<option vlaue="제네니스">제네니스</option>
@@ -429,9 +435,9 @@
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">차량명</label>
-													<div class="col-md-10">
-														<input class="form-control" id="carInput" disabled="disabled" placeholder="브랜드를 선택하세요." type="text"  list="car-list">
-														<datalist id="car-list">
+													<div class="col-md-5">
+														<input class="form-control" id="car" placeholder="브랜드를 선택하세요." type="text"  list="carList">
+														<datalist id="carList">
 									                        <option vlaue="싼타페TM">싼타페TM</option>
 															<option vlaue="아반떼">아반떼</option>
 															<option vlaue="그랜저IG">그랜저IG</option>
@@ -442,97 +448,75 @@
 									                    </datalist>
 														<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
 													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label">차량등급</label>
-													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2">
-															<option value="2.0">2.0</option>
-															<option value="2.2">2.2</option>
-															<option value="2.5">2.5</option>
-															<option value="3.6">3.6</option>
-														</select>
+													<div class="col-md-5">
+														<input class="form-control" placeholder="모델명" id="model" type="text">
 													</div>
 												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label">연료타입</label>
-													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2">
-															<option value="가솔린">가솔린</option>
-															<option value="디젤">디젤</option>
-															<option value="하이브리드">하이브리드</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-md-2 control-label">연비</label>
-													<div class="col-md-10">
-														<input class="form-control" placeholder="연비" type="text">
-													</div>
-												</div>
-												<div class="form-group">
+												<!--div class="form-group">
 													<label class="col-md-2 control-label">차량정보</label>
 													<div class="col-md-10">
 														<input class="form-control" placeholder="차량정보" type="text">
 													</div>
-												</div>
+												</div-->
 												<div class="form-group">
 													<label class="col-md-2 control-label">대표이미지</label>
 													<div class="col-md-10">
-														<input type="file" class="btn btn-default col-xs-12" id="exampleInputFile1">
+														<input type="file" class="btn btn-default col-xs-12" id="mainImg">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-2 control-label">신차시작가</label>
-													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
-													</div>
-													<label class="col-md-2 control-label">신차종료가</label>
-													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													<label class="col-md-2 control-label">리스트이미지</label>
+													<div class="col-md-10">
+														<input type="file" class="btn btn-default col-xs-12" id=listImg">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-2 control-label">렌트시작가</label>
-													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+													<label class="col-md-2 control-label">상세내용</label>
+													<!-- widget div-->
+													<div class="col-md-10">
+														<!-- widget edit box -->
+														<div class="jarviswidget-editbox">
+															<!-- This area used as dropdown edit box -->
+														</div>
+														<!-- end widget edit box -->
+														<!-- widget content -->
+														<div class="summernote" id="contents"></div>
+														<!-- end widget content -->
 													</div>
-													<label class="col-md-2 control-label">렌트종료가</label>
-													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
-													</div>
+													<!-- end widget div -->
 												</div>
 												<div class="form-group">
-													<label class="col-md-2 control-label">리스시작가</label>
+													<label class="col-md-2 control-label">핫딜시작가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="stPrice">
 													</div>
-													<label class="col-md-2 control-label">리스종료가</label>
+													<label class="col-md-2 control-label">핫딜종료가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="edPrice">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">메인게시</label>
 													<div class="col-md-10">
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="main-yn" checked="checked" >
+															<input type="radio" class="radiobox" name="mainYn" value="Y">
 															<span>예</span>
 														</label>
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="main-yn">
+															<input type="radio" class="radiobox" value="N" name="mainYn">
 															<span>아니오</span>  
 														</label>
 													</div>
 
 												</div>
+											
+											
 											</fieldset>
 
 											<div class="form-actions">
 												<div class="row">
 													<div class="col-md-4 fix-left">
-														<a class="btn btn-default" type="submit" href="car_management.html">
+														<a class="btn btn-default" type="submit" href="hot_deal_management.html">
 															<i class="fa fa-list"></i>
 															목록으로
 														</a>
@@ -542,10 +526,10 @@
 															<i class="fa fa-trash-o"></i>
 															삭제
 														</a>
-														<a class="btn btn-primary" type="submit">
+														<button class="btn btn-primary" type="submit">
 															<i class="fa fa-save"></i>
 															저장
-														</a>
+														</button>
 													</div>
 												</div>
 											</div>
@@ -754,6 +738,9 @@
 		<script src="js/plugin/moment/moment.min.js"></script>
 		<script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
+		<!-- PAGE RELATED PLUGIN(S) -->
+		<script src="js/plugin/summernote/summernote.min.js"></script>
+
 		<script>
 
 		$(document).ready(function() {
@@ -777,16 +764,41 @@
 			Also see: http://legacy.datatables.net/usage/features
 			*/	
 
+			/*
+			 * SUMMERNOTE EDITOR
+			 */
+			
+
+			$("#title").val("[장기렌트]무보증 48개월 핫딜!");
+			$("#brand").val("현대");
+			$("#car").val("싼타페TM");
+			$("#model").val("가솔린 2.0");
+			//$("#mainImg").val();
+			//$("#listImg").val();
+			$("#contents").text("저장된 내역 뿌리기~~~");
+			$("#stPrice").val("51만원");
+			$("#edPrice").val("71만원");
+			$("input[name='mainYn']:input[value="+"Y"+"]").attr('checked',true);
+
 			/* BRAND INPUT ;*/
-			$("#brandInput").on("change", function() {
-				if(this.value.length > 0)$("#carInput").removeAttr("disabled");
+			$("#brand").on("change", function() {
+				if(this.value.length > 0)$("#car").removeAttr("disabled");
 				else{
-					$("#carInput").attr("disabled","disabled");
-					$("#carInput").val("")
+					$("#car").attr("disabled","disabled");
+					$("#car").val("")
 				}
 
 			});
+
+
+			$('.summernote').summernote({
+				height : 180,
+				focus : false,
+				tabsize : 2
+			});
 			/* BRAND INPUT */
+
+
 		});
 
 		</script>

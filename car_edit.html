@@ -347,7 +347,6 @@
 
 			<!-- MAIN CONTENT -->
 			<div id="content">
-
 				<!--div class="row">
 					<//!-- col --//>
 					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
@@ -409,12 +408,12 @@
 										<form class="form-horizontal">
 											
 											<fieldset>
-												<legend>차량등록</legend>
+												<legend>차량수정</legend>
 												<div class="form-group">
 													<label class="col-md-2 control-label">브랜드</label>
 													<div class="col-md-10">
-									                    <input class="form-control" id="brandInput" placeholder="선택하세요." type="text"  list="brand-list">
-														<datalist id="brand-list">
+									                    <input class="form-control" id="brand" placeholder="선택하세요." type="text"  list="brandList" disabled="disabled">
+														<datalist id="brandList">
 									                        <option vlaue="현대">현대</option>
 															<option vlaue="기아">기아</option>
 															<option vlaue="제네니스">제네니스</option>
@@ -430,8 +429,8 @@
 												<div class="form-group">
 													<label class="col-md-2 control-label">차량명</label>
 													<div class="col-md-10">
-														<input class="form-control" id="carInput" disabled="disabled" placeholder="브랜드를 선택하세요." type="text"  list="car-list">
-														<datalist id="car-list">
+														<input class="form-control" id="car" disabled="disabled" placeholder="브랜드를 선택하세요." type="text"  list="carList">
+														<datalist id="carList">
 									                        <option vlaue="싼타페TM">싼타페TM</option>
 															<option vlaue="아반떼">아반떼</option>
 															<option vlaue="그랜저IG">그랜저IG</option>
@@ -446,7 +445,7 @@
 												<div class="form-group">
 													<label class="col-md-2 control-label">차량등급</label>
 													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2">
+														<select multiple style="width:100%" class="select2" id="grade">
 															<option value="2.0">2.0</option>
 															<option value="2.2">2.2</option>
 															<option value="2.5">2.5</option>
@@ -457,7 +456,7 @@
 												<div class="form-group">
 													<label class="col-md-2 control-label">연료타입</label>
 													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2">
+														<select multiple style="width:100%" class="select2" id="fuelType">
 															<option value="가솔린">가솔린</option>
 															<option value="디젤">디젤</option>
 															<option value="하이브리드">하이브리드</option>
@@ -468,60 +467,60 @@
 												<div class="form-group">
 													<label class="col-md-2 control-label">연비</label>
 													<div class="col-md-10">
-														<input class="form-control" placeholder="연비" type="text">
+														<input class="form-control" placeholder="연비" type="text" id="efficiency">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">차량정보</label>
 													<div class="col-md-10">
-														<input class="form-control" placeholder="차량정보" type="text">
+														<input class="form-control" placeholder="차량정보" type="text" id="carInfo">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">대표이미지</label>
 													<div class="col-md-10">
-														<input type="file" class="btn btn-default col-xs-12" id="exampleInputFile1">
+														<input type="file" class="btn btn-default col-xs-12" id="mainImg">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">신차시작가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="newStPrice">
 													</div>
 													<label class="col-md-2 control-label">신차종료가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="newEdPrice">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">렌트시작가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="rentStPrice">
 													</div>
 													<label class="col-md-2 control-label">렌트종료가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="rentEdPrice">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">리스시작가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="leaseStPrice">
 													</div>
 													<label class="col-md-2 control-label">리스종료가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="leaseEdPrice">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-2 control-label">메인게시</label>
 													<div class="col-md-10">
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="main-yn" checked="checked" >
+															<input type="radio" class="radiobox" name="mainYn" checked="checked" >
 															<span>예</span>
 														</label>
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="main-yn">
+															<input type="radio" class="radiobox" name="mainYn">
 															<span>아니오</span>  
 														</label>
 													</div>
@@ -777,12 +776,27 @@
 			Also see: http://legacy.datatables.net/usage/features
 			*/	
 
+			$("#brand").val("현대");
+			$("#car").val("코나");
+			$("#grade").select2("val", ['2.0','2.2']);
+			$("#fuelType").select2("val", ['가솔린','디젤']);
+			$("#efficiency").val("9~13");
+			$("#carInfo").val("");
+			//$("#mainImg").val();
+			$("#newStPrice").val("2500");
+			$("#newEdPrice").val("3200");
+			$("#rentStPrice").val("31.3");
+			$("#rentEdPrice").val("50");
+			$("#leaseStPrice").val("25.5");
+			$("#leaseEdPrice").val("45.8");
+			$("input[name='mainYn']:input[value="+"Y"+"]").attr('checked',true);
+
 			/* BRAND INPUT ;*/
-			$("#brandInput").on("change", function() {
-				if(this.value.length > 0)$("#carInput").removeAttr("disabled");
+			$("#brand").on("change", function() {
+				if(this.value.length > 0)$("#car").removeAttr("disabled");
 				else{
-					$("#carInput").attr("disabled","disabled");
-					$("#carInput").val("")
+					$("#car").attr("disabled","disabled");
+					$("#car").val("")
 				}
 
 			});
