@@ -266,44 +266,7 @@
 
 			<!-- NAVIGATION : This navigation is also responsive-->
 			<nav>
-				<ul>
-					<li >
-						<a href="index.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>
-					</li>
-					<li >
-						<a href="counseling_applications_list.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">상담신청 목록</span></a>
-					</li>
-					<li >
-						<a href="hot_deal_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">핫딜 관리</span></a>
-					</li>
-					<li >
-						<a href="car_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">차량 관리</span></a>
-					</li>
-					<li >
-						<a href="post_goods_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">출고 후기 관리</span></a>
-					</li>
-					<li >
-						<a href="post_construction_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">시공후기 관리</span></a>
-					</li>
-					<li >
-						<a href="vehicle_test_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">시승기 관리</span></a>
-					</li>
-					<li >
-						<a href="newcar_news_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">신차소식 관리</span></a>
-					</li>
-					<li >
-						<a href="comments_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">댓글 관리</span></a>
-					</li>
-					<li class="active">
-						<a href="used_car_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">중고차 상담신청 관리</span></a>
-					</li>
-					<li >
-						<a href="consultation_registration.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">상담 등록</span></a>
-					</li>
-					<li >
-						<a href="cpa_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">CPA</span></a>
-					</li>
-				</ul>
+				
 			</nav>
 
 			<span class="minifyme" data-action="minifyMenu"> 
@@ -508,6 +471,9 @@
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.min.js"></script>
 
+		<!-- SMARTDIRECTCAR COMMON JS FILE-->
+		<script src="js/smartdirectcar-common.js"></script>
+
 		<!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
 		<!-- Voice command : plugin -->
 		<script src="js/speech/voicecommand.min.js"></script>
@@ -537,6 +503,9 @@
 
 				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
+
+				// Menu Nav 
+				loadNavMenu('used_car_management');
 
 			});
 
