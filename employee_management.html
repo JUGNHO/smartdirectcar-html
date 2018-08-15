@@ -102,145 +102,6 @@
 
 		<!-- HEADER -->
 		<header id="header">
-			<div id="logo-group">
-
-				<!-- PLACE YOUR LOGO HERE -->
-				<span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span>
-				<!-- END LOGO PLACEHOLDER -->
-
-				<!-- Note: The activity badge color changes when clicked and resets the number to 0
-				Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-				<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
-
-				<!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
-				<div class="ajax-dropdown">
-
-					<!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->
-					<div class="btn-group btn-group-justified" data-toggle="buttons">
-						<label class="btn btn-default">
-							<input type="radio" name="activity" id="ajax/notify/mail.html">
-							Msgs (14) </label>
-						<label class="btn btn-default">
-							<input type="radio" name="activity" id="ajax/notify/notifications.html">
-							notify (3) </label>
-						<label class="btn btn-default">
-							<input type="radio" name="activity" id="ajax/notify/tasks.html">
-							Tasks (4) </label>
-					</div>
-
-					<!-- notification content -->
-					<div class="ajax-notifications custom-scroll">
-
-						<div class="alert alert-transparent">
-							<h4>Click a button to show messages here</h4>
-							This blank page message helps protect your privacy, or you can show the first message here automatically.
-						</div>
-
-						<i class="fa fa-lock fa-4x fa-border"></i>
-
-					</div>
-					<!-- end notification content -->
-
-					<!-- footer: refresh area -->
-					<span> Last updated on: 12/12/2013 9:43AM
-						<button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Loading..." class="btn btn-xs btn-default pull-right">
-							<i class="fa fa-refresh"></i>
-						</button> 
-					</span>
-					<!-- end footer -->
-
-				</div>
-				<!-- END AJAX-DROPDOWN -->
-			</div>
-
-			<!-- projects dropdown -->
-			<div class="project-context hidden-xs">
-
-				<span class="label">Projects:</span>
-				<span class="project-selector dropdown-toggle" data-toggle="dropdown">Recent projects <i class="fa fa-angle-down"></i></span>
-
-				<!-- Suggestion: populate this list with fetch and push technique -->
-				<ul class="dropdown-menu">
-					<li>
-						<a href="javascript:void(0);">Online e-merchant management system - attaching integration with the iOS</a>
-					</li>
-					<li>
-						<a href="javascript:void(0);">Notes on pipeline upgradee</a>
-					</li>
-					<li>
-						<a href="javascript:void(0);">Assesment Report for merchant account</a>
-					</li>
-					<li class="divider"></li>
-					<li>
-						<a href="javascript:void(0);"><i class="fa fa-power-off"></i> Clear</a>
-					</li>
-				</ul>
-				<!-- end dropdown-menu-->
-
-			</div>
-			<!-- end projects dropdown -->
-
-			<!-- pulled right: nav area -->
-			<div class="pull-right">
-				
-				<!-- collapse menu button -->
-				<div id="hide-menu" class="btn-header pull-right">
-					<span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
-				</div>
-				<!-- end collapse menu -->
-				
-				<!-- #MOBILE -->
-				<!-- Top menu profile link : this shows only when top menu is active -->
-				<ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
-					<li class="">
-						<a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown"> 
-							<img src="img/avatars/sunny.png" alt="John Doe" class="online" />  
-						</a>
-						<ul class="dropdown-menu pull-right">
-							<li>
-								<a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0"><i class="fa fa-cog"></i> Setting</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="profile.html" class="padding-10 padding-top-0 padding-bottom-0"> <i class="fa fa-user"></i> <u>P</u>rofile</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="toggleShortcut"><i class="fa fa-arrow-down"></i> <u>S</u>hortcut</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="launchFullscreen"><i class="fa fa-arrows-alt"></i> Full <u>S</u>creen</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="login.html" class="padding-10 padding-top-5 padding-bottom-5" data-action="userLogout"><i class="fa fa-sign-out fa-lg"></i> <strong><u>L</u>ogout</strong></a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-
-				<!-- logout button -->
-				<div id="logout" class="btn-header transparent pull-right">
-					<span> <a href="login.html" title="Sign Out" data-action="userLogout" data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i class="fa fa-sign-out"></i></a> </span>
-				</div>
-				<!-- end logout button -->
-
-				<!-- search mobile button (this is hidden till mobile view port) -->
-				<div id="search-mobile" class="btn-header transparent pull-right">
-					<span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>
-				</div>
-				<!-- end search mobile button -->
-
-				<!-- fullscreen button -->
-				<div id="fullscreen" class="btn-header transparent pull-right">
-					<span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i class="fa fa-arrows-alt"></i></a> </span>
-				</div>
-				<!-- end fullscreen button -->
-
-			</div>
-			<!-- end pulled right: nav area -->
-
 		</header>
 		<!-- END HEADER -->
 
@@ -309,9 +170,84 @@
 			<!-- END RIBBON -->
 
 			<!-- MAIN CONTENT -->
-			<div id="content">
-				직원 관리
+			<!-- MAIN CONTENT -->
+		<div id="content">
+			<div class="widget-body-toolbar">
+											
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+						<button class="btn btn-success" id="showInsertManagerModal">
+							<i class="fa fa-plus"></i> <span class="hidden-mobile">신규 등록</span>
+						</button>
+					</div>
+				</div>
+
 			</div>
+			<!-- widget grid -->
+			<section id="widget-grid" class="">
+				<!-- row -->
+				<div class="row">
+					<!-- NEW WIDGET START -->
+					<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<!-- Widget ID (each widget will need unique ID)-->
+						<div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
+							<!-- widget options:
+                           usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                           
+                           data-widget-colorbutton="false"
+                           data-widget-editbutton="false"
+                           data-widget-togglebutton="false"
+                           data-widget-deletebutton="false"
+                           data-widget-fullscreenbutton="false"
+                           data-widget-custombutton="false"
+                           data-widget-collapsed="true"
+                           data-widget-sortable="false"
+                           
+                           -->
+							<header>
+								<span class="widget-icon"> <i class="fa fa-table"></i>
+								</span>
+								<h2>Standard Data Tables</h2>
+							</header>
+							<!-- widget div-->
+							<div>
+								<!-- widget edit box -->
+								<div class="jarviswidget-editbox">
+									<!-- This area used as dropdown edit box -->
+								</div>
+								<!-- end widget edit box -->
+								<!-- widget content -->
+								<div class="widget-body no-padding">
+									<table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th data-class="expand"><i class="fa fa-fw fa-user"></i>ID</th>
+												<th data-class="expand">Name</th>
+												<th data-class="expand">Password</th>
+												<th>Phone</th>
+												<th>Email</th>
+												<th>Grade</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+								<!-- end widget content -->
+							</div>
+							<!-- end widget div -->
+						</div>
+						<!-- end widget -->
+					</article>
+					<!-- WIDGET END -->
+				</div>
+				<!-- end row -->
+				<!-- end row -->
+			</section>
+			<!-- end widget grid -->
+		</div>
+		<!-- END MAIN CONTENT -->
 			<!-- END MAIN CONTENT -->
 
 		</div>
@@ -319,56 +255,6 @@
 
 		<!-- PAGE FOOTER -->
 		<div class="page-footer">
-			<div class="row">
-				<div class="col-xs-12 col-sm-6">
-					<span class="txt-color-white">SmartAdmin 1.5 <span class="hidden-xs"> - Web Application Framework</span> © 2014-2015</span>
-				</div>
-
-				<div class="col-xs-6 col-sm-6 text-right hidden-xs">
-					<div class="txt-color-white inline-block">
-						<i class="txt-color-blueLight hidden-mobile">Last account activity <i class="fa fa-clock-o"></i> <strong>52 mins ago &nbsp;</strong> </i>
-						<div class="btn-group dropup">
-							<button class="btn btn-xs dropdown-toggle bg-color-blue txt-color-white" data-toggle="dropdown">
-								<i class="fa fa-link"></i> <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu pull-right text-left">
-								<li>
-									<div class="padding-5">
-										<p class="txt-color-darken font-sm no-margin">Download Progress</p>
-										<div class="progress progress-micro no-margin">
-											<div class="progress-bar progress-bar-success" style="width: 50%;"></div>
-										</div>
-									</div>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<div class="padding-5">
-										<p class="txt-color-darken font-sm no-margin">Server Load</p>
-										<div class="progress progress-micro no-margin">
-											<div class="progress-bar progress-bar-success" style="width: 20%;"></div>
-										</div>
-									</div>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<div class="padding-5">
-										<p class="txt-color-darken font-sm no-margin">Memory Load <span class="text-danger">*critical*</span></p>
-										<div class="progress progress-micro no-margin">
-											<div class="progress-bar progress-bar-danger" style="width: 70%;"></div>
-										</div>
-									</div>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<div class="padding-5">
-										<button class="btn btn-block btn-default">refresh</button>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 		<!-- END PAGE FOOTER -->
 
@@ -399,6 +285,202 @@
 			</ul>
 		</div>
 		<!-- END SHORTCUT AREA -->
+
+		<!-- Modal -->
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Manager Registration</h4>
+					</div>
+					<div class="modal-body">
+						
+						<form id="smart-form-register" class="smart-form">
+							
+
+							<fieldset>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-user"></i>
+										<input type="text" name="username" placeholder="User Account">
+										<b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
+								</section>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+										<input type="email" name="email" placeholder="Email address">
+										<b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
+								</section>
+								
+								<section>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" name="password" placeholder="Password" id="password">
+										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+								</section>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" name="passwordConfirm" placeholder="Confirm password">
+										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+								</section>
+							</fieldset>
+
+							<fieldset>
+								<div class="row">
+									<section class="col col-6">
+										<label class="input">
+											<input type="text" name="firstname" placeholder="First name">
+										</label>
+									</section>
+									<section class="col col-6">
+										<label class="input">
+											<input type="text" name="lastname" placeholder="Last name">
+										</label>
+									</section>
+								</div>
+								
+								<div class="row">
+									<section class="col col-6">
+										<label class="select">
+											<select name="gender">
+												<option value="0" selected="" disabled="">Gender</option>
+												<option value="1">Male</option>
+												<option value="2">Female</option>
+											</select> <i></i> 
+										</label>
+									</section>
+									<section class="col col-6">
+										<label class="input"> 
+											<i class="icon-append fa fa-calendar"></i>
+											<input type="text" name="request" placeholder="생년월일" class="datepicker" data-dateformat='dd/mm/yy'>
+										</label>
+									</section>
+								</div>	
+
+								<div class="row">
+									<section class="col col-6">
+										<label class="select">
+											<select id="managerGrade" name="managerGrade">
+											<option value="" selected="" disabled="">권한 등급</option>
+											<option value="1">CEO  </option>
+											<option value="2">Manager Chef. </option>
+											<option value="3">Manager </option>
+											</select> <i></i> 
+										</label>
+									</section>
+									<section class="col col-6">
+
+										<label class="input"> <i class="icon-append fa fa-phone"></i>
+										<input type="text" name="username" placeholder="Cell Phone">
+										<b class="tooltip tooltip-bottom-right">전화번호를 등록해주세요.</b> </label>
+
+									</section>
+								</div>	
+
+								<div class="row">
+									<section class="col col-12">
+
+										<label class="input"> <i class="icon-append fa fa-file"></i>
+										<input type="file" name="username" placeholder="Cell Phone">
+										<b class="tooltip tooltip-bottom-right">사진을 등록해주세요.</b> </label>
+
+									</section>
+								</div>	
+
+							</fieldset>
+
+
+						</form>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+						<!-- <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button> -->
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			
+
+		</div>
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Manager</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="category"> 계정 </label>
+									 <input type="hidden" id="managerIdx" name="managerIdx"  />
+									<input type="text" id="managerId" name="managerId" class="form-control disabled" placeholder="Manager ID" required disabled />
+								</div>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="category"> 이름  </label>
+									<input type="text" id="managerNm" name="managerNm" class="form-control" placeholder="Manager Name" required />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 비밀번호 </label> 
+									<input type="password" id="managerPw" name="managerPw" class="form-control " placeholder="Manager PW" required  />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 비밀번호 확인  </label> 
+									<input type="password" id="repeatManagerPw" name="repeatManagerPw" class="form-control " placeholder="Repeat Manager PW" required  />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 핸드폰 번호 </label>
+									<input type="text" id="phone" name="phone" class="form-control" placeholder="Manager Phone"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="row">	
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 이메일 </label>
+									<input type="text" id="email" name="email" class="form-control" placeholder="Manager Phone"  />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
 
 		<!--================================================== -->
 
@@ -465,9 +547,6 @@
 
 		<![endif]-->
 
-		<!-- Demo purpose only -->
-		<script src="js/demo.min.js"></script>
-
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.min.js"></script>
 
@@ -498,33 +577,337 @@
 		<script src="js/plugin/moment/moment.min.js"></script>
 		<script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
-		<script>
-			$(document).ready(function() {
+		<!-- PAGE RELATED PLUGIN(S) -->
+		<script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+		<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
 
+
+		<script>
+
+			// Menu Nav 
+			loadNavMenu('employee_management');
+
+			var table = null;
+			var _data = null;
+
+			$(document).ready(function() {
+				
 				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
+				
+				// init Table;
+				initTable();
 
-				// Menu Nav 
-				loadNavMenu('employee_management');
+				//
+				doSearch();
+
+				$("#btnUpdateManager").on("click", updateManager);
+			
+				$("#btnInsertManager").on("click", insertManager);
+
+				$("#btnDeleteManager").on("click", deleteManager);
+				
+				$("#showInsertManagerModal").on("click",function(){
+					// field Clear
+					$("#managerIdx, #managerId, #managerNm, #managerPw, #managerPw, #grade, #email, #phone").val("");
+					
+					//ID Field
+					$("#managerId").removeClass("disabled").removeAttr("disabled");
+					
+					// button set
+					$("#btnUpdateManager").addClass("hide");
+					$("#btnDeleteManager").addClass("hide");
+					$("#btnInsertManager").removeClass("hide");
+					
+					$('#myModal').modal('show');
+				})
+
+			
+				
 
 			});
 
-		</script>
+			function initTable() {
 
-		<!-- Your GOOGLE ANALYTICS CODE Below -->
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-			_gaq.push(['_trackPageview']);
+				/* BASIC ;*/
+				var responsiveHelper_dt_basic = undefined;
+				var responsiveHelper_datatable_fixed_column = undefined;
+				var responsiveHelper_datatable_col_reorder = undefined;
+				var responsiveHelper_datatable_tabletools = undefined;
 
-			(function() {
-				var ga = document.createElement('script');
-				ga.type = 'text/javascript';
-				ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(ga, s);
-			})();
+				var breakpointDefinition = {
+					tablet : 1024,
+					phone : 480
+				};
+				table = $('#dt_basic') .DataTable( {
+					sDom : "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"
+							+ "t"
+							+ "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					autoWidth : true,
+					preDrawCallback : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_dt_basic) {
+							responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'),breakpointDefinition);
+						}
+					},
+					data : [],
+					rowCallback : function(nRow) {
+						responsiveHelper_dt_basic
+								.createExpandIcon(nRow);
+					},
+					drawCallback : function(oSettings) {
+						responsiveHelper_dt_basic.respond();
+					},
+					columns : [ {
+						data : "manager_idx"
+					}, {
+						data : "manager_id"
+					}, {
+						data : "manager_nm"
+					},{
+						data : "manager_pw"
+					}, {
+						data : "email"
+					},{
+						data : "phone"
+					},{
+						data : "grade"
+					} ],
+					columnDefs : [ {
+						"targets" : [ 1 ],
+						"data" : "manager_id",
+						"render" : function(data, type, row, meta) {
+							return '<a href="javascript:showDetailModal(\'' + row["manager_idx"] + '\');">'+data+'</a>'; 
+						}
+					} ],
+				});
+			}
+
+			function doSearch() {
+
+				var data =[{"manager_idx":1,"manager_id":"smart","manager_nm":"오정호@#","email":"masay338@gmail.com","phone":"01049015584","manager_pw":"123456789@","grade":1},{"manager_idx":8,"manager_id":"문창민","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":3},{"manager_idx":9,"manager_id":"김흥식","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":3},{"manager_idx":10,"manager_id":"송근성","manager_nm":"","email":null,"phone":null,"manager_pw":"as@1468512","grade":3},{"manager_idx":11,"manager_id":"홍석표","manager_nm":"","email":null,"phone":null,"manager_pw":"0528","grade":3},{"manager_idx":14,"manager_id":"최빛나","manager_nm":"","email":null,"phone":null,"manager_pw":"a26588455","grade":3},{"manager_idx":16,"manager_id":"배진수","manager_nm":"","email":null,"phone":null,"manager_pw":"0805","grade":3},{"manager_idx":17,"manager_id":"smart2","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":2},{"manager_idx":23,"manager_id":"백선웅","manager_nm":"","email":null,"phone":null,"manager_pw":"cls9944","grade":3},{"manager_idx":24,"manager_id":"이정수","manager_nm":"","email":null,"phone":null,"manager_pw":"kkangs81","grade":3},{"manager_idx":25,"manager_id":"황교철","manager_nm":"황교철","email":"","phone":"","manager_pw":"1q2w3e","grade":3},{"manager_idx":27,"manager_id":"이민욱","manager_nm":"","email":null,"phone":null,"manager_pw":"alsdnr1","grade":3},{"manager_idx":28,"manager_id":"이수호","manager_nm":"","email":null,"phone":null,"manager_pw":"hoya3031","grade":3},{"manager_idx":29,"manager_id":"양한","manager_nm":"","email":null,"phone":null,"manager_pw":"hanhan11","grade":3},{"manager_idx":30,"manager_id":"이상훈","manager_nm":"","email":null,"phone":null,"manager_pw":"ghrja123","grade":3},{"manager_idx":31,"manager_id":"노효성","manager_nm":"","email":null,"phone":null,"manager_pw":"ami01ami","grade":3},{"manager_idx":33,"manager_id":"김정기","manager_nm":"","email":null,"phone":null,"manager_pw":"reyals00","grade":3},{"manager_idx":34,"manager_id":"이영진","manager_nm":"","email":null,"phone":null,"manager_pw":"asd1016","grade":3},{"manager_idx":35,"manager_id":"정인석","manager_nm":"","email":null,"phone":null,"manager_pw":"jis2896","grade":3},{"manager_idx":36,"manager_id":"guest","manager_nm":"","email":null,"phone":null,"manager_pw":"1234","grade":4},{"manager_idx":37,"manager_id":"박준순","manager_nm":"","email":null,"phone":null,"manager_pw":"qq1234","grade":3},{"manager_idx":38,"manager_id":"이대웅","manager_nm":"","email":null,"phone":null,"manager_pw":"1818","grade":3},{"manager_idx":39,"manager_id":"김종욱","manager_nm":"","email":null,"phone":null,"manager_pw":"1188015rla","grade":3}];
+
+				_data = data;
+						
+				table.clear();
+				table.rows.add(data).draw();
+
+				/*
+				$.ajax({
+					url : '/manager/selectManager',
+					data : {},
+					cache : false,
+					type : "get",
+					dataType : 'json',
+					success : function(data) {
+						
+						
+					},
+					error : function(xhr, status, error) {
+					}
+				});
+				*/
+			}
+
+			function showDetailModal(idx) {
+				
+				var rowData = _data.filter(function(item){
+					return (item.manager_idx == idx) 
+				})
+				
+				if(!$.isEmptyObject(rowData)){
+					var data = rowData[0];
+					$("#managerIdx").val(data.manager_idx);
+					$("#managerId").val(data.manager_id);
+					$("#managerNm").val(data.manager_nm);
+					$("#managerPw").val(data.manager_pw);
+					$("#managerGrade").val(data.grade);
+					$("#email").val(data.email);
+					$("#phone").val(data.phone);
+				}
+				
+				//ID Field
+				$("#managerId").addClass("disabled").prop("disabled", true);
+				//
+				$("#btnUpdateManager").removeClass("hide");
+				$("#btnDeleteManager").removeClass("hide");
+				$("#btnInsertManager").addClass("hide");
+				
+				$('#myModal').modal('show');
+				
+			}
+			
+			function updateManager(){
+				var data = {
+					manager_idx: $("#managerIdx").val(),
+					manager_id: $("#managerId").val(),
+					manager_nm: $("#managerNm").val(),
+					manager_pw: $("#managerPw").val(),
+					grade: $("#managerGrade").val(),
+					email: $("#email").val(),
+					phone: $("#phone").val()
+				}
+				
+				$.ajax({
+					url : '/manager/updateManager',
+					data : JSON.stringify(data),
+					cache : false,
+					type : "post",
+					dataType : 'json',
+					contentType : "application/json; charset=UTF-8",
+					success : function(data) {
+						$('#myModal').modal('hide');
+						doSearch();
+					},
+					error : function(xhr, status, error) {
+					}
+				});
+			}
+			
+			function insertManager(){
+
+				if($("#smart-form-register").valid()){
+					alert("등록 실행");
+				}else{
+					return;
+				}
+
+				alert("비행기 데이터");
+
+				var data = {
+					manager_idx: $("#managerIdx").val(),
+					manager_id: $("#managerId").val(),
+					manager_nm: $("#managerNm").val(),
+					manager_pw: $("#managerPw").val(),
+					grade: $("#managerGrade").val(),
+					email: $("#email").val(),
+					phone: $("#phone").val()
+				}
+
+
+
+
+				// $('#').validate(function(){
+				// 	submitHandler: function(form) {
+	   //                  alert("등록 실행!");
+	   //              }
+
+
+
+				// });
+
+				// $.ajax({
+				// 	url : '/manager/insertManager',
+				// 	data : JSON.stringify(data),
+				// 	cache : false,
+				// 	type : "post",
+				// 	dataType : 'json',
+				// 	contentType : "application/json; charset=UTF-8",
+				// 	success : function(data) {
+				// 		$('#myModal').modal('hide');
+				// 		doSearch();
+				// 	},
+				// 	error : function(xhr, status, error) {
+				// 	}
+				// });
+			}
+			
+			function deleteManager(){
+				if(confirm("삭제하시겠습니까?")){
+					var data = {
+						manager_idx: $("#managerIdx").val()
+					}
+					$.ajax({
+						url : '/manager/deleteManager',
+						data : JSON.stringify(data),
+						cache : false,
+						type : "post",
+						dataType : 'json',
+						contentType : "application/json; charset=UTF-8",
+						success : function(data) {
+							$('#myModal').modal('hide');
+							doSearch();
+						},
+						error : function(xhr, status, error) {
+						}
+					});	
+				}
+			}
+
+			var $registerForm = $("#smart-form-register").validate({
+	
+					// Rules for form validation
+					rules : {
+						username : {
+							required : true
+						},
+						email : {
+							required : true,
+							email : true
+						},
+						password : {
+							required : true,
+							minlength : 3,
+							maxlength : 20
+						},
+						passwordConfirm : {
+							required : true,
+							minlength : 3,
+							maxlength : 20,
+							equalTo : '#password'
+						},
+						firstname : {
+							required : true
+						},
+						lastname : {
+							required : true
+						},
+						gender : {
+							required : true
+						},
+						terms : {
+							required : true
+						}
+					},
+		
+					// Messages for form validation
+					messages : {
+						login : {
+							required : 'Please enter your login'
+						},
+						email : {
+							required : 'Please enter your email address',
+							email : 'Please enter a VALID email address'
+						},
+						password : {
+							required : 'Please enter your password'
+						},
+						passwordConfirm : {
+							required : 'Please enter your password one more time',
+							equalTo : 'Please enter the same password as above'
+						},
+						firstname : {
+							required : 'Please select your first name'
+						},
+						lastname : {
+							required : 'Please select your last name'
+						},
+						gender : {
+							required : 'Please select your gender'
+						},
+						terms : {
+							required : 'You must agree with Terms and Conditions'
+						}
+					},
+		
+					// Do not change code below
+					errorPlacement : function(error, element) {
+						error.insertAfter(element.parent());
+					}
+				});
 
 		</script>
 

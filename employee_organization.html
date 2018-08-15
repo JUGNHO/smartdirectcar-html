@@ -127,7 +127,7 @@
 
 			<!-- NAVIGATION : This navigation is also responsive-->
 			<nav>
-			
+				
 			</nav>
 
 			<span class="minifyme" data-action="minifyMenu"> 
@@ -170,9 +170,84 @@
 			<!-- END RIBBON -->
 
 			<!-- MAIN CONTENT -->
-			<div id="content">
-				댓글 관리댓글 관리댓글 관리댓글 관리댓글 관리
+			<!-- MAIN CONTENT -->
+		<div id="content">
+			<div class="widget-body-toolbar">
+											
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+						<button class="btn btn-success" id="showInsertManagerModal">
+							<i class="fa fa-plus"></i> <span class="hidden-mobile">신규 등록</span>
+						</button>
+					</div>
+				</div>
+
 			</div>
+			<!-- widget grid -->
+			<section id="widget-grid" class="">
+				<!-- row -->
+				<div class="row">
+					<!-- NEW WIDGET START -->
+					<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<!-- Widget ID (each widget will need unique ID)-->
+						<div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
+							<!-- widget options:
+                           usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                           
+                           data-widget-colorbutton="false"
+                           data-widget-editbutton="false"
+                           data-widget-togglebutton="false"
+                           data-widget-deletebutton="false"
+                           data-widget-fullscreenbutton="false"
+                           data-widget-custombutton="false"
+                           data-widget-collapsed="true"
+                           data-widget-sortable="false"
+                           
+                           -->
+							<header>
+								<span class="widget-icon"> <i class="fa fa-table"></i>
+								</span>
+								<h2>Standard Data Tables</h2>
+							</header>
+							<!-- widget div-->
+							<div>
+								<!-- widget edit box -->
+								<div class="jarviswidget-editbox">
+									<!-- This area used as dropdown edit box -->
+								</div>
+								<!-- end widget edit box -->
+								<!-- widget content -->
+								<div class="widget-body no-padding">
+									<table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th data-class="expand"><i class="fa fa-fw fa-user"></i>ID</th>
+												<th data-class="expand">Name</th>
+												<th data-class="expand">Password</th>
+												<th>Phone</th>
+												<th>Email</th>
+												<th>Grade</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+								<!-- end widget content -->
+							</div>
+							<!-- end widget div -->
+						</div>
+						<!-- end widget -->
+					</article>
+					<!-- WIDGET END -->
+				</div>
+				<!-- end row -->
+				<!-- end row -->
+			</section>
+			<!-- end widget grid -->
+		</div>
+		<!-- END MAIN CONTENT -->
 			<!-- END MAIN CONTENT -->
 
 		</div>
@@ -210,6 +285,202 @@
 			</ul>
 		</div>
 		<!-- END SHORTCUT AREA -->
+
+		<!-- Modal -->
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Manager Registration</h4>
+					</div>
+					<div class="modal-body">
+						
+						<form id="smart-form-register" class="smart-form">
+							
+
+							<fieldset>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-user"></i>
+										<input type="text" name="username" placeholder="User Account">
+										<b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
+								</section>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+										<input type="email" name="email" placeholder="Email address">
+										<b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
+								</section>
+								
+								<section>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" name="password" placeholder="Password" id="password">
+										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+								</section>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" name="passwordConfirm" placeholder="Confirm password">
+										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+								</section>
+							</fieldset>
+
+							<fieldset>
+								<div class="row">
+									<section class="col col-6">
+										<label class="input">
+											<input type="text" name="firstname" placeholder="First name">
+										</label>
+									</section>
+									<section class="col col-6">
+										<label class="input">
+											<input type="text" name="lastname" placeholder="Last name">
+										</label>
+									</section>
+								</div>
+								
+								<div class="row">
+									<section class="col col-6">
+										<label class="select">
+											<select name="gender">
+												<option value="0" selected="" disabled="">Gender</option>
+												<option value="1">Male</option>
+												<option value="2">Female</option>
+											</select> <i></i> 
+										</label>
+									</section>
+									<section class="col col-6">
+										<label class="input"> 
+											<i class="icon-append fa fa-calendar"></i>
+											<input type="text" name="request" placeholder="생년월일" class="datepicker" data-dateformat='dd/mm/yy'>
+										</label>
+									</section>
+								</div>	
+
+								<div class="row">
+									<section class="col col-6">
+										<label class="select">
+											<select id="managerGrade" name="managerGrade">
+											<option value="" selected="" disabled="">권한 등급</option>
+											<option value="1">CEO  </option>
+											<option value="2">Manager Chef. </option>
+											<option value="3">Manager </option>
+											</select> <i></i> 
+										</label>
+									</section>
+									<section class="col col-6">
+
+										<label class="input"> <i class="icon-append fa fa-phone"></i>
+										<input type="text" name="username" placeholder="Cell Phone">
+										<b class="tooltip tooltip-bottom-right">전화번호를 등록해주세요.</b> </label>
+
+									</section>
+								</div>	
+
+								<div class="row">
+									<section class="col col-12">
+
+										<label class="input"> <i class="icon-append fa fa-file"></i>
+										<input type="file" name="username" placeholder="Cell Phone">
+										<b class="tooltip tooltip-bottom-right">사진을 등록해주세요.</b> </label>
+
+									</section>
+								</div>	
+
+							</fieldset>
+
+
+						</form>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+						<!-- <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button> -->
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			
+
+		</div>
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Manager</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="category"> 계정 </label>
+									 <input type="hidden" id="managerIdx" name="managerIdx"  />
+									<input type="text" id="managerId" name="managerId" class="form-control disabled" placeholder="Manager ID" required disabled />
+								</div>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="category"> 이름  </label>
+									<input type="text" id="managerNm" name="managerNm" class="form-control" placeholder="Manager Name" required />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 비밀번호 </label> 
+									<input type="password" id="managerPw" name="managerPw" class="form-control " placeholder="Manager PW" required  />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 비밀번호 확인  </label> 
+									<input type="password" id="repeatManagerPw" name="repeatManagerPw" class="form-control " placeholder="Repeat Manager PW" required  />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 핸드폰 번호 </label>
+									<input type="text" id="phone" name="phone" class="form-control" placeholder="Manager Phone"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="row">	
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 이메일 </label>
+									<input type="text" id="email" name="email" class="form-control" placeholder="Manager Phone"  />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
 
 		<!--================================================== -->
 
@@ -276,9 +547,6 @@
 
 		<![endif]-->
 
-		<!-- Demo purpose only -->
-		<script src="js/demo.min.js"></script>
-
 		<!-- MAIN APP JS FILE -->
 		<script src="js/app.min.js"></script>
 
@@ -295,13 +563,12 @@
 		
 		<!-- PAGE RELATED PLUGIN(S) -->
 		
-		<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip
+		<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip 
 		<script src="js/plugin/flot/jquery.flot.cust.min.js"></script>
 		<script src="js/plugin/flot/jquery.flot.resize.min.js"></script>
 		<script src="js/plugin/flot/jquery.flot.time.min.js"></script>
 		<script src="js/plugin/flot/jquery.flot.tooltip.min.js"></script>
 		-->
-		
 		<!-- Vector Maps Plugin: Vectormap engine, Vectormap language -->
 		<script src="js/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>
 		<script src="js/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>
@@ -310,13 +577,24 @@
 		<script src="js/plugin/moment/moment.min.js"></script>
 		<script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
+		<!-- PAGE RELATED PLUGIN(S) -->
+		<script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+		<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+
+
 		<script>
 
 			// Menu Nav 
-			loadNavMenu('comments_management');
+			loadNavMenu('employee_organization');
+
+			var table = null;
+			var _data = null;
 
 			$(document).ready(function() {
-
+				
 				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
 
