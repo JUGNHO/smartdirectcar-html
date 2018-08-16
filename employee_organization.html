@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> SmartAdmin </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+	</head>
+	
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #RIGHT PANEL              |  right panel userlist          |
+	|  13. #MAIN PANEL               |  main panel                    |
+	|  14. #MAIN CONTENT             |  content holder                |
+	|  15. #PAGE FOOTER              |  page footer                   |
+	|  16. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  17. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-style-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'no-menu'			  - Hides the menu completely
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-page-footer' - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="">
+
+		<!-- HEADER -->
+		<header id="header">
+		</header>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<aside id="left-panel">
+
+			<!-- User info -->
+			<div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
+
+					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+						<img src="img/avatars/sunny.png" alt="me" class="online" /> 
+						<span>
+							john.doe 
+						</span>
+						<i class="fa fa-angle-down"></i>
+					</a> 
+					
+				</span>
+			</div>
+			<!-- end user info -->
+
+			<!-- NAVIGATION : This navigation is also responsive-->
+			<nav>
+				
+			</nav>
+
+			<span class="minifyme" data-action="minifyMenu"> 
+				<i class="fa fa-arrow-circle-left hit"></i> 
+			</span>
+
+		</aside>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li>Home</li><li>Dashboard</li>
+				</ol>
+				<!-- end breadcrumb -->
+
+				<!-- You can also add more buttons to the
+				ribbon for further usability
+
+				Example below:
+
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span> -->
+
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<!-- MAIN CONTENT -->
+		<div id="content">
+			<div class="widget-body-toolbar">
+											
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+						<button class="btn btn-success" id="showInsertManagerModal">
+							<i class="fa fa-plus"></i> <span class="hidden-mobile">신규 등록</span>
+						</button>
+					</div>
+				</div>
+
+			</div>
+			<!-- widget grid -->
+			<section id="widget-grid" class="">
+				<!-- row -->
+				<div class="row">
+					<!-- NEW WIDGET START -->
+					<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<!-- Widget ID (each widget will need unique ID)-->
+						<div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
+							<!-- widget options:
+                           usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                           
+                           data-widget-colorbutton="false"
+                           data-widget-editbutton="false"
+                           data-widget-togglebutton="false"
+                           data-widget-deletebutton="false"
+                           data-widget-fullscreenbutton="false"
+                           data-widget-custombutton="false"
+                           data-widget-collapsed="true"
+                           data-widget-sortable="false"
+                           
+                           -->
+							<header>
+								<span class="widget-icon"> <i class="fa fa-table"></i>
+								</span>
+								<h2>Standard Data Tables</h2>
+							</header>
+							<!-- widget div-->
+							<div>
+								<!-- widget edit box -->
+								<div class="jarviswidget-editbox">
+									<!-- This area used as dropdown edit box -->
+								</div>
+								<!-- end widget edit box -->
+								<!-- widget content -->
+								<div class="widget-body no-padding">
+									<table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th data-class="expand"><i class="fa fa-fw fa-user"></i>ID</th>
+												<th data-class="expand">Name</th>
+												<th data-class="expand">Password</th>
+												<th>Phone</th>
+												<th>Email</th>
+												<th>Grade</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+								<!-- end widget content -->
+							</div>
+							<!-- end widget div -->
+						</div>
+						<!-- end widget -->
+					</article>
+					<!-- WIDGET END -->
+				</div>
+				<!-- end row -->
+				<!-- end row -->
+			</section>
+			<!-- end widget grid -->
+		</div>
+		<!-- END MAIN CONTENT -->
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- PAGE FOOTER -->
+		<div class="page-footer">
+		</div>
+		<!-- END PAGE FOOTER -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		<div id="shortcut">
+			<ul>
+				<li>
+					<a href="inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+				</li>
+				<li>
+					<a href="calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+				</li>
+				<li>
+					<a href="gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+				</li>
+				<li>
+					<a href="invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+				</li>
+				<li>
+					<a href="gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+				</li>
+				<li>
+					<a href="profile.html" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+				</li>
+			</ul>
+		</div>
+		<!-- END SHORTCUT AREA -->
+
+		<!-- Modal -->
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Manager Registration</h4>
+					</div>
+					<div class="modal-body">
+						
+						<form id="smart-form-register" class="smart-form">
+							
+
+							<fieldset>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-user"></i>
+										<input type="text" name="username" placeholder="User Account">
+										<b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
+								</section>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+										<input type="email" name="email" placeholder="Email address">
+										<b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
+								</section>
+								
+								<section>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" name="password" placeholder="Password" id="password">
+										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+								</section>
+								<section>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" name="passwordConfirm" placeholder="Confirm password">
+										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+								</section>
+							</fieldset>
+
+							<fieldset>
+								<div class="row">
+									<section class="col col-6">
+										<label class="input">
+											<input type="text" name="firstname" placeholder="First name">
+										</label>
+									</section>
+									<section class="col col-6">
+										<label class="input">
+											<input type="text" name="lastname" placeholder="Last name">
+										</label>
+									</section>
+								</div>
+								
+								<div class="row">
+									<section class="col col-6">
+										<label class="select">
+											<select name="gender">
+												<option value="0" selected="" disabled="">Gender</option>
+												<option value="1">Male</option>
+												<option value="2">Female</option>
+											</select> <i></i> 
+										</label>
+									</section>
+									<section class="col col-6">
+										<label class="input"> 
+											<i class="icon-append fa fa-calendar"></i>
+											<input type="text" name="request" placeholder="생년월일" class="datepicker" data-dateformat='dd/mm/yy'>
+										</label>
+									</section>
+								</div>	
+
+								<div class="row">
+									<section class="col col-6">
+										<label class="select">
+											<select id="managerGrade" name="managerGrade">
+											<option value="" selected="" disabled="">권한 등급</option>
+											<option value="1">CEO  </option>
+											<option value="2">Manager Chef. </option>
+											<option value="3">Manager </option>
+											</select> <i></i> 
+										</label>
+									</section>
+									<section class="col col-6">
+
+										<label class="input"> <i class="icon-append fa fa-phone"></i>
+										<input type="text" name="username" placeholder="Cell Phone">
+										<b class="tooltip tooltip-bottom-right">전화번호를 등록해주세요.</b> </label>
+
+									</section>
+								</div>	
+
+								<div class="row">
+									<section class="col col-12">
+
+										<label class="input"> <i class="icon-append fa fa-file"></i>
+										<input type="file" name="username" placeholder="Cell Phone">
+										<b class="tooltip tooltip-bottom-right">사진을 등록해주세요.</b> </label>
+
+									</section>
+								</div>	
+
+							</fieldset>
+
+
+						</form>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+						<!-- <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button> -->
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			
+
+		</div>
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Manager</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="category"> 계정 </label>
+									 <input type="hidden" id="managerIdx" name="managerIdx"  />
+									<input type="text" id="managerId" name="managerId" class="form-control disabled" placeholder="Manager ID" required disabled />
+								</div>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="category"> 이름  </label>
+									<input type="text" id="managerNm" name="managerNm" class="form-control" placeholder="Manager Name" required />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 비밀번호 </label> 
+									<input type="password" id="managerPw" name="managerPw" class="form-control " placeholder="Manager PW" required  />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 비밀번호 확인  </label> 
+									<input type="password" id="repeatManagerPw" name="repeatManagerPw" class="form-control " placeholder="Repeat Manager PW" required  />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 핸드폰 번호 </label>
+									<input type="text" id="phone" name="phone" class="form-control" placeholder="Manager Phone"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="row">	
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="category"> 이메일 </label>
+									<input type="text" id="email" name="email" class="form-control" placeholder="Manager Phone"  />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
+
+		<!--================================================== -->
+		<!-- smartdirect script loader-->
+		<script src="js/smartdirectcar-common-jsloader.js"></script>
+		
+		<!-- Append External JS here-->
+		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@-->
+		<!-- ./Append External JS here-->
+
+		<script>
+
+			// Menu Nav 
+			loadNavMenu('employee_organization');
+
+			var table = null;
+			var _data = null;
+
+			$(document).ready(function() {
+				
+				// DO NOT REMOVE : GLOBAL FUNCTIONS!
+				pageSetUp();
+
+			});
+
+		</script>
+
+	</body>
+
+</html>
