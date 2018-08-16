@@ -52,6 +52,8 @@
 		<link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
 		<link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
 
+		<link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+
 	</head>
 	
 	<!--
@@ -177,7 +179,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
 						<button class="btn btn-success" id="showInsertManagerModal">
-							<i class="fa fa-plus"></i> <span class="hidden-mobile">신규 등록</span>
+							<i class="fa fa-plus"></i> <span class="hidden-mobile">신규 팀 생성</span>
 						</button>
 					</div>
 				</div>
@@ -209,34 +211,88 @@
 								</span>
 								<h2>Standard Data Tables</h2>
 							</header>
-							<!-- widget div-->
-							<div>
-								<!-- widget edit box -->
-								<div class="jarviswidget-editbox">
-									<!-- This area used as dropdown edit box -->
+							<!-- widget content -->
+							<div class="widget-body">
+								
+								<div class="col-md-6 col-lg-6">
+									<div id="jstree1">
+				                        <ul>
+				                            <li class="jstree-open ">Admin theme
+				                                <ul>
+				                                    <li>css
+				                                        <ul>
+				                                            <li data-jstree='"type":"css"}'>animate.css</li>
+				                                            <li data-jstree='"type":"css"}'>bootstrap.css</li>
+				                                            <li data-jstree='"type":"css"}'>style.css</li>
+				                                        </ul>
+				                                    </li>
+				                                    <li>email-templates
+				                                        <ul>
+				                                            <li data-jstree='"type":"html"}'>action.html</li>
+				                                            <li data-jstree='"type":"html"}'>alert.html</li>
+				                                            <li data-jstree='"type":"html"}'>billing.html</li>
+				                                        </ul>
+				                                    </li>
+				                                    <li>fonts
+				                                        <ul>
+				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.eot</li>
+				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.svg</li>
+				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.ttf</li>
+				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.woff</li>
+				                                        </ul>
+				                                    </li>
+				                                    <li class="jstree-open">img
+				                                        <ul>
+				                                            <li data-jstree='"type":"img"}'>profile_small.jpg</li>
+				                                            <li data-jstree='"type":"img"}'>angular_logo.png</li>
+				                                            <li class="text-navy" data-jstree='"type":"img"}'>html_logo.png</li>
+				                                            <li class="text-navy" data-jstree='"type":"img"}'>mvc_logo.png</li>
+				                                        </ul>
+				                                    </li>
+				                                    <li class="jstree-open">js
+				                                        <ul>
+				                                            <li data-jstree='"type":"js"}'>inspinia.js</li>
+				                                            <li data-jstree='"type":"js"}'>bootstrap.js</li>
+				                                            <li data-jstree='"type":"js"}'>jquery-2.1.1.js</li>
+				                                            <li data-jstree='"type":"js"}'>jquery-ui.custom.min.js</li>
+				                                            <li  class="text-navy" data-jstree='"type":"js"}'>jquery-ui-1.10.4.min.js</li>
+				                                        </ul>
+				                                    </li>
+				                                    <li data-jstree='"type":"html"}'> affix.html</li>
+				                                    <li data-jstree='"type":"html"}'> dashboard.html</li>
+				                                    <li data-jstree='"type":"html"}'> buttons.html</li>
+				                                    <li data-jstree='"type":"html"}'> calendar.html</li>
+				                                    <li data-jstree='"type":"html"}'> contacts.html</li>
+				                                    <li data-jstree='"type":"html"}'> css_animation.html</li>
+				                                    <li  class="text-navy" data-jstree='"type":"html"}'> flot_chart.html</li>
+				                                    <li  class="text-navy" data-jstree='"type":"html"}'> google_maps.html</li>
+				                                    <li data-jstree='"type":"html"}'> icons.html</li>
+				                                    <li data-jstree='"type":"html"}'> invoice.html</li>
+				                                    <li data-jstree='"type":"html"}'> login.html</li>
+				                                    <li data-jstree='"type":"html"}'> mailbox.html</li>
+				                                    <li data-jstree='"type":"html"}'> profile.html</li>
+				                                    <li  class="text-navy" data-jstree='"type":"html"}'> register.html</li>
+				                                    <li data-jstree='"type":"html"}'> timeline.html</li>
+				                                    <li data-jstree='"type":"html"}'> video.html</li>
+				                                    <li data-jstree='"type":"html"}'> widgets.html</li>
+				                                </ul>
+				                            </li>
+				                        </ul>
+				                    </div>
 								</div>
-								<!-- end widget edit box -->
-								<!-- widget content -->
-								<div class="widget-body no-padding">
-									<table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
-										<thead>
-											<tr>
-												<th>#</th>
-												<th data-class="expand"><i class="fa fa-fw fa-user"></i>ID</th>
-												<th data-class="expand">Name</th>
-												<th data-class="expand">Password</th>
-												<th>Phone</th>
-												<th>Email</th>
-												<th>Grade</th>
-											</tr>
-										</thead>
-										<tbody>
-										</tbody>
-									</table>
+								<div class="col-md-6 col-lg-6">
+									<div class="panel panel-primary">
+										<div class="panel-body">
+											<div class="row">
+												
+											</div>
+										</div>
+									</div>
 								</div>
-								<!-- end widget content -->
+								
+		
 							</div>
-							<!-- end widget div -->
+							<!-- end widget content -->
 						</div>
 						<!-- end widget -->
 					</article>
@@ -286,222 +342,132 @@
 		</div>
 		<!-- END SHORTCUT AREA -->
 
-		<!-- Modal -->
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Manager Registration</h4>
-					</div>
-					<div class="modal-body">
-						
-						<form id="smart-form-register" class="smart-form">
-							
-
-							<fieldset>
-								<section>
-									<label class="input"> <i class="icon-append fa fa-user"></i>
-										<input type="text" name="username" placeholder="User Account">
-										<b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
-								</section>
-								<section>
-									<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-										<input type="email" name="email" placeholder="Email address">
-										<b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
-								</section>
-								
-								<section>
-									<label class="input"> <i class="icon-append fa fa-lock"></i>
-										<input type="password" name="password" placeholder="Password" id="password">
-										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
-								</section>
-								<section>
-									<label class="input"> <i class="icon-append fa fa-lock"></i>
-										<input type="password" name="passwordConfirm" placeholder="Confirm password">
-										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
-								</section>
-							</fieldset>
-
-							<fieldset>
-								<div class="row">
-									<section class="col col-6">
-										<label class="input">
-											<input type="text" name="firstname" placeholder="First name">
-										</label>
-									</section>
-									<section class="col col-6">
-										<label class="input">
-											<input type="text" name="lastname" placeholder="Last name">
-										</label>
-									</section>
-								</div>
-								
-								<div class="row">
-									<section class="col col-6">
-										<label class="select">
-											<select name="gender">
-												<option value="0" selected="" disabled="">Gender</option>
-												<option value="1">Male</option>
-												<option value="2">Female</option>
-											</select> <i></i> 
-										</label>
-									</section>
-									<section class="col col-6">
-										<label class="input"> 
-											<i class="icon-append fa fa-calendar"></i>
-											<input type="text" name="request" placeholder="생년월일" class="datepicker" data-dateformat='dd/mm/yy'>
-										</label>
-									</section>
-								</div>	
-
-								<div class="row">
-									<section class="col col-6">
-										<label class="select">
-											<select id="managerGrade" name="managerGrade">
-											<option value="" selected="" disabled="">권한 등급</option>
-											<option value="1">CEO  </option>
-											<option value="2">Manager Chef. </option>
-											<option value="3">Manager </option>
-											</select> <i></i> 
-										</label>
-									</section>
-									<section class="col col-6">
-
-										<label class="input"> <i class="icon-append fa fa-phone"></i>
-										<input type="text" name="username" placeholder="Cell Phone">
-										<b class="tooltip tooltip-bottom-right">전화번호를 등록해주세요.</b> </label>
-
-									</section>
-								</div>	
-
-								<div class="row">
-									<section class="col col-12">
-
-										<label class="input"> <i class="icon-append fa fa-file"></i>
-										<input type="file" name="username" placeholder="Cell Phone">
-										<b class="tooltip tooltip-bottom-right">사진을 등록해주세요.</b> </label>
-
-									</section>
-								</div>	
-
-							</fieldset>
-
-
-						</form>
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
-						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
-						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
-						<!-- <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button> -->
-					</div>
-				</div>
-				<!-- /.modal-content -->
-			</div>
-			
-
-		</div>
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Manager</h4>
-					</div>
-					<div class="modal-body">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<label for="category"> 계정 </label>
-									 <input type="hidden" id="managerIdx" name="managerIdx"  />
-									<input type="text" id="managerId" name="managerId" class="form-control disabled" placeholder="Manager ID" required disabled />
-								</div>
-							</div>
-						</div>
-						<div class="row">	
-							<div class="col-md-12">
-								<div class="form-group">
-									<label for="category"> 이름  </label>
-									<input type="text" id="managerNm" name="managerNm" class="form-control" placeholder="Manager Name" required />
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="category"> 비밀번호 </label> 
-									<input type="password" id="managerPw" name="managerPw" class="form-control " placeholder="Manager PW" required  />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="category"> 비밀번호 확인  </label> 
-									<input type="password" id="repeatManagerPw" name="repeatManagerPw" class="form-control " placeholder="Repeat Manager PW" required  />
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="category"> 핸드폰 번호 </label>
-									<input type="text" id="phone" name="phone" class="form-control" placeholder="Manager Phone"  />
-								</div>
-							</div>
-						</div>
-
-						<div class="row">	
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="category"> 이메일 </label>
-									<input type="text" id="email" name="email" class="form-control" placeholder="Manager Phone"  />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-						<button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
-						<button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
-						<button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
-					</div>
-				</div>
-				<!-- /.modal-content -->
-			</div>
-			<!-- /.modal-dialog -->
-		</div>
-		<!-- /.modal -->
-
-
 		<!--================================================== -->
 		<!-- smartdirect script loader-->
 		<script src="js/smartdirectcar-common-jsloader.js"></script>
 		
 		<!-- Append External JS here-->
-		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@-->
+		<script src="js/plugin/jsTree/jstree.min.js"></script>
 		<!-- ./Append External JS here-->
 
+		<style>
+		    .jstree-open > .jstree-anchor > .fa-folder:before {
+		        content: "\f07c";
+		    }
+
+		    .jstree-default .jstree-icon.none {
+		        width: 0;
+		    }
+		</style>
 		<script>
 
 			// Menu Nav 
 			loadNavMenu('employee_organization');
 
-			var table = null;
-			var _data = null;
-
 			$(document).ready(function() {
 				
 				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
+
+				// var root = [
+				//   { "id" : "demo_root_1", "text" : "Root 1", "children" : true, "type" : "root" },
+				//   { "id" : "demo_root_2", "text" : "Root 2", "type" : "root" }
+				// ]
+
+				// var data =
+				// ["Child 1", { "id" : "demo_child_1", "text" : "Child 2", "children" : [ { "id" : "demo_child_2", "text" : "One more", "type" : "file" }] }];
+
+				var tree_data = [{
+					"id": "root",
+                    'text': 'SMART DIRECT CAR',
+                    'state': {
+                        'opened': true
+                    },
+                    'icon': 'fa fa-car',
+                    'children': [
+                        {
+                        	"id": "team01",
+                            'text': '영업 1팀',
+                            'children': [
+                            	{
+                                    'text': '팀장 문선민', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 이국주', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 이동주', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 김남형', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 나대리', 'icon': 'none'
+                                }
+                            ],
+                            'state': {
+                                'opened': true,
+                                "selected": false
+                            },
+                            'icon': 'fa fa-group'
+                        },
+                        {
+                        	"id": "team02",
+                            'text': '영업 2팀',
+                            'children': [
+                                {
+                                    'text': '팀장 문선민', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 이국주', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 이동주', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 김남형', 'icon': 'none'
+                                },
+                                {
+                                    'text': '직원 나대리', 'icon': 'none'
+                                }
+                            ],
+                            'state': {
+                                'opened': true
+                            },
+                            'icon': 'fa fa-group'
+                        }
+                    ]
+                }]
+
+
+				$('#jstree1').jstree({
+					"animation": 0,
+		            "multiple": false,
+		            "core" : {
+		                "check_callback": true,
+		            	"data" : tree_data
+			        },
+			        "types":{
+						"#" : {
+							"max_children" : 1,
+							"max_depth" : 3,
+							"valid_children" : ["root"]
+						},
+			        },
+			        "root" : {
+					    "valid_children" : ["team"]
+				    },
+				    "team" : {
+				    	"valid_children" : ["default","user"]
+				    },
+				    "user" : {
+					    "icon" : "glyphicon glyphicon-file",
+					    "valid_children" : []
+				    },
+			        "plugins" : [ "changed", "dnd",'types', "contextmenu" ]
+			    });
+
+
 
 			});
 
