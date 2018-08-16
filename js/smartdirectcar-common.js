@@ -94,17 +94,17 @@ var loadHeader = function(){
 var loadRibbonSection = function(){
 
 	var html = [];
+	html.push('<h1 class="page-title txt-color-blueDark"> ');
 	html.push('<span class="ribbon-button-alignment"> ');
-	html.push('	<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title=\'<i class="text-warning fa fa-warning"></i> Warning! This will reset all your widget settings.\' data-html="true">');
+	html.push('	<span id="refresh" class="btn btn-circle btn-default txt-color-blueDark" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title=\'<i class="text-warning fa fa-warning"></i> Warning! This will reset all your widget settings.\' data-html="true">');
 	html.push('		<i class="fa fa-refresh"></i>');
 	html.push('	</span> ');
 	html.push('</span>');
 	html.push('');
 	html.push('<!-- breadcrumb -->');
-	html.push('<ol class="breadcrumb">');
-	html.push('	<li>Home</li><li>Dashboard</li>');
-	html.push('</ol>');
+	html.push('	Home <span>> Dashboard</span>');
 	html.push('<!-- end breadcrumb -->');
+	html.push('</h1>');
 	html.push('');
 	html.push('<!-- You can also add more buttons to the');
 	html.push('ribbon for further usability');
