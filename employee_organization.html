@@ -152,13 +152,7 @@
 		<div id="content">
 			<div class="widget-body-toolbar">
 											
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
-						<button class="btn btn-success" id="showInsertManagerModal">
-							<i class="fa fa-plus"></i> <span class="hidden-mobile">신규 팀 생성</span>
-						</button>
-					</div>
-				</div>
+				<!-- 팀 -->
 
 			</div>
 			<!-- widget grid -->
@@ -192,69 +186,13 @@
 								
 								<div class="col-md-6 col-lg-6">
 									<div id="jstree1">
-				                        <ul>
-				                            <li class="jstree-open ">Admin theme
-				                                <ul>
-				                                    <li>css
-				                                        <ul>
-				                                            <li data-jstree='"type":"css"}'>animate.css</li>
-				                                            <li data-jstree='"type":"css"}'>bootstrap.css</li>
-				                                            <li data-jstree='"type":"css"}'>style.css</li>
-				                                        </ul>
-				                                    </li>
-				                                    <li>email-templates
-				                                        <ul>
-				                                            <li data-jstree='"type":"html"}'>action.html</li>
-				                                            <li data-jstree='"type":"html"}'>alert.html</li>
-				                                            <li data-jstree='"type":"html"}'>billing.html</li>
-				                                        </ul>
-				                                    </li>
-				                                    <li>fonts
-				                                        <ul>
-				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.eot</li>
-				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.svg</li>
-				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.ttf</li>
-				                                            <li data-jstree='"type":"svg"}'>glyphicons-halflings-regular.woff</li>
-				                                        </ul>
-				                                    </li>
-				                                    <li class="jstree-open">img
-				                                        <ul>
-				                                            <li data-jstree='"type":"img"}'>profile_small.jpg</li>
-				                                            <li data-jstree='"type":"img"}'>angular_logo.png</li>
-				                                            <li class="text-navy" data-jstree='"type":"img"}'>html_logo.png</li>
-				                                            <li class="text-navy" data-jstree='"type":"img"}'>mvc_logo.png</li>
-				                                        </ul>
-				                                    </li>
-				                                    <li class="jstree-open">js
-				                                        <ul>
-				                                            <li data-jstree='"type":"js"}'>inspinia.js</li>
-				                                            <li data-jstree='"type":"js"}'>bootstrap.js</li>
-				                                            <li data-jstree='"type":"js"}'>jquery-2.1.1.js</li>
-				                                            <li data-jstree='"type":"js"}'>jquery-ui.custom.min.js</li>
-				                                            <li  class="text-navy" data-jstree='"type":"js"}'>jquery-ui-1.10.4.min.js</li>
-				                                        </ul>
-				                                    </li>
-				                                    <li data-jstree='"type":"html"}'> affix.html</li>
-				                                    <li data-jstree='"type":"html"}'> dashboard.html</li>
-				                                    <li data-jstree='"type":"html"}'> buttons.html</li>
-				                                    <li data-jstree='"type":"html"}'> calendar.html</li>
-				                                    <li data-jstree='"type":"html"}'> contacts.html</li>
-				                                    <li data-jstree='"type":"html"}'> css_animation.html</li>
-				                                    <li  class="text-navy" data-jstree='"type":"html"}'> flot_chart.html</li>
-				                                    <li  class="text-navy" data-jstree='"type":"html"}'> google_maps.html</li>
-				                                    <li data-jstree='"type":"html"}'> icons.html</li>
-				                                    <li data-jstree='"type":"html"}'> invoice.html</li>
-				                                    <li data-jstree='"type":"html"}'> login.html</li>
-				                                    <li data-jstree='"type":"html"}'> mailbox.html</li>
-				                                    <li data-jstree='"type":"html"}'> profile.html</li>
-				                                    <li  class="text-navy" data-jstree='"type":"html"}'> register.html</li>
-				                                    <li data-jstree='"type":"html"}'> timeline.html</li>
-				                                    <li data-jstree='"type":"html"}'> video.html</li>
-				                                    <li data-jstree='"type":"html"}'> widgets.html</li>
-				                                </ul>
-				                            </li>
-				                        </ul>
+				                       
 				                    </div>
+
+				                    <div id="jstree_demo">
+				                    	
+				                    </div>
+
 								</div>
 								<div class="col-md-6 col-lg-6">
 									<div class="panel panel-primary">
@@ -318,6 +256,49 @@
 		</div>
 		<!-- END SHORTCUT AREA -->
 
+
+		<div class="modal" id="modal_manager_list" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg" style="width:90%;">
+            <div class="modal-content animated bounceInRight">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Manager 추가</h4>
+                </div>
+                <div class="modal-body" style="overflow-y: auto;">
+                    <div class="row">
+                       
+                        <div class="col-md-12" style="text-align: right;">
+                            <button class="btn btn-primary" type="button" id="btn_manager_search"><i class="fa fa-search"></i> Search</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
+								<thead>
+									<tr>
+										<th data-class="expand">#</th>
+										<th><i class="fa fa-fw fa-user"></i>ID</th>
+										<th>Name</th>
+										<th data-hide="phone,tablet">Password</th>
+										<th data-hide="phone,tablet">Phone</th>
+										<th data-hide="phone,tablet">Email</th>
+										<th data-hide="phone,tablet">Grade</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> 취소</button>
+                    <button type="button" class="btn btn-primary" onclick="" id="btn_standard_question_to_structure"><i class="fa fa-plus"></i> 팀에 직원 추가</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 		<!--================================================== -->
 		<!-- smartdirect script loader-->
 		<script src="js/smartdirectcar-common-jsloader.js"></script>
@@ -339,113 +320,385 @@
 
 			// Menu Nav 
 			loadNavMenu('employee_organization');
+			var table = null;
+			var _data = null;
+			var selectedNodeObj = null;
 
 			$(document).ready(function() {
 				
 				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
 
-				// var root = [
-				//   { "id" : "demo_root_1", "text" : "Root 1", "children" : true, "type" : "root" },
-				//   { "id" : "demo_root_2", "text" : "Root 2", "type" : "root" }
-				// ]
+				// init Table;
+				initTable();
 
-				// var data =
-				// ["Child 1", { "id" : "demo_child_1", "text" : "Child 2", "children" : [ { "id" : "demo_child_2", "text" : "One more", "type" : "file" }] }];
+				$("#btn_manager_search").on("click", doSearch);
 
-				var tree_data = [{
-					"id": "root",
-                    'text': 'SMART DIRECT CAR',
-                    'state': {
-                        'opened': true
-                    },
-                    'icon': 'fa fa-car',
-                    'children': [
-                        {
-                        	"id": "team01",
-                            'text': '영업 1팀',
-                            'children': [
-                            	{
-                                    'text': '팀장 문선민', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 이국주', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 이동주', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 김남형', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 나대리', 'icon': 'none'
-                                }
-                            ],
-                            'state': {
-                                'opened': true,
-                                "selected": false
-                            },
-                            'icon': 'fa fa-group'
-                        },
-                        {
-                        	"id": "team02",
-                            'text': '영업 2팀',
-                            'children': [
-                                {
-                                    'text': '팀장 문선민', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 이국주', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 이동주', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 김남형', 'icon': 'none'
-                                },
-                                {
-                                    'text': '직원 나대리', 'icon': 'none'
-                                }
-                            ],
-                            'state': {
-                                'opened': true
-                            },
-                            'icon': 'fa fa-group'
-                        }
-                    ]
-                }]
+				var _root = [{
+				    "id": "demo_root_1",
+				    "text": "SMART DIRECT CAR",
+				    "type": "root",
+				    "children": [
+				    	{
+				    		"id": "team_0",
+				            "text": "영업 1팀",
+				            "children": [{
+				                "id": "team_0_user_0",
+				                "text": "문선민",
+				                "icon": "fa fa-user-circle-o",
+				                "type": "user"
+				            },{
+				                "id": "team_0_user_1",
+				                "text": "김규호",
+				                "type": "user"
+				            },{
+				                "id": "team_0_user_2",
+				                "text": "황성훈",
+				                "type": "user"
+				            },{
+				                "id": "team_0_user_3",
+				                "text": "김종욱",
+				                "type": "user"
+				            },{
+				                "id": "team_0_user_4",
+				                "text": "이대웅",
+				                "type": "user"
+				            },{
+				                "id": "team_0_user_5",
+				                "text": "박준순",
+				                "type": "user"
+				            }],
+				            "type": "team"
+				    	},{
+				            "id": "team_1",
+				            "text": "영업 2팀",
+				            "children": [{
+				                "id": "team_1_user_0",
+				                "text": "정인석",
+				                "icon": "fa fa-user-circle-o",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_1",
+				                "text": "이영진",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_2",
+				                "text": "김정기",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_3",
+				                "text": "노효성",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_4",
+				                "text": "이상훈",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_5",
+				                "text": "한",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_6",
+				                "text": "이민욱",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_7",
+				                "text": "황교철",
+				                "type": "user"
+				            },{
+				                "id": "team_1_user_8",
+				                "text": "이정수",
+				                "type": "user"
+				            }],
+				            "type": "team"
+				        },{
+				            "id": "team_3",
+				            "text": "영업 3팀",
+				            "children": [{
+				                "id": "team_2_user_0",
+				                "text": "이수호",
+				                "icon": "fa fa-user-circle-o",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_1",
+				                "text": "이정수",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_2",
+				                "text": "백선웅",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_3",
+				                "text": "배진수",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_4",
+				                "text": "최빛나",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_5",
+				                "text": "홍석표",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_6",
+				                "text": "송근성",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_7",
+				                "text": "김흥식",
+				                "type": "user"
+				            },{
+				                "id": "team_2_user_8",
+				                "text": "문창민",
+				                "type": "user"
+				            }],
+				            "type": "team"
+				        },{
+				            "id": "team_4",
+				            "text": "영업 4팀",
+				            "children": [],
+				            "type": "team"
+				        }
+				    ]
+				}]
 
-
-				$('#jstree1').jstree({
-					"animation": 0,
-		            "multiple": false,
-		            "core" : {
-		                "check_callback": true,
-		            	"data" : tree_data
-			        },
-			        "types":{
-						"#" : {
-							"max_children" : 1,
-							"max_depth" : 3,
-							"valid_children" : ["root"]
-						},
-			        },
-			        "root" : {
-					    "valid_children" : ["team"]
+				$('#jstree_demo').jstree({
+				    "core": {
+				        "animation": 0,
+				        "check_callback": true,
+				        // "themes": {
+				        //     "stripes": true
+				        // },
+				        'data': _root
 				    },
-				    "team" : {
-				    	"valid_children" : ["default","user"]
+				    "types": {
+				        "#": {
+				            "max_children": 10,
+				            "max_depth": 3,
+				            "valid_children": ["root"]
+				        },
+				        "root": {
+				            "icon": "fa fa-car",
+				            "valid_children": ["team"]
+				        },
+				        "team": {
+				        	"icon": "fa fa-group",
+				            "valid_children": ["user"]
+				        },
+				        "user": {
+				            "icon": "fa fa-user",
+				            "valid_children": []
+				        }
 				    },
-				    "user" : {
-					    "icon" : "glyphicon glyphicon-file",
-					    "valid_children" : []
-				    },
-			        "plugins" : [ "changed", "dnd",'types', "contextmenu" ]
-			    });
+				    "plugins": [
+				        "contextmenu", "dnd", "state", "types"
+				    ],
+				    "contextmenu":{         
+		                "items": function($node){
+
+		                	selectedNodeObj = $node;
+		                	console.log($node);
+		                	
+		                	if($node['type'] == 'root'){
+					            return {
+					                // "Create": {
+					                //     "separator_before": false,
+					                //     "separator_after": false,
+					                //     "label": "Create Structure",
+					                //     "action": function (obj) { 
+					                //         var node = $("#div_question_structure").jstree('create_node', $node, { "text":"Question Label", "type":"label" });
+					                //         $("#div_question_structure").jstree('edit', node);
+					                //     }
+					                // }
+					                "Create": {
+						                "separator_before": false,
+						                "separator_after": false,
+						                "label": "팀 생성",
+						                "action": function (obj) { 
+						                	// var node = $("#jstree_demo").jstree('create_node', $node);
+                       //  					$("#jstree_demo").jstree('edit', node);
+											var tree = $("#jstree_demo").jstree(true);
+                    					    $node = tree.create_node($node, { text: '영업 00팀', type: 'team' });
+
+                    					    // console.log($node);
+
+                                            tree.deselect_all();
+                                            tree.select_node($node);
+
+						                }
+						            },
+					                // "Rename": {
+					                //     "separator_before": false,
+					                //     "separator_after": false,
+					                //     "label": "Add Additional Question",
+					                //     "action": function (obj) { 
+					                //         tree.jstree('edit', $node);
+					                //     }
+					                // }
+					            }
+
+					        }else if($node['type'] == 'team'){
+
+					            var items = {
+					                "Create": {
+					                    "separator_before": false,
+					                    "separator_after": false,
+					                    "label": "직원 추가",
+					                    "action": function (obj) { 
 
 
+
+					                        var h = $(document.body).height() - 200;
+					                        $('#modal_manager_list .modal-body').css('max-height', h + 'px');
+					                        $('#modal_manager_list').modal('show');
+					                    }
+					                }, 
+					                "Rename": {
+					                    "separator_before": false,
+					                    "separator_after": false,
+					                    "label": "Rename",
+					                    "action": function (obj) { 
+					                        $("#jstree_demo").jstree('edit', $node);
+
+					                    }
+					                },
+					                "Remove": {
+						                "separator_before": false,
+						                "separator_after": false,
+						                "label": "Remove",
+						                "action": function (obj) {
+						                	$("#jstree_demo").jstree('delete_node', $node);
+						                }
+						            }
+					            }
+
+					            if($node.children.length > 0){
+					            	items["Remove"] = null;
+					            }
+
+					            return items;
+					        }
+
+
+		                }
+		            }
+
+
+				});
+				
+				$('#btn_standard_question_to_structure').click(function(){
+
+			        var checkedIdx = $('input[name=manager_rdo]:checked').val();
+			        var managerObj = {};
+			        $(_data).each(function(idx, item){
+			        	if(item["manager_idx"] == checkedIdx){
+			        		managerObj = item;
+			        		return;
+			        	}
+			        })
+
+			        console.log("checkedIdx : " + checkedIdx);
+			        console.log(managerObj);
+
+			        var nodeData = {
+			            "id": "teamx_" + managerObj["manager_idx"],
+			            "text": managerObj["manager_id"],
+			            "icon": "fa fa-user",
+			            "type" : "user"
+			        };
+
+			        $('#jstree_demo').jstree("create_node", selectedNodeObj['id'] , nodeData, 'last', false, false); 
+			        $('#jstree_demo').jstree("open_all");
+			   		
+			   		// close modal
+		            $('#modal_manager_list').modal('hide');
+		        });
 
 			});
+			
+			function initTable() {
+
+				/* BASIC ;*/
+				var responsiveHelper_dt_basic = undefined;
+				var responsiveHelper_datatable_fixed_column = undefined;
+				var responsiveHelper_datatable_col_reorder = undefined;
+				var responsiveHelper_datatable_tabletools = undefined;
+
+				var breakpointDefinition = {
+					tablet : 1024,
+					phone : 480
+				};
+				table = $('#dt_basic').DataTable( {
+					sDom : "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"
+							+ "t"
+							+ "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					autoWidth : true,
+					preDrawCallback : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_dt_basic) {
+							responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'),breakpointDefinition);
+						}
+					},
+					data : [],
+					rowCallback : function(nRow) {
+						responsiveHelper_dt_basic.createExpandIcon(nRow);
+					},
+					drawCallback : function(oSettings) {
+						responsiveHelper_dt_basic.respond();
+					},
+					columns : [ {
+						data : "manager_idx"
+					}, {
+						data : "manager_id"
+					}, {
+						data : "manager_nm"
+					},{
+						data : "manager_pw"
+					}, {
+						data : "email"
+					},{
+						data : "phone"
+					},{
+						data : "grade"
+					} ],
+					columnDefs : [ {
+						"targets" : [ 0 ],
+						"data" : "manager_idx",
+						"render" : function(data, type, row, meta) {
+							return '<input type="radio" name="manager_rdo" id="' + row["manager_idx"] + '" value="' + row["manager_idx"] + '">'; 
+						}
+					}]
+				});
+
+				
+
+			}
+
+			function doSearch() {
+
+				var data =[{"manager_idx":1,"manager_id":"smart","manager_nm":"오정호@#","email":"masay338@gmail.com","phone":"01049015584","manager_pw":"123456789@","grade":1},{"manager_idx":8,"manager_id":"문창민","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":3},{"manager_idx":9,"manager_id":"김흥식","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":3},{"manager_idx":10,"manager_id":"송근성","manager_nm":"","email":null,"phone":null,"manager_pw":"as@1468512","grade":3},{"manager_idx":11,"manager_id":"홍석표","manager_nm":"","email":null,"phone":null,"manager_pw":"0528","grade":3},{"manager_idx":14,"manager_id":"최빛나","manager_nm":"","email":null,"phone":null,"manager_pw":"a26588455","grade":3},{"manager_idx":16,"manager_id":"배진수","manager_nm":"","email":null,"phone":null,"manager_pw":"0805","grade":3},{"manager_idx":17,"manager_id":"smart2","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":2},{"manager_idx":23,"manager_id":"백선웅","manager_nm":"","email":null,"phone":null,"manager_pw":"cls9944","grade":3},{"manager_idx":24,"manager_id":"이정수","manager_nm":"","email":null,"phone":null,"manager_pw":"kkangs81","grade":3},{"manager_idx":25,"manager_id":"황교철","manager_nm":"황교철","email":"","phone":"","manager_pw":"1q2w3e","grade":3},{"manager_idx":27,"manager_id":"이민욱","manager_nm":"","email":null,"phone":null,"manager_pw":"alsdnr1","grade":3},{"manager_idx":28,"manager_id":"이수호","manager_nm":"","email":null,"phone":null,"manager_pw":"hoya3031","grade":3},{"manager_idx":29,"manager_id":"양한","manager_nm":"","email":null,"phone":null,"manager_pw":"hanhan11","grade":3},{"manager_idx":30,"manager_id":"이상훈","manager_nm":"","email":null,"phone":null,"manager_pw":"ghrja123","grade":3},{"manager_idx":31,"manager_id":"노효성","manager_nm":"","email":null,"phone":null,"manager_pw":"ami01ami","grade":3},{"manager_idx":33,"manager_id":"김정기","manager_nm":"","email":null,"phone":null,"manager_pw":"reyals00","grade":3},{"manager_idx":34,"manager_id":"이영진","manager_nm":"","email":null,"phone":null,"manager_pw":"asd1016","grade":3},{"manager_idx":35,"manager_id":"정인석","manager_nm":"","email":null,"phone":null,"manager_pw":"jis2896","grade":3},{"manager_idx":36,"manager_id":"guest","manager_nm":"","email":null,"phone":null,"manager_pw":"1234","grade":4},{"manager_idx":37,"manager_id":"박준순","manager_nm":"","email":null,"phone":null,"manager_pw":"qq1234","grade":3},{"manager_idx":38,"manager_id":"이대웅","manager_nm":"","email":null,"phone":null,"manager_pw":"1818","grade":3},{"manager_idx":39,"manager_id":"김종욱","manager_nm":"","email":null,"phone":null,"manager_pw":"1188015rla","grade":3}];
+
+				_data = data;
+						
+				table.clear();
+				table.rows.add(data).draw();
+
+				/*
+				$.ajax({
+					url : '/manager/selectManager',
+					data : {},
+					cache : false,
+					type : "get",
+					dataType : 'json',
+					success : function(data) {
+						
+						
+					},
+					error : function(xhr, status, error) {
+					}
+				});
+				*/
+			}
 
 		</script>
 
