@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <title> SmartAdmin </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+    <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+    <!-- SmartAdmin RTL Support  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
+    <!-- We recommend you use "your_style.css" to override SmartAdmin
+             specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+        <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <!-- Date range picker-->
+    <link rel="stylesheet" type="text/css" href="css/plugins/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+    <!-- Specifying a Webpage Icon for Web Clip 
+             Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+</head>
+<!--
+
+    TABLE OF CONTENTS.
+    
+    Use search to find needed section.
+    
+    ===================================================================
+    
+    |  01. #CSS Links                |  all CSS links and file paths  |
+    |  02. #FAVICONS                 |  Favicon links and file paths  |
+    |  03. #GOOGLE FONT              |  Google font link              |
+    |  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+    |  05. #BODY                     |  body tag                      |
+    |  06. #HEADER                   |  header tag                    |
+    |  07. #PROJECTS                 |  project lists                 |
+    |  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+    |  09. #MOBILE                   |  mobile view dropdown          |
+    |  10. #SEARCH                   |  search field                  |
+    |  11. #NAVIGATION               |  left panel & navigation       |
+    |  12. #RIGHT PANEL              |  right panel userlist          |
+    |  13. #MAIN PANEL               |  main panel                    |
+    |  14. #MAIN CONTENT             |  content holder                |
+    |  15. #PAGE FOOTER              |  page footer                   |
+    |  16. #SHORTCUT AREA            |  dropdown shortcuts area       |
+    |  17. #PLUGINS                  |  all scripts and plugins       |
+    
+    ===================================================================
+    
+    -->
+<!-- #BODY -->
+<!-- Possible Classes
+
+        * 'smart-style-{SKIN#}'
+        * 'smart-rtl'         - Switch theme mode to RTL
+        * 'menu-on-top'       - Switch to top navigation (no DOM change required)
+        * 'no-menu'           - Hides the menu completely
+        * 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+        * 'fixed-header'      - Fixes the header
+        * 'fixed-navigation'  - Fixes the main menu
+        * 'fixed-ribbon'      - Fixes breadcrumb
+        * 'fixed-page-footer' - Fixes footer
+        * 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+    -->
+
+<body class="">
+    <!-- HEADER -->
+    <header id="header">
+    </header>
+    <!-- END HEADER -->
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel">
+        <!-- User info -->
+        <div class="login-info">
+            <span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
+
+                    <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                        <img src="img/avatars/sunny.png" alt="me" class="online" /> 
+                        <span>
+                            john.doe 
+                        </span>
+            <i class="fa fa-angle-down"></i>
+            </a>
+            </span>
+        </div>
+        <!-- end user info -->
+        <!-- NAVIGATION : This navigation is also responsive-->
+        <nav>
+        </nav>
+        <span class="minifyme" data-action="minifyMenu"> 
+                <i class="fa fa-arrow-circle-left hit"></i> 
+            </span>
+    </aside>
+    <!-- END NAVIGATION -->
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+        <!-- RIBBON -->
+        <div id="ribbon">
+        </div>
+        <!-- END RIBBON -->
+        <!-- MAIN CONTENT -->
+        <div id="content">
+            <div class="widget-body-toolbar" style="margin:0 0 0 0;">
+                <div class="row">
+                    <div class="col-lg-12 text-right">
+                        <button class="btn btn-success" onclick="history.back(-1);">
+                            <i class="fa fa-arrow-circle-left"></i> <span class="hidden-mobile">뒤로</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- widget grid -->
+            <section id="widget-grid" class="">
+                <!-- row -->
+                <div class="row">
+                    <!-- NEW WIDGET START -->
+                    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <!-- Widget ID (each widget will need unique ID)-->
+                        <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
+                            <!-- widget options:
+                               usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                               
+                               data-widget-colorbutton="false"
+                               data-widget-editbutton="false"
+                               data-widget-togglebutton="false"
+                               data-widget-deletebutton="false"
+                               data-widget-fullscreenbutton="false"
+                               data-widget-custombutton="false"
+                               data-widget-collapsed="true"
+                               data-widget-sortable="false"
+                               
+                               -->
+                            <header>
+                                <span class="widget-icon"> <i class="fa fa-table"></i>
+                                    </span>
+                                <h2>상담신청 상세보기 </h2>
+                            </header>
+                            <!-- widget div-->
+                            <div>
+                                <!-- widget edit box -->
+                                <div class="jarviswidget-editbox">
+                                    <!-- This area used as dropdown edit box -->
+                                </div>
+                                <!-- end widget edit box -->
+                                <!-- widget content -->
+                                <div class="widget-body">
+                                    <form class="form-horizontal">
+                                        <fieldset>
+                                            <legend>상담신청 상세 #225828</legend>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Text field</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" placeholder="Default Text Field" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Auto Complete</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" placeholder="Type somethine..." type="text" list="list">
+                                                    <datalist id="list">
+                                                        <option value="Alexandra">Alexandra</option>
+                                                        <option value="Alice">Alice</option>
+                                                        <option value="Anastasia">Anastasia</option>
+                                                        <option value="Avelina">Avelina</option>
+                                                        <option value="Basilia">Basilia</option>
+                                                        <option value="Beatrice">Beatrice</option>
+                                                        <option value="Cassandra">Cassandra</option>
+                                                        <option value="Cecil">Cecil</option>
+                                                        <option value="Clemencia">Clemencia</option>
+                                                        <option value="Desiderata">Desiderata</option>
+                                                        <option value="Dionisia">Dionisia</option>
+                                                        <option value="Edith">Edith</option>
+                                                        <option value="Eleanora">Eleanora</option>
+                                                        <option value="Elizabeth">Elizabeth</option>
+                                                        <option value="Emma">Emma</option>
+                                                        <option value="Felicia">Felicia</option>
+                                                        <option value="Florence">Florence</option>
+                                                        <option value="Galiana">Galiana</option>
+                                                        <option value="Grecia">Grecia</option>
+                                                        <option value="Helen">Helen</option>
+                                                        <option value="Helewisa">Helewisa</option>
+                                                        <option value="Idonea">Idonea</option>
+                                                        <option value="Isabel">Isabel</option>
+                                                        <option value="Joan">Joan</option>
+                                                        <option value="Juliana">Juliana</option>
+                                                        <option value="Karla">Karla</option>
+                                                        <option value="Karyn">Karyn</option>
+                                                        <option value="Kate">Kate</option>
+                                                        <option value="Lakisha">Lakisha</option>
+                                                        <option value="Lana">Lana</option>
+                                                        <option value="Laura">Laura</option>
+                                                        <option value="Leona">Leona</option>
+                                                        <option value="Mandy">Mandy</option>
+                                                        <option value="Margaret">Margaret</option>
+                                                        <option value="Maria">Maria</option>
+                                                        <option value="Nanacy">Nanacy</option>
+                                                        <option value="Nicole">Nicole</option>
+                                                        <option value="Olga">Olga</option>
+                                                        <option value="Pamela">Pamela</option>
+                                                        <option value="Patricia">Patricia</option>
+                                                        <option value="Qiana">Qiana</option>
+                                                        <option value="Rachel">Rachel</option>
+                                                        <option value="Ramona">Ramona</option>
+                                                        <option value="Samantha">Samantha</option>
+                                                        <option value="Sandra">Sandra</option>
+                                                        <option value="Tanya">Tanya</option>
+                                                        <option value="Teresa">Teresa</option>
+                                                        <option value="Ursula">Ursula</option>
+                                                        <option value="Valerie">Valerie</option>
+                                                        <option value="Veronica">Veronica</option>
+                                                        <option value="Wilma">Wilma</option>
+                                                        <option value="Yasmin">Yasmin</option>
+                                                        <option value="Zelma">Zelma</option>
+                                                    </datalist>
+                                                    <p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Password field</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" placeholder="Password field" type="password" value="mypassword">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Textarea</label>
+                                                <div class="col-md-10">
+                                                    <textarea class="form-control" placeholder="Textarea" rows="4"></textarea>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Unstyled Checkbox</legend>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Checkbox default</label>
+                                                <div class="col-md-10">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox 1 </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox 2 </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox 3 </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Inline</label>
+                                                <div class="col-md-10">
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox"> Checkbox 2 </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox"> Checkbox 2 </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox"> Checkbox 3 </label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Unstyled Radiobox</legend>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Radios default</label>
+                                                <div class="col-md-10">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio"> Radiobox 1 </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio"> Radiobox 2 </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio"> Radiobox 3 </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Inline</label>
+                                                <div class="col-md-10">
+                                                    <label class="radio radio-inline">
+                                                        <input type="radio"> Radiobox 1 </label>
+                                                    <label class="radio radio-inline">
+                                                        <input type="radio"> Radiobox 2 </label>
+                                                    <label class="radio radio-inline">
+                                                        <input type="radio"> Radiobox 3 </label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>File inputs</legend>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">File input</label>
+                                                <div class="col-md-10">
+                                                    <input type="file" class="btn btn-default" id="exampleInputFile1">
+                                                    <p class="help-block">
+                                                        some help text here.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="demo-switcher-1">
+                                            <legend>Styled Checkbox and Radiobox</legend>
+                                            <span class="toggle-demo">
+                                    <span>Styles: </span>
+                                            <span class="btn-group btn-group-justified" data-toggle="buttons">
+                                        <label class="btn btn-default btn-xs active">
+                                          <input type="radio" name="demo-switcher-1" id="style-0"> 1
+                                        </label>
+                                        <label class="btn btn-default btn-xs">
+                                          <input type="radio" name="demo-switcher-1" id="style-1"> 2
+                                        </label>
+                                        <label class="btn btn-default btn-xs">
+                                          <input type="radio" name="demo-switcher-1" id="style-2"> 3
+                                        </label>
+                                        <label class="btn btn-default btn-xs">
+                                          <input type="radio" name="demo-switcher-1" id="style-3"> 4
+                                        </label>
+                                    </span>
+                                            </span>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Checkbox Styles</label>
+                                                <div class="col-md-10">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" class="checkbox style-0" checked="checked">
+                                                            <span>Checkbox 1</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" class="checkbox style-0">
+                                                            <span>Checkbox 2</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" class="checkbox style-0">
+                                                            <span>Checkbox 3</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Inline</label>
+                                                <div class="col-md-10">
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" class="checkbox style-0">
+                                                        <span>Checkbox 1</span>
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" class="checkbox style-0">
+                                                        <span>Checkbox 2</span>
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" class="checkbox style-0">
+                                                        <span>Checkbox 3</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="demo-switcher-1">
+                                            <legend></legend>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Radios Styles</label>
+                                                <div class="col-md-10">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" class="radiobox style-0" checked="checked" name="style-0">
+                                                            <span>Radiobox 1</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" class="radiobox style-0" name="style-0">
+                                                            <span>Radiobox 2</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" class="radiobox style-0" name="style-0">
+                                                            <span>Radiobox 3</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Inline</label>
+                                                <div class="col-md-10">
+                                                    <label class="radio radio-inline">
+                                                        <input type="radio" class="radiobox" name="style-0a">
+                                                        <span>Radiobox 1</span>
+                                                    </label>
+                                                    <label class="radio radio-inline">
+                                                        <input type="radio" class="radiobox" name="style-0a">
+                                                        <span>Radiobox 2</span>
+                                                    </label>
+                                                    <label class="radio radio-inline">
+                                                        <input type="radio" class="radiobox" name="style-0a">
+                                                        <span>Radiobox 3</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Unstyled Select</legend>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label" for="select-1">Select</label>
+                                                <div class="col-md-10">
+                                                    <select class="form-control" id="select-1">
+                                                        <option>Amsterdam</option>
+                                                        <option>Atlanta</option>
+                                                        <option>Baltimore</option>
+                                                        <option>Boston</option>
+                                                        <option>Buenos Aires</option>
+                                                        <option>Calgary</option>
+                                                        <option>Chicago</option>
+                                                        <option>Denver</option>
+                                                        <option>Dubai</option>
+                                                        <option>Frankfurt</option>
+                                                        <option>Hong Kong</option>
+                                                        <option>Honolulu</option>
+                                                        <option>Houston</option>
+                                                        <option>Kuala Lumpur</option>
+                                                        <option>London</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Melbourne</option>
+                                                        <option>Mexico City</option>
+                                                        <option>Miami</option>
+                                                        <option>Minneapolis</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label" for="multiselect1">Multiple select</label>
+                                                <div class="col-md-10">
+                                                    <select multiple="multiple" id="multiselect1" class="form-control custom-scroll" title="Click to Select a City">
+                                                        <option>Amsterdam</option>
+                                                        <option selected="selected">Atlanta</option>
+                                                        <option>Baltimore</option>
+                                                        <option>Boston</option>
+                                                        <option>Buenos Aires</option>
+                                                        <option>Calgary</option>
+                                                        <option selected="selected">Chicago</option>
+                                                        <option>Denver</option>
+                                                        <option>Dubai</option>
+                                                        <option>Frankfurt</option>
+                                                        <option>Hong Kong</option>
+                                                        <option>Honolulu</option>
+                                                        <option>Houston</option>
+                                                        <option>Kuala Lumpur</option>
+                                                        <option>London</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Melbourne</option>
+                                                        <option>Mexico City</option>
+                                                        <option>Miami</option>
+                                                        <option>Minneapolis</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Input States</legend>
+                                            <div class="form-group has-warning">
+                                                <label class="col-md-2 control-label">Input warning</label>
+                                                <div class="col-md-10">
+                                                    <div class="input-group">
+                                                        <input class="form-control" type="text">
+                                                        <span class="input-group-addon"><i class="fa fa-warning"></i></span>
+                                                    </div>
+                                                    <span class="help-block">Something may have gone wrong</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-error">
+                                                <label class="col-md-2 control-label">Input error</label>
+                                                <div class="col-md-10">
+                                                    <div class="input-group">
+                                                        <input class="form-control" type="text">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
+                                                    </div>
+                                                    <span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-success">
+                                                <label class="col-md-2 control-label">Input success</label>
+                                                <div class="col-md-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+                                                        <input class="form-control" type="text">
+                                                        <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                                                    </div>
+                                                    <span class="help-block">Something may have gone wrong</span>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Input sizes</legend>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Extra Small Input</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control input-xs" placeholder=".input-xs" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Small Input</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control input-sm" placeholder=".input-sm" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Default Input</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" placeholder="Default input" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Large Input</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control input-lg" placeholder=".input-lg" type="text">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Select Sizes</legend>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Small Select</label>
+                                                <div class="col-md-10">
+                                                    <select class="form-control input-sm">
+                                                        <option>Amsterdam</option>
+                                                        <option>Atlanta</option>
+                                                        <option>Baltimore</option>
+                                                        <option>Boston</option>
+                                                        <option>Buenos Aires</option>
+                                                        <option>Calgary</option>
+                                                        <option>Chicago</option>
+                                                        <option>Denver</option>
+                                                        <option>Dubai</option>
+                                                        <option>Frankfurt</option>
+                                                        <option>Hong Kong</option>
+                                                        <option>Honolulu</option>
+                                                        <option>Houston</option>
+                                                        <option>Kuala Lumpur</option>
+                                                        <option>London</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Melbourne</option>
+                                                        <option>Mexico City</option>
+                                                        <option>Miami</option>
+                                                        <option>Minneapolis</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Default Select</label>
+                                                <div class="col-md-10">
+                                                    <select class="form-control">
+                                                        <option>Amsterdam</option>
+                                                        <option>Atlanta</option>
+                                                        <option>Baltimore</option>
+                                                        <option>Boston</option>
+                                                        <option>Buenos Aires</option>
+                                                        <option>Calgary</option>
+                                                        <option>Chicago</option>
+                                                        <option>Denver</option>
+                                                        <option>Dubai</option>
+                                                        <option>Frankfurt</option>
+                                                        <option>Hong Kong</option>
+                                                        <option>Honolulu</option>
+                                                        <option>Houston</option>
+                                                        <option>Kuala Lumpur</option>
+                                                        <option>London</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Melbourne</option>
+                                                        <option>Mexico City</option>
+                                                        <option>Miami</option>
+                                                        <option>Minneapolis</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Large Select</label>
+                                                <div class="col-md-10">
+                                                    <select class="form-control input-lg">
+                                                        <option>Amsterdam</option>
+                                                        <option>Atlanta</option>
+                                                        <option>Baltimore</option>
+                                                        <option>Boston</option>
+                                                        <option>Buenos Aires</option>
+                                                        <option>Calgary</option>
+                                                        <option>Chicago</option>
+                                                        <option>Denver</option>
+                                                        <option>Dubai</option>
+                                                        <option>Frankfurt</option>
+                                                        <option>Hong Kong</option>
+                                                        <option>Honolulu</option>
+                                                        <option>Houston</option>
+                                                        <option>Kuala Lumpur</option>
+                                                        <option>London</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Melbourne</option>
+                                                        <option>Mexico City</option>
+                                                        <option>Miami</option>
+                                                        <option>Minneapolis</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Prepend &amp; Append</legend>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Prepended Input</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">@</span>
+                                                                <input class="form-control" id="prepend" placeholder="Username" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">W/ input &amp; radios</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                        <span class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox" class="checkbox style-0" checked="checked">
+                                                              <span></span>
+                                                                </label>
+                                                                </span>
+                                                                </span>
+                                                                <input class="form-control" placeholder="" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2"></label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <input class="form-control" placeholder="With switch" type="text">
+                                                                <span class="input-group-addon">
+                                                        <span class="onoffswitch">
+                                                            <input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="st3">
+                                                            <label class="onoffswitch-label" for="st3"> 
+                                                                <span class="onoffswitch-inner" data-swchon-text="YES" data-swchoff-text="NO"></span>
+                                                                <span class="onoffswitch-switch"></span>
+                                                                </label>
+                                                                </span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2"></label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                        <span class="radio">
+                                                            <label>
+                                                                <input type="radio" class="radiobox style-0" name="style-0a2">
+                                                                <span> Left</span>
+                                                                </label>
+                                                                </span>
+                                                                </span>
+                                                                <input class="form-control" placeholder="" type="text">
+                                                                <span class="input-group-addon">
+                                                        <span class="radio">
+                                                            <label>
+                                                                <input type="radio" class="radiobox style-0" name="style-0a2">
+                                                                <span> Right</span>
+                                                                </label>
+                                                                </span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="append">Appended Input</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <input class="form-control" id="append" type="text">
+                                                                <span class="input-group-addon">.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="appendprepend">Combined</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">$</span>
+                                                                <input class="form-control" id="appendprepend" type="text">
+                                                                <span class="input-group-addon">.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="appendbutton">With buttons</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <input class="form-control" id="appendbutton" type="text">
+                                                                <div class="input-group-btn">
+                                                                    <button class="btn btn-default" type="button">
+                                                                        Search
+                                                                    </button>
+                                                                    <button class="btn btn-default" type="button">
+                                                                        Options
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">With dropdowns</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                                                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                                                        <span class="caret"></span>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                                        <li><a href="javascript:void(0);">Action</a></li>
+                                                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                                                        <li class="divider"></li>
+                                                                        <li><a href="javascript:void(0);">Cancel</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2"></label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-group">
+                                                                <div class="input-group-btn">
+                                                                    <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                                                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                                                        <span class="caret"></span>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu" role="menu">
+                                                                        <li><a href="javascript:void(0);">Action</a></li>
+                                                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                                                        <li class="divider"></li>
+                                                                        <li><a href="javascript:void(0);">Cancel</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Flexible Input fields with icons</legend>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Addon Large</label>
+                                                <div class="col-md-10">
+                                                    <div class="icon-addon addon-lg">
+                                                        <input type="text" placeholder="Email" class="form-control">
+                                                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Addon Medium</label>
+                                                <div class="col-md-10">
+                                                    <div class="icon-addon addon-md">
+                                                        <input type="text" placeholder="Email" class="form-control">
+                                                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Addon Small</label>
+                                                <div class="col-md-10">
+                                                    <div class="icon-addon addon-sm">
+                                                        <input type="text" placeholder="Email" class="form-control">
+                                                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Select Large</label>
+                                                <div class="col-md-10">
+                                                    <div class="icon-addon addon-lg">
+                                                        <select class="form-control">
+                                                            <option>Select Option</option>
+                                                            <option>Sample</option>
+                                                            <option>Sample</option>
+                                                        </select>
+                                                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Select Medium</label>
+                                                <div class="col-md-10">
+                                                    <div class="icon-addon addon-md">
+                                                        <select class="form-control">
+                                                            <option>Select Option</option>
+                                                            <option>Sample</option>
+                                                            <option>Sample</option>
+                                                        </select>
+                                                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Select Small</label>
+                                                <div class="col-md-10">
+                                                    <div class="icon-addon addon-sm">
+                                                        <select class="form-control">
+                                                            <option>Select Option</option>
+                                                            <option>Sample</option>
+                                                            <option>Sample</option>
+                                                        </select>
+                                                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Prepended Large</label>
+                                                <div class="col-md-10">
+                                                    <div class="input-group input-group-lg">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+                                                        <div class="icon-addon addon-lg">
+                                                            <input type="text" placeholder="Email" class="form-control">
+                                                            <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                        </div>
+                                                        <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Go!</button>
+                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Prepended Medium</label>
+                                                <div class="col-md-10">
+                                                    <div class="input-group input-group-md">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+                                                        <div class="icon-addon addon-md">
+                                                            <input type="text" placeholder="Email" class="form-control">
+                                                            <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                        </div>
+                                                        <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Go!</button>
+                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="prepend">Prepended Small</label>
+                                                <div class="col-md-10">
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+                                                        <div class="icon-addon addon-sm">
+                                                            <input type="text" placeholder="Email" class="form-control">
+                                                            <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="" data-original-title="email"></label>
+                                                        </div>
+                                                        <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Go!</button>
+                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Simple input with icons</legend>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Input with icon</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-icon-left">
+                                                                <i class="fa fa-microphone"></i>
+                                                                <input class="form-control" placeholder="Left Icon" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">With right icon</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="input-icon-right">
+                                                                <i class="fa fa-microphone"></i>
+                                                                <input class="form-control" placeholder="" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2">Input with spinner</label>
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <input class="form-control ui-autocomplete-loading" placeholder="" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-default" type="submit">
+                                                        Cancel
+                                                    </button>
+                                                    <button class="btn btn-primary" type="submit">
+                                                        <i class="fa fa-save"></i> Submit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end widget content -->
+                            </div>
+                            <!-- end widget div -->
+                        </div>
+                        <!-- end widget -->
+                    </article>
+                    <!-- WIDGET END -->
+                </div>
+                <!-- end row -->
+                <!-- end row -->
+            </section>
+            <!-- end widget grid -->
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END MAIN PANEL -->
+    <!-- PAGE FOOTER -->
+    <div class="page-footer">
+    </div>
+    <!-- END PAGE FOOTER -->
+    <!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+        Note: These tiles are completely responsive,
+        you can add as many as you like
+        -->
+    <div id="shortcut">
+        <ul>
+            <li>
+                <a href="inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+            </li>
+            <li>
+                <a href="gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+            </li>
+            <li>
+                <a href="invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+            </li>
+            <li>
+                <a href="profile.html" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+            </li>
+        </ul>
+    </div>
+    <!-- END SHORTCUT AREA -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Manager Registration</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="smart-form-register" class="smart-form">
+                        <fieldset>
+                            <section>
+                                <label class="input"> <i class="icon-append fa fa-user"></i>
+                                    <input type="text" name="username" placeholder="User Account">
+                                    <b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
+                            </section>
+                            <section>
+                                <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+                                    <input type="email" name="email" placeholder="Email address">
+                                    <b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
+                            </section>
+                            <section>
+                                <label class="input"> <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" name="password" placeholder="Password" id="password">
+                                    <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+                            </section>
+                            <section>
+                                <label class="input"> <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" name="passwordConfirm" placeholder="Confirm password">
+                                    <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+                            </section>
+                        </fieldset>
+                        <fieldset>
+                            <div class="row">
+                                <section class="col col-6">
+                                    <label class="input">
+                                        <input type="text" name="firstname" placeholder="First name">
+                                    </label>
+                                </section>
+                                <section class="col col-6">
+                                    <label class="input">
+                                        <input type="text" name="lastname" placeholder="Last name">
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-6">
+                                    <label class="select">
+                                        <select name="gender">
+                                            <option value="0" selected="" disabled="">Gender</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                        </select> <i></i>
+                                    </label>
+                                </section>
+                                <section class="col col-6">
+                                    <label class="input">
+                                        <i class="icon-append fa fa-calendar"></i>
+                                        <input type="text" name="request" placeholder="생년월일" class="datepicker" data-dateformat='dd/mm/yy'>
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-6">
+                                    <label class="select">
+                                        <select id="managerGrade" name="managerGrade">
+                                            <option value="" selected="" disabled="">권한 등급</option>
+                                            <option value="1">CEO </option>
+                                            <option value="2">Manager Chef. </option>
+                                            <option value="3">Manager </option>
+                                        </select> <i></i>
+                                    </label>
+                                </section>
+                                <section class="col col-6">
+                                    <label class="input"> <i class="icon-append fa fa-phone"></i>
+                                        <input type="text" name="username" placeholder="Cell Phone">
+                                        <b class="tooltip tooltip-bottom-right">전화번호를 등록해주세요.</b> </label>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <label class="input"> <i class="icon-append fa fa-file"></i>
+                                        <input type="file" name="username" placeholder="Cell Phone">
+                                        <b class="tooltip tooltip-bottom-right">사진을 등록해주세요.</b> </label>
+                                </section>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    <button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+                    <button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+                    <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+                    <!-- <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button> -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Manager</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="category"> 계정 </label>
+                                <input type="hidden" id="managerIdx" name="managerIdx" />
+                                <input type="text" id="managerId" name="managerId" class="form-control disabled" placeholder="Manager ID" required disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="category"> 이름 </label>
+                                <input type="text" id="managerNm" name="managerNm" class="form-control" placeholder="Manager Name" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="category"> 비밀번호 </label>
+                                <input type="password" id="managerPw" name="managerPw" class="form-control " placeholder="Manager PW" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="category"> 비밀번호 확인 </label>
+                                <input type="password" id="repeatManagerPw" name="repeatManagerPw" class="form-control " placeholder="Repeat Manager PW" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="category"> 핸드폰 번호 </label>
+                                <input type="text" id="phone" name="phone" class="form-control" placeholder="Manager Phone" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="category"> 이메일 </label>
+                                <input type="text" id="email" name="email" class="form-control" placeholder="Manager Phone" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    <button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
+                    <button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
+                    <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!--================================================== -->
+    <!-- smartdirect script loader-->
+    <script src="js/smartdirectcar-common-jsloader.js"></script>
+    <!-- Append External JS here-->
+    <script src="js/smartdirectcar-testdata.js"></script>
+    <script src="js/plugin/daterangepicker/moment.min.js"></script>
+    <script src="js/plugin/daterangepicker/daterangepicker.js"></script>
+    <!-- ./Append External JS here-->
+    <script>
+    // Menu Nav 
+    loadNavMenu('counseling_applications_list');
+
+    var table = null;
+    var _data = null;
+
+    $(document).ready(function() {
+
+        // DO NOT REMOVE : GLOBAL FUNCTIONS!
+        pageSetUp();
+
+        // init Table;
+        initTable();
+
+        //
+        doSearch();
+
+        $("#btnSearchApply").on("click", doSearch);
+
+        $("#btnUpdateManager").on("click", updateManager);
+
+        $("#btnInsertManager").on("click", insertManager);
+
+        $("#btnDeleteManager").on("click", deleteManager);
+
+        $("#showInsertManagerModal").on("click", function() {
+            // field Clear
+            $("#managerIdx, #managerId, #managerNm, #managerPw, #managerPw, #grade, #email, #phone").val("");
+
+            //ID Field
+            $("#managerId").removeClass("disabled").removeAttr("disabled");
+
+            // button set
+            $("#btnUpdateManager").addClass("hide");
+            $("#btnDeleteManager").addClass("hide");
+            $("#btnInsertManager").removeClass("hide");
+
+            $('#myModal').modal('show');
+        })
+
+        $('input[name="datefilter"]').daterangepicker({
+            autoUpdateInput: false,
+            autoApply: true,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        });
+
+        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+            //$(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
+            $('input[name="datefilter"]')[0].value = picker.startDate.format('YYYY-MM-DD');
+            $('input[name="datefilter"]')[1].value = picker.endDate.format('YYYY-MM-DD');
+        });
+
+        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
+    });
+
+    function initTable() {
+
+        /* // DOM Position key index //
+        
+        l - Length changing (dropdown)
+        f - Filtering input (search)
+        t - The Table! (datatable)
+        i - Information (records)
+        p - Pagination (paging)
+        r - pRocessing 
+        < and > - div elements
+        <"#id" and > - div with an id
+        <"class" and > - div with a class
+        <"#id.class" and > - div with an id and class
+        
+        Also see: http://legacy.datatables.net/usage/features
+        */
+
+        /* BASIC ;*/
+        var responsiveHelper_dt_basic = undefined;
+        var responsiveHelper_datatable_fixed_column = undefined;
+        var responsiveHelper_datatable_col_reorder = undefined;
+        var responsiveHelper_datatable_tabletools = undefined;
+
+        var breakpointDefinition = {
+            tablet: 1024,
+            phone: 480
+        };
+        table = $('#dt_basic').DataTable({
+            sDom: "<'dt-toolbar'<'col-xs-12 col-sm-6'l><'col-sm-6 col-xs-12 hidden-xs'f>r>" +
+                "t" +
+                "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+
+            // "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-6 hidden-xs'T>r>"+
+            // "t"+
+            // "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-sm-6 col-xs-12'p>>",
+            // "oTableTools": {
+            //   "aButtons": [
+            //      "copy",
+            //      "csv",
+            //      "xls",
+            //         {
+            //             "sExtends": "pdf",
+            //             "sTitle": "SmartAdmin_PDF",
+            //             "sPdfMessage": "SmartAdmin PDF Export",
+            //             "sPdfSize": "letter"
+            //         },
+            //          {
+            //              "sExtends": "print",
+            //              "sMessage": "Generated by SmartAdmin <i>(press Esc to close)</i>"
+            //          }
+            //      ],
+            //     "sSwfPath": "js/plugin/datatables/swf/copy_csv_xls_pdf.swf"
+            // },
+            autoWidth: true,
+            preDrawCallback: function() {
+                // Initialize the responsive datatables helper once.
+                if (!responsiveHelper_dt_basic) {
+                    responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
+                }
+            },
+            data: [],
+            rowCallback: function(nRow) {
+                responsiveHelper_dt_basic
+                    .createExpandIcon(nRow);
+            },
+            drawCallback: function(oSettings) {
+                responsiveHelper_dt_basic.respond();
+            },
+            columns: [{
+                data: "idx"
+            }, {
+                data: "reg_date"
+            }, {
+                data: "name"
+            }, {
+                data: "car"
+            }, {
+                data: "tel"
+            }, {
+                data: "email"
+            }, {
+                data: "manager"
+            }, {
+                data: "status"
+            }],
+            columnDefs: [{
+                "targets": [2],
+                "data": "name",
+                "render": function(data, type, row, meta) {
+                    return '<a style="color:blue;" href="javascript:moveToDetail(\'' + row["idx"] + '\');">' + data + '</a>';
+                }
+            }]
+
+        });
+    }
+
+    function doSearch() {
+
+        var data = applicationData();
+
+        _data = data;
+
+        table.clear();
+        table.rows.add(data).draw();
+
+        /*
+        $.ajax({
+            url : '/manager/selectManager',
+            data : {},
+            cache : false,
+            type : "get",
+            dataType : 'json',
+            success : function(data) {
+                
+                
+            },
+            error : function(xhr, status, error) {
+            }
+        });
+        */
+    }
+
+    function moveToDetail(idx) {
+        console.log(idx);
+
+        document.location.href = "counseling_applications_detail.html";
+    }
+
+    function showDetailModal(idx) {
+
+        var rowData = _data.filter(function(item) {
+            return (item.manager_idx == idx)
+        })
+
+        if (!$.isEmptyObject(rowData)) {
+            var data = rowData[0];
+            $("#managerIdx").val(data.manager_idx);
+            $("#managerId").val(data.manager_id);
+            $("#managerNm").val(data.manager_nm);
+            $("#managerPw").val(data.manager_pw);
+            $("#managerGrade").val(data.grade);
+            $("#email").val(data.email);
+            $("#phone").val(data.phone);
+        }
+
+        //ID Field
+        $("#managerId").addClass("disabled").prop("disabled", true);
+        //
+        $("#btnUpdateManager").removeClass("hide");
+        $("#btnDeleteManager").removeClass("hide");
+        $("#btnInsertManager").addClass("hide");
+
+        $('#myModal').modal('show');
+
+    }
+
+    function updateManager() {
+        var data = {
+            manager_idx: $("#managerIdx").val(),
+            manager_id: $("#managerId").val(),
+            manager_nm: $("#managerNm").val(),
+            manager_pw: $("#managerPw").val(),
+            grade: $("#managerGrade").val(),
+            email: $("#email").val(),
+            phone: $("#phone").val()
+        }
+
+        $.ajax({
+            url: '/manager/updateManager',
+            data: JSON.stringify(data),
+            cache: false,
+            type: "post",
+            dataType: 'json',
+            contentType: "application/json; charset=UTF-8",
+            success: function(data) {
+                $('#myModal').modal('hide');
+                doSearch();
+            },
+            error: function(xhr, status, error) {}
+        });
+    }
+
+    function insertManager() {
+
+        if ($("#smart-form-register").valid()) {
+            alert("등록 실행");
+        } else {
+            return;
+        }
+
+        alert("비행기 데이터");
+
+        var data = {
+            manager_idx: $("#managerIdx").val(),
+            manager_id: $("#managerId").val(),
+            manager_nm: $("#managerNm").val(),
+            manager_pw: $("#managerPw").val(),
+            grade: $("#managerGrade").val(),
+            email: $("#email").val(),
+            phone: $("#phone").val()
+        }
+
+
+
+
+        // $('#').validate(function(){
+        //  submitHandler: function(form) {
+        //                  alert("등록 실행!");
+        //              }
+
+
+
+        // });
+
+        // $.ajax({
+        //  url : '/manager/insertManager',
+        //  data : JSON.stringify(data),
+        //  cache : false,
+        //  type : "post",
+        //  dataType : 'json',
+        //  contentType : "application/json; charset=UTF-8",
+        //  success : function(data) {
+        //      $('#myModal').modal('hide');
+        //      doSearch();
+        //  },
+        //  error : function(xhr, status, error) {
+        //  }
+        // });
+    }
+
+    function deleteManager() {
+        if (confirm("삭제하시겠습니까?")) {
+            var data = {
+                manager_idx: $("#managerIdx").val()
+            }
+            $.ajax({
+                url: '/manager/deleteManager',
+                data: JSON.stringify(data),
+                cache: false,
+                type: "post",
+                dataType: 'json',
+                contentType: "application/json; charset=UTF-8",
+                success: function(data) {
+                    $('#myModal').modal('hide');
+                    doSearch();
+                },
+                error: function(xhr, status, error) {}
+            });
+        }
+    }
+
+    var $registerForm = $("#smart-form-register").validate({
+
+        // Rules for form validation
+        rules: {
+            username: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                minlength: 3,
+                maxlength: 20
+            },
+            passwordConfirm: {
+                required: true,
+                minlength: 3,
+                maxlength: 20,
+                equalTo: '#password'
+            },
+            firstname: {
+                required: true
+            },
+            lastname: {
+                required: true
+            },
+            gender: {
+                required: true
+            },
+            terms: {
+                required: true
+            }
+        },
+
+        // Messages for form validation
+        messages: {
+            login: {
+                required: 'Please enter your login'
+            },
+            email: {
+                required: 'Please enter your email address',
+                email: 'Please enter a VALID email address'
+            },
+            password: {
+                required: 'Please enter your password'
+            },
+            passwordConfirm: {
+                required: 'Please enter your password one more time',
+                equalTo: 'Please enter the same password as above'
+            },
+            firstname: {
+                required: 'Please select your first name'
+            },
+            lastname: {
+                required: 'Please select your last name'
+            },
+            gender: {
+                required: 'Please select your gender'
+            },
+            terms: {
+                required: 'You must agree with Terms and Conditions'
+            }
+        },
+
+        // Do not change code below
+        errorPlacement: function(error, element) {
+            error.insertAfter(element.parent());
+        }
+    });
+    </script>
+</body>
+
+</html>
