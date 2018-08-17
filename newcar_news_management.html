@@ -157,7 +157,8 @@
 						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="well-sm bg-color-white text-right">
 								<a class="btn btn-primary" type="submit" href="car_write.html">
-									<i class="fa fa-pencil-square-o"></i>신차소식등록
+									<i class="fa fa-pencil-square-o"></i>
+									신차소식등록
 								</a>
 							</div>
 
@@ -395,22 +396,7 @@
 											</div>
 											<div class="col-xs-12 col-sm-6">
 												<div class="dataTables_paginate paging_simple_numbers" id="dt_basic_paginate">
-													<ul class="pagination pagination-sm">
-														<li class="paginate_button previous disabled" aria-controls="dt_basic" tabindex="0" id="dt_basic_previous">
-															<a href="#">Previous</a>
-														</li>
-														<li class="paginate_button active" aria-controls="dt_basic" tabindex="0">
-															<a href="#">1</a>
-														</li>
-														<li class="paginate_button " aria-controls="dt_basic" tabindex="0">
-															<a href="#">2</a>
-														</li>
-														<li class="paginate_button " aria-controls="dt_basic" tabindex="0">
-															<a href="#">3</a>
-														</li>
-														<li class="paginate_button next" aria-controls="dt_basic" tabindex="0" id="dt_basic_next">
-															<a href="#">Next</a>
-														</li>
+													<ul class="pagination pagination-sm">											
 													</ul>
 												</div>
 											</div>
@@ -421,7 +407,7 @@
 				
 							</div>
 							<!-- end widget -->
-				
+							<div id="test"></div>
 						</article>
 						<!-- WIDGET END -->
 				
@@ -480,6 +466,7 @@
 
 		// Menu Nav 
 		loadNavMenu('newcar_news_management');
+		drawPagination(250);
 
 		$(document).ready(function() {
 
@@ -502,41 +489,6 @@
 			Also see: http://legacy.datatables.net/usage/features
 			*/	
 	
-			/* BASIC ;*/
-			var responsiveHelper_dt_basic = undefined;
-			var responsiveHelper_datatable_fixed_column = undefined;
-			var responsiveHelper_datatable_col_reorder = undefined;
-			var responsiveHelper_datatable_tabletools = undefined;
-			
-			var breakpointDefinition = {
-				tablet : 1024,
-				phone : 480
-			};
-			//"order": [[ 2, "desc" ],[ 1, "asc" ]],
-
-			$('#dt_basic').dataTable({
-				"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"+
-					"t"+
-					"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
-				"autoWidth" : true,
-				"order": [[ 1, "asc" ]],
-				"preDrawCallback" : function() {
-					// Initialize the responsive datatables helper once.
-					if (!responsiveHelper_dt_basic) {
-						responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
-					}
-				},
-				"rowCallback" : function(nRow) {
-					responsiveHelper_dt_basic.createExpandIcon(nRow);
-				},
-				"drawCallback" : function(oSettings) {
-					responsiveHelper_dt_basic.respond();
-				}
-			});
-	
-			/* END BASIC */
-			
-
 		})
 
 		</script>

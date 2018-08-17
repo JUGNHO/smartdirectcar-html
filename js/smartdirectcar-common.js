@@ -216,3 +216,100 @@ var loadFooter = function(){
 	$("div.page-footer").html(html.join(""));
 
 }();
+
+function drawPagination(listCnt){
+
+	var html = [];
+	var viewCnt = 20;
+	var pageCnt = parseInt(listCnt % viewCnt) > 0 ? parseInt(listCnt / viewCnt) + 1 : parseInt(listCnt / viewCnt);
+	var active = "active";
+
+	html.push('	<div class="col-sm-6 col-xs-12 hidden-xs">');
+	html.push('		<div class="dataTables_info" id="dt_basic_info" role="status" aria-live="polite">Showing ');
+	html.push('			<span class="txt-color-darken">'+'1'+'</span> to ');
+	html.push('    		<span class="txt-color-darken">'+viewCnt+'</span> of');
+	html.push('			<span class="text-primary">'+listCnt+'</span> entries');
+	html.push('		</div>');
+	html.push('</div>');
+	html.push('<div class="col-xs-12 col-sm-6">');
+	html.push('		<div class="dataTables_paginate paging_simple_numbers" id="dt_basic_paginate" listCnt='+listCnt+' viewCnt='+viewCnt+'>');
+	html.push('			<ul class="pagination pagination-sm">');
+
+	html.push('				<li class="paginate_button previous disabled" aria-controls="dt_basic" id="dt_basic_previous">');
+	html.push('    				<a href="javascript:controlPagination(\'p\');">Previous</a>');
+	html.push('				</li>');
+
+	for (var i = 0; i < pageCnt; i++) {
+
+		var tabindex = i+1;
+
+		if(tabindex <= 6 || tabindex == pageCnt){
+			html.push('				<li class="paginate_button '+active+'" aria-controls="dt_basic" tabindex="'+tabindex+'">');
+			html.push('					<a href="javascript:controlPagination('+tabindex+');">'+tabindex+'</a>');
+			html.push('				</li>');
+		}else if(tabindex == pageCnt-1){
+			html.push('				<li class="paginate_button disabled" aria-controls="datatable_col_reorder" tabindex="0">');
+			html.push('					<a href="#">…</a>');
+			html.push('				</li>');
+		}
+		active = "";
+	}
+	html.push('				<li class="paginate_button next" aria-controls="dt_basic" id="dt_basic_next">');
+	html.push('	   				<a href="javascript:controlPagination(\'n\');">Next</a>');
+	html.push('				</li>');
+	html.push('			</ul>');
+	html.push('		</div>');
+	html.push('	</div>');
+
+	$(".dt-toolbar-footer").html(html.join(""));
+	//$("#" + pageId).addClass("active");
+}
+
+function controlPagination(selIdx){
+
+	var currentIdx = $(".paginate_button.active").attr("tabindex");
+	var listCnt = $("#dt_basic_paginate").attr("listCnt");
+	var viewCnt = $("#dt_basic_paginate").attr("viewCnt");
+	var pageCnt = parseInt(listCnt % viewCnt) > 0 ? parseInt(listCnt / viewCnt) + 1 : parseInt(listCnt / viewCnt);
+
+	if(selIdx == 'p')selIdx = Number(currentIdx) - 1;
+	else if(selIdx == 'n')selIdx = Number(currentIdx) + 1;
+
+	if(selIdx <= 1){
+		$("#dt_basic_previous").addClass("disabled");
+		$("#dt_basic_next").removeClass("disabled");
+		selIdx = 1;
+	}else if(selIdx >= pageCnt){
+		$("#dt_basic_previous").removeClass("disabled");
+		$("#dt_basic_next").addClass("disabled");
+		selIdx = pageCnt;
+	}else{
+		$("#dt_basic_previous").removeClass("disabled");
+		$("#dt_basic_next").removeClass("disabled");
+	}
+
+	$(".paginate_button.active").removeClass("active");
+	$(".paginate_button[tabindex="+selIdx+"]").addClass('active');
+
+	$("#dt_basic_info span").eq(0).text("20");
+	$("#dt_basic_info span").eq(1).text("20");
+
+
+
+
+
+
+
+/*
+	if(gubun == 'p'){
+
+	}else if(gubun == 'n'){
+
+	}else{
+
+	}*/
+
+
+
+	//searchList();
+}
