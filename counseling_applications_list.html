@@ -42,6 +42,7 @@
     <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
     <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
     <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+    
 </head>
 <!--
 
@@ -125,73 +126,62 @@
         <!-- END RIBBON -->
         <!-- MAIN CONTENT -->
         <div id="content">
-            <div class="widget-body-toolbar" style="margin:0 0 0 0;">
+            <div class="widget-body-toolbar no-margin">
                 <div class="row">
                     <div class="col-md-3 col-lg-3">
-                        <div class="form-group">
-                            <label class="font-normal">등록일 From</label>
-                            <div class="input-group">
-                                <input class="form-control" id="fromDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            </div>
+                        <label class="font-normal">등록일 From ~ To</label>
+                        <div class="input-group">
+                            <input class="form-control" id="fromDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <input class="form-control" id="toDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-3">
+                        <label class="font-normal">담당자</label>
                         <div class="form-group">
-                            <label class="font-normal">등록일 To</label>
-                            <div class="input-group">
-                                <input class="form-control" id="toDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            </div>
+                            <select class="form-control col-md-12" style="width: 100%" name="keyword">
+                                <option value="">전체 조회 </option>
+                                <option value="김규호">김규호 (미처리 : 0 total : 5)</option>
+                                <option value="황성훈">황성훈 (미처리 : 0 total : 5)</option>
+                                <option value="김종욱">김종욱 (미처리 : 1 total : 6)</option>
+                                <option value="이대웅">이대웅 (미처리 : 0 total : 8)</option>
+                                <option value="박준순">박준순 (미처리 : 0 total : 7)</option>
+                                <option value="정인석">정인석 (미처리 : 0 total : 8)</option>
+                                <option value="이영진">이영진 (미처리 : 0 total : 5)</option>
+                                <option value="김정기">김정기 (미처리 : 0 total : 5)</option>
+                                <option value="노효성">노효성 (미처리 : 0 total : 4)</option>
+                                <option value="이상훈">이상훈 (미처리 : 0 total : 6)</option>
+                                <option value="양한">양한 (미처리 : 0 total : 5)</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-3">
+                        <label class="font-normal">상담상태</label>
                         <div class="form-group">
-                            <label class="font-normal">상담상태</label>
-                            <div class="form-group">
-                                <select class="form-control col-md-12" style="width: 100%" name="keyword">
-                                    <option value="상담완료">상담완료</option>
-                                    <option value="상담완료">상담완료</option>
-                                    <option value="부재">부재</option>
-                                    <option value="재상담">재상담</option>
-                                    <option value="진행중">진행중</option>
-                                    <option value="가망고객">가망고객</option>
-                                    <option value="계약완료">계약완료</option>
-                                    <option value="출고완료">출고완료</option>
-                                    <option value="취소">취소</option>
-                                </select>
-                                <!-- <select style="width:100%" class="select2">
-                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                        <option value="AK">Alaska</option>
-                                        <option value="HI">Hawaii</option>
-                                    </optgroup>
-                                    <optgroup label="Pacific Time Zone">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                    </optgroup>
-                                    <optgroup label="Mountain Time Zone">
-                                        <option value="AZ">Arizona</option>
-                                        <option value="CO">Colorado</option>
-                                        <option value="ID">Idaho</option>
-                                        <option value="MT">Montana</option><option value="NE">Nebraska</option>
-                                        <option value="NM">New Mexico</option>
-                                        <option value="ND">North Dakota</option>
-                                        <option value="UT">Utah</option>
-                                        <option value="WY">Wyoming</option>
-                                    </optgroup>
-                                </select> -->
-                            </div>
+                            <select class="form-control col-md-12" style="width: 100%" name="keyword">
+                                <option value="상담완료">상담완료</option>
+                                <option value="상담완료">상담완료</option>
+                                <option value="부재">부재</option>
+                                <option value="재상담">재상담</option>
+                                <option value="진행중">진행중</option>
+                                <option value="가망고객">가망고객</option>
+                                <option value="계약완료">계약완료</option>
+                                <option value="출고완료">출고완료</option>
+                                <option value="취소">취소</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="col-lg-3 text-right">
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-right">
                         <button class="btn btn-success" id="btnSearchApply">
                             <i class="fa fa-search"></i> <span class="hidden-mobile">조회</span>
                         </button>
                     </div>
                 </div>
             </div>
+
             <!-- widget grid -->
             <section id="widget-grid" class="">
                 <!-- row -->
@@ -293,174 +283,180 @@
     <!-- END SHORTCUT AREA -->
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Manager Registration</h4>
+                    <h3 class="modal-title" id="myModalLabel"><i class="fa fa-car fa-1x" style="color: darkgrey;"></i> 상담신청 상세보기 <span style="font-weight: bold;font-style: italic;">#225886</span></h3>
                 </div>
                 <div class="modal-body">
-                    <form id="smart-form-register" class="smart-form">
-                        <fieldset>
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-user"></i>
-                                    <input type="text" name="username" placeholder="User Account">
-                                    <b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
-                            </section>
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-                                    <input type="email" name="email" placeholder="Email address">
-                                    <b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
-                            </section>
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                    <input type="password" name="password" placeholder="Password" id="password">
-                                    <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
-                            </section>
-                            <section>
-                                <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                    <input type="password" name="passwordConfirm" placeholder="Confirm password">
-                                    <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
-                            </section>
-                        </fieldset>
-                        <fieldset>
+                    <fieldset>
+                        <legend>고객 상담 신청 내용</legend>
+                        <div class="form-group">
                             <div class="row">
-                                <section class="col col-6">
-                                    <label class="input">
-                                        <input type="text" name="firstname" placeholder="First name">
-                                    </label>
-                                </section>
-                                <section class="col col-6">
-                                    <label class="input">
-                                        <input type="text" name="lastname" placeholder="Last name">
-                                    </label>
-                                </section>
+                                <div class="col-lg-12 col-md-12">
+                                    <label>상세 접근 URL</label>
+                                    <textarea class="form-control" disabled="disabled" placeholder="Textarea" rows="5">280174&url=https://adcr.naver.com/adcr?x=ZKkylHtcbxFZLTql3HZ2GP///w==khrS6OFrqzHSjOhyJZvybkdbTuYRT8XniXAtEEGgRXSuttmpJVN2ycqMJQYYEBRxXaClJrlz5QWTkJkWo0UCx6ret5JWbMu7a49aJ8OfpSOiZOYRZ3Bf5mfU0umSfeUyfDY7whTuHBUX7gWthyZrY8+pXLaR/zW1Q4kAu5pvnrHZPlvRL4u7RoGY3EDjvpqGkX43ZSObtpuJ75m+JuFIREVu5PDQdLVDk3Zb/zrD4B8MNYPTnc6a9TMB3zzEpYeVM6BvHocLk3mu5LVqg6W9yHkADOUBjPL+D3newo1WcnEw+hGLXoh+/j</textarea>
+                                </div>
                             </div>
+                        </div>
+                        <div class="form-group">
                             <div class="row">
-                                <section class="col col-6">
-                                    <label class="select">
-                                        <select name="gender">
-                                            <option value="0" selected="" disabled="">Gender</option>
-                                            <option value="1">Male</option>
-                                            <option value="2">Female</option>
-                                        </select> <i></i>
-                                    </label>
-                                </section>
-                                <section class="col col-6">
-                                    <label class="input">
-                                        <i class="icon-append fa fa-calendar"></i>
-                                        <input type="text" name="request" placeholder="생년월일" class="datepicker" data-dateformat='dd/mm/yy'>
-                                    </label>
-                                </section>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>이름</label>
+                                    <input type="text" class="form-control readonly" value="이상민" readonly="readonly">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>연락처</label>
+                                    <input type="text" class="form-control readonly" value="010-7703-2551" readonly="readonly">
+                                </div>
                             </div>
+                        </div>
+                        <div class="form-group">
                             <div class="row">
-                                <section class="col col-6">
-                                    <label class="select">
-                                        <select id="managerGrade" name="managerGrade">
-                                            <option value="" selected="" disabled="">권한 등급</option>
-                                            <option value="1">CEO </option>
-                                            <option value="2">Manager Chef. </option>
-                                            <option value="3">Manager </option>
-                                        </select> <i></i>
-                                    </label>
-                                </section>
-                                <section class="col col-6">
-                                    <label class="input"> <i class="icon-append fa fa-phone"></i>
-                                        <input type="text" name="username" placeholder="Cell Phone">
-                                        <b class="tooltip tooltip-bottom-right">전화번호를 등록해주세요.</b> </label>
-                                </section>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>신청일시</label>
+                                    <input type="text" class="form-control readonly" value="2018년 08월 18일 19시 11분" readonly="readonly">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>처리일시</label>
+                                    <input type="text" class="form-control readonly" value="2018년 08월 19일 11시 05분" readonly="readonly">
+                                </div>
                             </div>
+                        </div>
+                        <div class="form-group">
                             <div class="row">
-                                <section class="col col-12">
-                                    <label class="input"> <i class="icon-append fa fa-file"></i>
-                                        <input type="file" name="username" placeholder="Cell Phone">
-                                        <b class="tooltip tooltip-bottom-right">사진을 등록해주세요.</b> </label>
-                                </section>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>유입사이트</label>
+                                    <input type="text" class="form-control readonly" value="구글" readonly="readonly">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>구입방법</label>
+                                    <input type="text" class="form-control readonly" value="장기렌트" readonly="readonly">
+                                </div>
                             </div>
-                        </fieldset>
-                    </form>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <label>이메일</label>
+                                    <input type="text" class="form-control readonly" value="goodjob@gmail.com" readonly="readonly">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>차종</label>
+                                    <input type="text" class="form-control readonly" value="더 뉴 소렌토" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <label>초기비용</label>
+                                    <input type="text" class="form-control readonly" value="0%" readonly="readonly">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>고객구분</label>
+                                    <input type="text" class="form-control readonly" value="" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <label>계약기간</label>
+                                    <input type="text" class="form-control readonly" value="0%" readonly="readonly">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label>요청사항</label>
+                                    <input type="text" class="form-control readonly" value="" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+                        <legend>매니저 상담 내용</legend>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <label><i class="fa fa-asterisk fa-1x" style="color: red;"></i> 배정 상담원</label>
+                                <select class="form-control" id="select-1">
+                                    <option value="미지정">미지정 </option>
+                                    <option value="김규호">김규호 (미처리 : 0 total : 5)</option>
+                                    <option value="황성훈">황성훈 (미처리 : 0 total : 5)</option>
+                                    <option value="김종욱">김종욱 (미처리 : 1 total : 6)</option>
+                                    <option value="이대웅">이대웅 (미처리 : 0 total : 8)</option>
+                                    <option value="박준순">박준순 (미처리 : 0 total : 7)</option>
+                                    <option value="정인석">정인석 (미처리 : 0 total : 8)</option>
+                                    <option value="이영진">이영진 (미처리 : 0 total : 5)</option>
+                                    <option value="김정기">김정기 (미처리 : 0 total : 5)</option>
+                                    <option value="노효성">노효성 (미처리 : 0 total : 4)</option>
+                                    <option value="이상훈">이상훈 (미처리 : 0 total : 6)</option>
+                                    <option value="양한">양한 (미처리 : 0 total : 5)</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <label><i class="fa fa-asterisk fa-1x" style="color: red;"></i> 상태</label>
+                                <select class="form-control" id="select-1">
+                                    <option>신규문의</option>
+                                    <option value="상담완료">상담완료</option>
+                                    <option value="중복">중복</option>
+                                    <option value="부재">부재</option>
+                                    <option value="재상담">재상담</option>
+                                    <option value="진행중">진행중</option>
+                                    <option value="가망고객">가망고객</option>
+                                    <option value="계약완료">계약완료</option>
+                                    <option value="출고완료">출고완료</option>
+                                    <option value="취소">취소</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa fa-asterisk fa-1x" style="color: red;"></i> 관리메모</label>
+                            <textarea class="form-control" placeholder="상담 신청 내용을 등록하세요." rows="5"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>견적서 파일 업로드</label>
+                            <form action="upload.php" class="dropzone" id="mydropzone"></form>
+                        </div>
+
+                        <!-- <div>
+                            <p id="dropzone">여기에 견적서를 업로드 해주세요!</p>
+                            <p>
+                                <button id="upload1" type="button" class="btn btn-default">견적서업로드</button>
+                            </p>
+                        </div> -->
+                        <!-- 
+                        <div class="form-group">
+                            <label>Text field</label>
+                            <input class="form-control" disabled="disabled" placeholder="Text field" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Password field</label>
+                            <input class="form-control" disabled="disabled" placeholder="Password" type="password" value="mypassword">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Textarea</label>
+                            <textarea class="form-control" disabled="disabled" placeholder="Textarea" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Readonly</label>
+                            <span class="form-control">Read only text</span>
+                        </div>
+    -->
+                    </fieldset>
+                       
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-                    <button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
-                    <button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
-                    <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="fa fa-ban"></i> 취소</button>
+                    <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> 삭제</button>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-save"></i> 저장</button>
+                    <button type="button" class="btn btn-primary hide"><i class="fa fa-plus-square-o"></i> 등록</button>
                     <!-- <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button> -->
                 </div>
             </div>
             <!-- /.modal-content -->
         </div>
-    </div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Manager</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="category"> 계정 </label>
-                                <input type="hidden" id="managerIdx" name="managerIdx" />
-                                <input type="text" id="managerId" name="managerId" class="form-control disabled" placeholder="Manager ID" required disabled />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="category"> 이름 </label>
-                                <input type="text" id="managerNm" name="managerNm" class="form-control" placeholder="Manager Name" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="category"> 비밀번호 </label>
-                                <input type="password" id="managerPw" name="managerPw" class="form-control " placeholder="Manager PW" required />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="category"> 비밀번호 확인 </label>
-                                <input type="password" id="repeatManagerPw" name="repeatManagerPw" class="form-control " placeholder="Repeat Manager PW" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="category"> 핸드폰 번호 </label>
-                                <input type="text" id="phone" name="phone" class="form-control" placeholder="Manager Phone" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="category"> 이메일 </label>
-                                <input type="text" id="email" name="email" class="form-control" placeholder="Manager Phone" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-                    <button type="button" id="btnDeleteManager" class="btn btn-primary hide">삭제</button>
-                    <button type="button" id="btnUpdateManager" class="btn btn-primary hide">수정</button>
-                    <button type="button" id="btnInsertManager" class="btn btn-primary hide">등록</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
     <!--================================================== -->
@@ -470,6 +466,9 @@
     <script src="js/smartdirectcar-testdata.js"></script>
     <script src="js/plugin/daterangepicker/moment.min.js"></script>
     <script src="js/plugin/daterangepicker/daterangepicker.js"></script>
+    <!-- DROPZONE -->
+    <script src="js/plugin/dropzone/dropzone.min.js"></script>
+
     <!-- ./Append External JS here-->
     <script>
     // Menu Nav 
@@ -529,6 +528,16 @@
         $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
             $(this).val('');
         });
+
+        $("#mydropzone").dropzone({
+            autoDiscover:false,
+            //url: "/file/post",
+            addRemoveLinks: true,
+            maxFilesize: 5.0, // MB
+            dictDefaultMessage: '<span class="text-center"><span class="font-lg visible-xs-block visible-sm-block visible-lg-block"><span class="font-lg"><i class="fa fa-caret-right text-danger"></i> Drop files <span class="font-xs">to upload</span></span><span>&nbsp&nbsp<h4 class="display-inline"> (Or Click)</h4></span>',
+            dictResponseError: 'Error uploading file!'
+        });
+
     });
 
     function initTable() {
@@ -621,7 +630,7 @@
                 "targets": [2],
                 "data": "name",
                 "render": function(data, type, row, meta) {
-                    return '<a style="color:blue;" href="javascript:moveToDetail(\'' + row["idx"] + '\');">' + data + '</a>';
+                    return '<a style="color:blue;" href="javascript:showDetailModal(\'' + row["idx"] + '\');">' + data + '</a>';
                 }
             }]
 
@@ -654,11 +663,11 @@
         */
     }
 
-    function moveToDetail(idx){
-        console.log(idx);
+    // function moveToDetail(idx){
+    //     console.log(idx);
 
-        document.location.href = "counseling_applications_detail.html";
-    }
+    //     document.location.href = "counseling_applications_detail.html";
+    // }
 
     function showDetailModal(idx) {
 
@@ -855,6 +864,8 @@
         }
     });
     </script>
+    
+  
 </body>
 
 </html>

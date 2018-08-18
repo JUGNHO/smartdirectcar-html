@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		<meta charset="utf-8">
-		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-		<title> SmartAdmin </title>
-		<meta name="description" content="">
-		<meta name="author" content="">
-			
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<!-- Basic Styles -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
-
-		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
-
-		<!-- SmartAdmin RTL Support  -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
-
-		<!-- We recommend you use "your_style.css" to override SmartAdmin
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <title> SmartAdmin </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+    <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+    <!-- SmartAdmin RTL Support  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
+    <!-- We recommend you use "your_style.css" to override SmartAdmin
 		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
 		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
-
-		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
-
-		<!-- FAVICONS -->
-		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
-
-		<!-- GOOGLE FONT -->
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
-
-		<!-- Specifying a Webpage Icon for Web Clip 
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+    <!-- Specifying a Webpage Icon for Web Clip 
 			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
-		<link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
-		
-		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		
-		<!-- Startup image for web apps -->
-		<link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-		<link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-		<link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+    <link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+    <link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
 
-		<link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+    <style>
+    .jstree-open>.jstree-anchor>.fa-folder:before {
+        content: "\f07c";
+    }
 
-	</head>
-	
-	<!--
+    .jstree-default .jstree-icon.none {
+        width: 0;
+    }
+    </style>
+
+</head>
+<!--
 
 	TABLE OF CONTENTS.
 	
@@ -85,9 +82,8 @@
 	===================================================================
 	
 	-->
-	
-	<!-- #BODY -->
-	<!-- Possible Classes
+<!-- #BODY -->
+<!-- Possible Classes
 
 		* 'smart-style-{SKIN#}'
 		* 'smart-rtl'         - Switch theme mode to RTL
@@ -100,73 +96,64 @@
 		* 'fixed-page-footer' - Fixes footer
 		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
 	-->
-	<body class="">
 
-		<!-- HEADER -->
-		<header id="header">
-		</header>
-		<!-- END HEADER -->
-
-		<!-- Left panel : Navigation area -->
-		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
-		<aside id="left-panel">
-
-			<!-- User info -->
-			<div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
+<body class="">
+    <!-- HEADER -->
+    <header id="header">
+    </header>
+    <!-- END HEADER -->
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel">
+        <!-- User info -->
+        <div class="login-info">
+            <span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
 
 					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
 						<img src="img/avatars/sunny.png" alt="me" class="online" /> 
 						<span>
 							john.doe 
 						</span>
-						<i class="fa fa-angle-down"></i>
-					</a> 
-					
-				</span>
-			</div>
-			<!-- end user info -->
-
-			<!-- NAVIGATION : This navigation is also responsive-->
-			<nav>
-				
-			</nav>
-
-			<span class="minifyme" data-action="minifyMenu"> 
+            <i class="fa fa-angle-down"></i>
+            </a>
+            </span>
+        </div>
+        <!-- end user info -->
+        <!-- NAVIGATION : This navigation is also responsive-->
+        <nav>
+        </nav>
+        <span class="minifyme" data-action="minifyMenu"> 
 				<i class="fa fa-arrow-circle-left hit"></i> 
 			</span>
-
-		</aside>
-		<!-- END NAVIGATION -->
-
-		<!-- MAIN PANEL -->
-		<div id="main" role="main">
-
-			<!-- RIBBON -->
-			<div id="ribbon">
-			</div>
-			<!-- END RIBBON -->
-
-			<!-- MAIN CONTENT -->
-			<div id="content"> 
-				<div class="widget-body-toolbar">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
-							<button class="btn btn-success" id="showInsertManagerModal">
-								<i class="fa fa-plus"></i> <span class="hidden-mobile">신규 팀 생성</span>
-							</button>
-						</div>
-					</div>
-				</div>
-				<!-- widget grid -->
-				<section id="widget-grid" class="">
-					<!-- row -->
-					<div class="row">
-						<!-- NEW WIDGET START -->
-						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<!-- Widget ID (each widget will need unique ID)-->
-							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
-								<!-- widget options:
+    </aside>
+    <!-- END NAVIGATION -->
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+        <!-- RIBBON -->
+        <div id="ribbon">
+        </div>
+        <!-- END RIBBON -->
+        <!-- MAIN CONTENT -->
+        <div id="content">
+        	<!-- <div class="widget-body-toolbar no-margin">
+                    
+                <div class="row">
+                    <div class="col-lg-12 text-right">
+                        <button class="btn btn-success" id="showInsertManagerModal">
+                            <i class="fa fa-plus"></i> <span class="hidden-mobile">조직도 상태 저장</span>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- widget grid -->
+            <section id="widget-grid" class="">
+                <!-- row -->
+                <div class="row">
+                    <!-- NEW WIDGET START -->
+                    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <!-- Widget ID (each widget will need unique ID)-->
+                        <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false">
+                            <!-- widget options:
 	                           usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 	                           
 	                           data-widget-colorbutton="false"
@@ -179,81 +166,171 @@
 	                           data-widget-sortable="false"
 	                           
 	                           -->
-								<header>
-									<span class="widget-icon"> <i class="fa fa-table"></i>
+                            <header>
+                                <span class="widget-icon"> <i class="fa fa-table"></i>
 									</span>
-									<h2>신규 상담신청 목록</h2>
-								</header>
-								<!-- widget content -->
-								<div class="widget-body">
-									
-									<div class="col-md-6 col-lg-6">
-					                    <div id="jstree_demo">
-					                    </div>
-									</div>
-									<div class="col-md-6 col-lg-6">
-										<div class="panel panel-primary">
-											<div class="panel-body">
-												<div class="row">
-													
-												</div>
-											</div>
-										</div>
-									</div>
-									
-			
-								</div>
-								<!-- end widget content -->
-							</div>
-							<!-- end widget -->
-						</article>
-						<!-- WIDGET END -->
-					</div>
-					<!-- end row -->
-					<!-- end row -->
-				</section>
-				<!-- end widget grid -->
-			</div>
-			<!-- END MAIN CONTENT -->
+                                <h2>신규 상담신청 목록</h2>
+                            </header>
+                            <!-- widget content -->
+                            <div class="widget-body">
+                                <div class="col-md-5 col-lg-5">
+                                    <div id="jstree_demo">
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-lg-7 animated fadeInLeft hide" id="profile_view">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="well well-sm">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="well well-light well-sm no-margin no-padding">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div id="myCarousel" class="carousel fade profile-carousel">
+                                                                                <!-- <div class="air air-bottom-right padding-10">
+                                                                                    <a href="javascript:void(0);" class="btn txt-color-white bg-color-teal btn-sm"><i class="fa fa-check"></i> Follow</a>&nbsp; <a href="javascript:void(0);" class="btn txt-color-white bg-color-pinkDark btn-sm"><i class="fa fa-link"></i> Connect</a>
+                                                                                </div> -->
+                                                                                <div class="air air-top-left padding-10">
+                                                                                    <h4 class="txt-color-white font-md">Jan 1, 2014</h4>
+                                                                                </div>
+                                                                                <!-- <ol class="carousel-indicators">
+                                                                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                                                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                                                                                    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                                                                                </ol> -->
+                                                                                <div class="carousel-inner">
+                                                                                    <!-- Slide 1 -->
+                                                                                    <div class="item active">
+                                                                                        <img src="img/demo/s1.jpg" alt="demo user">
+                                                                                    </div>
+                                                                                    <!-- Slide 2 -->
+                                                                                    <div class="item ">
+                                                                                        <img src="img/demo/s2.jpg" alt="demo user">
+                                                                                    </div>
+                                                                                    <!-- Slide 3 -->
+                                                                                    <div class="item ">
+                                                                                        <img src="img/demo/m3.jpg" alt="demo user">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4 profile-pic">
+                                                                                    <img src="img/avatars/sunny-big.png" alt="demo user">
+                                                                                    <div class="padding-10">
 
-		</div>
-		<!-- END MAIN PANEL -->
+                                                                                        <!-- <h4 class="font-md"><strong>1,543</strong>
+							                                                                <br>
+							                                                                <small>자동차 할당</small></h4>
+                                                                                        <br>
+                                                                                        <h4 class="font-md"><strong>419</strong>
+							                                                                <br>
+							                                                                <small>Connections</small></h4> -->
 
-		<!-- PAGE FOOTER -->
-		<div class="page-footer">
-		</div>
-		<!-- END PAGE FOOTER -->
-
-		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-8">
+                                                                                    <h1>진권 <span class="semi-bold">조</span>
+                                                            							<br>
+                                                            							<small> CEO, Smart Direct Car</small></h1>
+                                                                                    <ul class="list-unstyled">
+                                                                                        <li>
+                                                                                            <p class="text-muted">
+                                                                                                <i class="fa fa-phone"></i>&nbsp;&nbsp;(<span class="txt-color-darken">313</span>) <span class="txt-color-darken">464</span> - <span class="txt-color-darken">6473</span>
+                                                                                            </p>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <p class="text-muted">
+                                                                                                <i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:simmons@smartadmin">ceo@smartdirectcar.com</a>
+                                                                                            </p>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <p class="text-muted">
+                                                                                                <i class="fa fa-comment"></i>&nbsp;&nbsp;<span class="txt-color-darken">dafuck99</span>
+                                                                                            </p>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <p class="text-muted">
+                                                                                                <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="txt-color-darken">Free after <a href="javascript:void(0);" rel="tooltip" title="" data-placement="top" data-original-title="Create an Appointment">4:30 PM</a></span>
+                                                                                            </p>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <br>
+                                                                                    <p class="font-md">
+                                                                                        <i>여기에는 어떤 컨텐츠를 넣을지.....</i>
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+                                                                                    </p>
+                                                                                    <br>
+                                                                                    <!-- <a href="javascript:void(0);" class="btn btn-default btn-xs"><i class="fa fa-envelope-o"></i> Send Message</a>
+                                                                                    <br>
+                                                                                    <br> -->
+                                                                                </div>
+                                                                               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end row -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end widget content -->
+                        </div>
+                        <!-- end widget -->
+                    </article>
+                    <!-- WIDGET END -->
+                </div>
+                <!-- end row -->
+                <!-- end row -->
+            </section>
+            <!-- end widget grid -->
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END MAIN PANEL -->
+    <!-- PAGE FOOTER -->
+    <div class="page-footer">
+    </div>
+    <!-- END PAGE FOOTER -->
+    <!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
 		Note: These tiles are completely responsive,
 		you can add as many as you like
 		-->
-		<div id="shortcut">
-			<ul>
-				<li>
-					<a href="inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
-				</li>
-				<li>
-					<a href="calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
-				</li>
-				<li>
-					<a href="gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
-				</li>
-				<li>
-					<a href="invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
-				</li>
-				<li>
-					<a href="gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
-				</li>
-				<li>
-					<a href="profile.html" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
-				</li>
-			</ul>
-		</div>
-		<!-- END SHORTCUT AREA -->
-
-
-		<div class="modal" id="modal_manager_list" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div id="shortcut">
+        <ul>
+            <li>
+                <a href="inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+            </li>
+            <li>
+                <a href="gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+            </li>
+            <li>
+                <a href="invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+            </li>
+            <li>
+                <a href="profile.html" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+            </li>
+        </ul>
+    </div>
+    <!-- END SHORTCUT AREA -->
+    <div class="modal" id="modal_manager_list" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-lg" style="width:90%;">
             <div class="modal-content animated bounceInRight">
                 <div class="modal-header">
@@ -262,7 +339,6 @@
                 </div>
                 <div class="modal-body" style="overflow-y: auto;">
                     <div class="row">
-                       
                         <div class="col-md-12" style="text-align: right;">
                             <button class="btn btn-primary" type="button" id="btn_manager_search"><i class="fa fa-search"></i> Search</button>
                         </div>
@@ -270,20 +346,20 @@
                     <div class="row">
                         <div class="col-md-12">
                             <table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
-								<thead>
-									<tr>
-										<th data-class="expand">#</th>
-										<th><i class="fa fa-fw fa-user"></i>ID</th>
-										<th>Name</th>
-										<th data-hide="phone,tablet">Password</th>
-										<th data-hide="phone,tablet">Phone</th>
-										<th data-hide="phone,tablet">Email</th>
-										<th data-hide="phone,tablet">Grade</th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
+                                <thead>
+                                    <tr>
+                                        <th data-class="expand">#</th>
+                                        <th><i class="fa fa-fw fa-user"></i>ID</th>
+                                        <th>Name</th>
+                                        <th data-hide="phone,tablet">Password</th>
+                                        <th data-hide="phone,tablet">Phone</th>
+                                        <th data-hide="phone,tablet">Email</th>
+                                        <th data-hide="phone,tablet">Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -294,410 +370,417 @@
             </div>
         </div>
     </div>
+    <!--================================================== -->
+    <!-- smartdirect script loader-->
+    <script src="js/smartdirectcar-common-jsloader.js"></script>
+    <!-- Append External JS here-->
+    <script src="js/plugin/jsTree/jstree.min.js"></script>
+    <!-- ./Append External JS here-->
+    
+    <script>
+    // Menu Nav 
+    loadNavMenu('employee_organization');
+    var table = null;
+    var _data = null;
+    var selectedNodeObj = null;
 
-		<!--================================================== -->
-		<!-- smartdirect script loader-->
-		<script src="js/smartdirectcar-common-jsloader.js"></script>
-		
-		<!-- Append External JS here-->
-		<script src="js/plugin/jsTree/jstree.min.js"></script>
-		<!-- ./Append External JS here-->
+    $(document).ready(function() {
 
-		<style>
-		    .jstree-open > .jstree-anchor > .fa-folder:before {
-		        content: "\f07c";
-		    }
+        // DO NOT REMOVE : GLOBAL FUNCTIONS!
+        pageSetUp();
 
-		    .jstree-default .jstree-icon.none {
-		        width: 0;
-		    }
-		</style>
-		<script>
+        // init Table;
+        initTable();
 
-			// Menu Nav 
-			loadNavMenu('employee_organization');
-			var table = null;
-			var _data = null;
-			var selectedNodeObj = null;
+        $("#btn_manager_search").on("click", doSearch);
 
-			$(document).ready(function() {
-				
-				// DO NOT REMOVE : GLOBAL FUNCTIONS!
-				pageSetUp();
+        var _root = [{
+            "id": "demo_root_1",
+            "text": "SMART DIRECT CAR",
+            "type": "root",
+            "children": [{
+                "id": "team_0",
+                "text": "영업 1팀",
+                "children": [{
+                    "id": "team_0_user_0",
+                    "text": "문선민",
+                    "icon": "fa fa-user-circle-o",
+                    "type": "user"
+                }, {
+                    "id": "team_0_user_1",
+                    "text": "김규호",
+                    "type": "user"
+                }, {
+                    "id": "team_0_user_2",
+                    "text": "황성훈",
+                    "type": "user"
+                }, {
+                    "id": "team_0_user_3",
+                    "text": "김종욱",
+                    "type": "user"
+                }, {
+                    "id": "team_0_user_4",
+                    "text": "이대웅",
+                    "type": "user"
+                }, {
+                    "id": "team_0_user_5",
+                    "text": "박준순",
+                    "type": "user"
+                }],
+                "type": "team"
+            }, {
+                "id": "team_1",
+                "text": "영업 2팀",
+                "children": [{
+                    "id": "team_1_user_0",
+                    "text": "정인석",
+                    "icon": "fa fa-user-circle-o",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_1",
+                    "text": "이영진",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_2",
+                    "text": "김정기",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_3",
+                    "text": "노효성",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_4",
+                    "text": "이상훈",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_5",
+                    "text": "한",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_6",
+                    "text": "이민욱",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_7",
+                    "text": "황교철",
+                    "type": "user"
+                }, {
+                    "id": "team_1_user_8",
+                    "text": "이정수",
+                    "type": "user"
+                }],
+                "type": "team"
+            }, {
+                "id": "team_3",
+                "text": "영업 3팀",
+                "children": [{
+                    "id": "team_2_user_0",
+                    "text": "이수호",
+                    "icon": "fa fa-user-circle-o",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_1",
+                    "text": "이정수",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_2",
+                    "text": "백선웅",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_3",
+                    "text": "배진수",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_4",
+                    "text": "최빛나",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_5",
+                    "text": "홍석표",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_6",
+                    "text": "송근성",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_7",
+                    "text": "김흥식",
+                    "type": "user"
+                }, {
+                    "id": "team_2_user_8",
+                    "text": "문창민",
+                    "type": "user"
+                }],
+                "type": "team"
+            }, {
+                "id": "team_4",
+                "text": "영업 4팀",
+                "children": [],
+                "type": "team"
+            }]
+        }]
 
-				// init Table;
-				initTable();
+        $('#jstree_demo').jstree({
+            "core": {
+                "animation": 0,
+                "check_callback": true,
+                // "themes": {
+                //     "stripes": true
+                // },
+                'data': _root
+            },
+            "types": {
+                "#": {
+                    "max_children": 10,
+                    "max_depth": 3,
+                    "valid_children": ["root"]
+                },
+                "root": {
+                    "icon": "fa fa-car",
+                    "valid_children": ["team"]
+                },
+                "team": {
+                    "icon": "fa fa-group",
+                    "valid_children": ["user"]
+                },
+                "user": {
+                    "icon": "fa fa-user",
+                    "valid_children": []
+                }
+            },
+            "plugins": [
+                "contextmenu", "dnd", "state", "types"
+            ],
+            "contextmenu": {
+                "items": function($node) {
 
-				$("#btn_manager_search").on("click", doSearch);
+                    selectedNodeObj = $node;
+                    console.log($node);
 
-				var _root = [{
-				    "id": "demo_root_1",
-				    "text": "SMART DIRECT CAR",
-				    "type": "root",
-				    "children": [
-				    	{
-				    		"id": "team_0",
-				            "text": "영업 1팀",
-				            "children": [{
-				                "id": "team_0_user_0",
-				                "text": "문선민",
-				                "icon": "fa fa-user-circle-o",
-				                "type": "user"
-				            },{
-				                "id": "team_0_user_1",
-				                "text": "김규호",
-				                "type": "user"
-				            },{
-				                "id": "team_0_user_2",
-				                "text": "황성훈",
-				                "type": "user"
-				            },{
-				                "id": "team_0_user_3",
-				                "text": "김종욱",
-				                "type": "user"
-				            },{
-				                "id": "team_0_user_4",
-				                "text": "이대웅",
-				                "type": "user"
-				            },{
-				                "id": "team_0_user_5",
-				                "text": "박준순",
-				                "type": "user"
-				            }],
-				            "type": "team"
-				    	},{
-				            "id": "team_1",
-				            "text": "영업 2팀",
-				            "children": [{
-				                "id": "team_1_user_0",
-				                "text": "정인석",
-				                "icon": "fa fa-user-circle-o",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_1",
-				                "text": "이영진",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_2",
-				                "text": "김정기",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_3",
-				                "text": "노효성",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_4",
-				                "text": "이상훈",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_5",
-				                "text": "한",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_6",
-				                "text": "이민욱",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_7",
-				                "text": "황교철",
-				                "type": "user"
-				            },{
-				                "id": "team_1_user_8",
-				                "text": "이정수",
-				                "type": "user"
-				            }],
-				            "type": "team"
-				        },{
-				            "id": "team_3",
-				            "text": "영업 3팀",
-				            "children": [{
-				                "id": "team_2_user_0",
-				                "text": "이수호",
-				                "icon": "fa fa-user-circle-o",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_1",
-				                "text": "이정수",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_2",
-				                "text": "백선웅",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_3",
-				                "text": "배진수",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_4",
-				                "text": "최빛나",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_5",
-				                "text": "홍석표",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_6",
-				                "text": "송근성",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_7",
-				                "text": "김흥식",
-				                "type": "user"
-				            },{
-				                "id": "team_2_user_8",
-				                "text": "문창민",
-				                "type": "user"
-				            }],
-				            "type": "team"
-				        },{
-				            "id": "team_4",
-				            "text": "영업 4팀",
-				            "children": [],
-				            "type": "team"
-				        }
-				    ]
-				}]
+                    if ($node['type'] == 'root') {
+                        return {
+                            // "Create": {
+                            //     "separator_before": false,
+                            //     "separator_after": false,
+                            //     "label": "Create Structure",
+                            //     "action": function (obj) { 
+                            //         var node = $("#div_question_structure").jstree('create_node', $node, { "text":"Question Label", "type":"label" });
+                            //         $("#div_question_structure").jstree('edit', node);
+                            //     }
+                            // }
+                            "Create": {
+                                "separator_before": false,
+                                "separator_after": false,
+                                "label": "팀 생성",
+                                "action": function(obj) {
+                                    // var node = $("#jstree_demo").jstree('create_node', $node);
+                                    //  					$("#jstree_demo").jstree('edit', node);
+                                    var tree = $("#jstree_demo").jstree(true);
+                                    $node = tree.create_node($node, { text: '영업 00팀', type: 'team' });
 
-				$('#jstree_demo').jstree({
-				    "core": {
-				        "animation": 0,
-				        "check_callback": true,
-				        // "themes": {
-				        //     "stripes": true
-				        // },
-				        'data': _root
-				    },
-				    "types": {
-				        "#": {
-				            "max_children": 10,
-				            "max_depth": 3,
-				            "valid_children": ["root"]
-				        },
-				        "root": {
-				            "icon": "fa fa-car",
-				            "valid_children": ["team"]
-				        },
-				        "team": {
-				        	"icon": "fa fa-group",
-				            "valid_children": ["user"]
-				        },
-				        "user": {
-				            "icon": "fa fa-user",
-				            "valid_children": []
-				        }
-				    },
-				    "plugins": [
-				        "contextmenu", "dnd", "state", "types"
-				    ],
-				    "contextmenu":{         
-		                "items": function($node){
+                                    // console.log($node);
 
-		                	selectedNodeObj = $node;
-		                	console.log($node);
-		                	
-		                	if($node['type'] == 'root'){
-					            return {
-					                // "Create": {
-					                //     "separator_before": false,
-					                //     "separator_after": false,
-					                //     "label": "Create Structure",
-					                //     "action": function (obj) { 
-					                //         var node = $("#div_question_structure").jstree('create_node', $node, { "text":"Question Label", "type":"label" });
-					                //         $("#div_question_structure").jstree('edit', node);
-					                //     }
-					                // }
-					                "Create": {
-						                "separator_before": false,
-						                "separator_after": false,
-						                "label": "팀 생성",
-						                "action": function (obj) { 
-						                	// var node = $("#jstree_demo").jstree('create_node', $node);
-                       //  					$("#jstree_demo").jstree('edit', node);
-											var tree = $("#jstree_demo").jstree(true);
-                    					    $node = tree.create_node($node, { text: '영업 00팀', type: 'team' });
+                                    tree.deselect_all();
+                                    tree.select_node($node);
 
-                    					    // console.log($node);
+                                }
+                            },
+                            // "Rename": {
+                            //     "separator_before": false,
+                            //     "separator_after": false,
+                            //     "label": "Add Additional Question",
+                            //     "action": function (obj) { 
+                            //         tree.jstree('edit', $node);
+                            //     }
+                            // }
+                        }
 
-                                            tree.deselect_all();
-                                            tree.select_node($node);
+                    } else if ($node['type'] == 'team') {
 
-						                }
-						            },
-					                // "Rename": {
-					                //     "separator_before": false,
-					                //     "separator_after": false,
-					                //     "label": "Add Additional Question",
-					                //     "action": function (obj) { 
-					                //         tree.jstree('edit', $node);
-					                //     }
-					                // }
-					            }
+                        var items = {
+                        	"Rename": {
+                                "separator_before": false,
+                                "separator_after": false,
+                                "label": "팀명 수정",
+                                "action": function(obj) {
+                                    $("#jstree_demo").jstree('edit', $node);
 
-					        }else if($node['type'] == 'team'){
+                                }
+                            },
+                            "Create": {
+                                "separator_before": false,
+                                "separator_after": false,
+                                "label": "직원 추가",
+                                "action": function(obj) {
+                                    var h = $(document.body).height() - 200;
+                                    $('#modal_manager_list .modal-body').css('max-height', h + 'px');
+                                    $('#modal_manager_list').modal('show');
+                                }
+                            },
+                            "Remove": {
+                                "separator_before": false,
+                                "separator_after": false,
+                                "label": "팀 삭제",
+                                "action": function(obj) {
+                                    $("#jstree_demo").jstree('delete_node', $node);
+                                }
+                            }
+                        }
 
-					            var items = {
-					                "Create": {
-					                    "separator_before": false,
-					                    "separator_after": false,
-					                    "label": "직원 추가",
-					                    "action": function (obj) { 
+                        if ($node.children.length > 0) {
+                            items["Remove"] = null;
+                        }
 
+                        return items;
+                    } else if($node['type'] == 'user'){
+                    	var items = {
+                            "Remove": {
+                                "separator_before": false,
+                                "separator_after": false,
+                                "label": "팀에서 삭제",
+                                "action": function(obj) {
+                                    $("#jstree_demo").jstree('delete_node', $node);
+                                }
+                            }
+                        }
 
+                        if ($node.children.length > 0) {
+                            items["Remove"] = null;
+                        }
 
-					                        var h = $(document.body).height() - 200;
-					                        $('#modal_manager_list .modal-body').css('max-height', h + 'px');
-					                        $('#modal_manager_list').modal('show');
-					                    }
-					                }, 
-					                "Rename": {
-					                    "separator_before": false,
-					                    "separator_after": false,
-					                    "label": "Rename",
-					                    "action": function (obj) { 
-					                        $("#jstree_demo").jstree('edit', $node);
-
-					                    }
-					                },
-					                "Remove": {
-						                "separator_before": false,
-						                "separator_after": false,
-						                "label": "Remove",
-						                "action": function (obj) {
-						                	$("#jstree_demo").jstree('delete_node', $node);
-						                }
-						            }
-					            }
-
-					            if($node.children.length > 0){
-					            	items["Remove"] = null;
-					            }
-
-					            return items;
-					        }
-
-
-		                }
-		            }
+                        return items;
+                    }
 
 
-				});
-				
-				$('#btn_standard_question_to_structure').click(function(){
+                }
+            }
+        });
 
-			        var checkedIdx = $('input[name=manager_rdo]:checked').val();
-			        var managerObj = {};
-			        $(_data).each(function(idx, item){
-			        	if(item["manager_idx"] == checkedIdx){
-			        		managerObj = item;
-			        		return;
-			        	}
-			        })
+        $('#btn_standard_question_to_structure').click(function() {
 
-			        console.log("checkedIdx : " + checkedIdx);
-			        console.log(managerObj);
+            var checkedIdx = $('input[name=manager_rdo]:checked').val();
+            var managerObj = {};
+            $(_data).each(function(idx, item) {
+                if (item["manager_idx"] == checkedIdx) {
+                    managerObj = item;
+                    return;
+                }
+            })
 
-			        var nodeData = {
-			            "id": "teamx_" + managerObj["manager_idx"],
-			            "text": managerObj["manager_id"],
-			            "icon": "fa fa-user",
-			            "type" : "user"
-			        };
+            console.log("checkedIdx : " + checkedIdx);
+            console.log(managerObj);
 
-			        $('#jstree_demo').jstree("create_node", selectedNodeObj['id'] , nodeData, 'last', false, false); 
-			        $('#jstree_demo').jstree("open_all");
-			   		
-			   		// close modal
-		            $('#modal_manager_list').modal('hide');
-		        });
+            var nodeData = {
+                "id": "teamx_" + managerObj["manager_idx"],
+                "text": managerObj["manager_id"],
+                "icon": "fa fa-user",
+                "type": "user"
+            };
 
-			});
-			
-			function initTable() {
+            $('#jstree_demo').jstree("create_node", selectedNodeObj['id'], nodeData, 'last', false, false);
+            $('#jstree_demo').jstree("open_all");
 
-				/* BASIC ;*/
-				var responsiveHelper_dt_basic = undefined;
-				var responsiveHelper_datatable_fixed_column = undefined;
-				var responsiveHelper_datatable_col_reorder = undefined;
-				var responsiveHelper_datatable_tabletools = undefined;
+            // close modal
+            $('#modal_manager_list').modal('hide');
+        });
 
-				var breakpointDefinition = {
-					tablet : 1024,
-					phone : 480
-				};
-				table = $('#dt_basic').DataTable( {
-					sDom : "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"
-							+ "t"
-							+ "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
-					autoWidth : true,
-					preDrawCallback : function() {
-						// Initialize the responsive datatables helper once.
-						if (!responsiveHelper_dt_basic) {
-							responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'),breakpointDefinition);
-						}
-					},
-					data : [],
-					rowCallback : function(nRow) {
-						responsiveHelper_dt_basic.createExpandIcon(nRow);
-					},
-					drawCallback : function(oSettings) {
-						responsiveHelper_dt_basic.respond();
-					},
-					columns : [ {
-						data : "manager_idx"
-					}, {
-						data : "manager_id"
-					}, {
-						data : "manager_nm"
-					},{
-						data : "manager_pw"
-					}, {
-						data : "email"
-					},{
-						data : "phone"
-					},{
-						data : "grade"
-					} ],
-					columnDefs : [ {
-						"targets" : [ 0 ],
-						"data" : "manager_idx",
-						"render" : function(data, type, row, meta) {
-							return '<input type="radio" name="manager_rdo" id="' + row["manager_idx"] + '" value="' + row["manager_idx"] + '">'; 
-						}
-					}]
-				});
+        $("#jstree_demo").on("select_node.jstree", function(evt, data) {
+            if (data.node.type == "user") {
+                console.log(data.node);
 
-				
+                $("#profile_view").removeClass("hide");
+            } else {
+            	$("#profile_view").addClass("hide");
+            }
 
-			}
+        });
 
-			function doSearch() {
+    });
 
-				var data =[{"manager_idx":1,"manager_id":"smart","manager_nm":"오정호@#","email":"masay338@gmail.com","phone":"01049015584","manager_pw":"123456789@","grade":1},{"manager_idx":8,"manager_id":"문창민","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":3},{"manager_idx":9,"manager_id":"김흥식","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":3},{"manager_idx":10,"manager_id":"송근성","manager_nm":"","email":null,"phone":null,"manager_pw":"as@1468512","grade":3},{"manager_idx":11,"manager_id":"홍석표","manager_nm":"","email":null,"phone":null,"manager_pw":"0528","grade":3},{"manager_idx":14,"manager_id":"최빛나","manager_nm":"","email":null,"phone":null,"manager_pw":"a26588455","grade":3},{"manager_idx":16,"manager_id":"배진수","manager_nm":"","email":null,"phone":null,"manager_pw":"0805","grade":3},{"manager_idx":17,"manager_id":"smart2","manager_nm":"","email":null,"phone":null,"manager_pw":"123456789","grade":2},{"manager_idx":23,"manager_id":"백선웅","manager_nm":"","email":null,"phone":null,"manager_pw":"cls9944","grade":3},{"manager_idx":24,"manager_id":"이정수","manager_nm":"","email":null,"phone":null,"manager_pw":"kkangs81","grade":3},{"manager_idx":25,"manager_id":"황교철","manager_nm":"황교철","email":"","phone":"","manager_pw":"1q2w3e","grade":3},{"manager_idx":27,"manager_id":"이민욱","manager_nm":"","email":null,"phone":null,"manager_pw":"alsdnr1","grade":3},{"manager_idx":28,"manager_id":"이수호","manager_nm":"","email":null,"phone":null,"manager_pw":"hoya3031","grade":3},{"manager_idx":29,"manager_id":"양한","manager_nm":"","email":null,"phone":null,"manager_pw":"hanhan11","grade":3},{"manager_idx":30,"manager_id":"이상훈","manager_nm":"","email":null,"phone":null,"manager_pw":"ghrja123","grade":3},{"manager_idx":31,"manager_id":"노효성","manager_nm":"","email":null,"phone":null,"manager_pw":"ami01ami","grade":3},{"manager_idx":33,"manager_id":"김정기","manager_nm":"","email":null,"phone":null,"manager_pw":"reyals00","grade":3},{"manager_idx":34,"manager_id":"이영진","manager_nm":"","email":null,"phone":null,"manager_pw":"asd1016","grade":3},{"manager_idx":35,"manager_id":"정인석","manager_nm":"","email":null,"phone":null,"manager_pw":"jis2896","grade":3},{"manager_idx":36,"manager_id":"guest","manager_nm":"","email":null,"phone":null,"manager_pw":"1234","grade":4},{"manager_idx":37,"manager_id":"박준순","manager_nm":"","email":null,"phone":null,"manager_pw":"qq1234","grade":3},{"manager_idx":38,"manager_id":"이대웅","manager_nm":"","email":null,"phone":null,"manager_pw":"1818","grade":3},{"manager_idx":39,"manager_id":"김종욱","manager_nm":"","email":null,"phone":null,"manager_pw":"1188015rla","grade":3}];
+    function initTable() {
 
-				_data = data;
-						
-				table.clear();
-				table.rows.add(data).draw();
+        /* BASIC ;*/
+        var responsiveHelper_dt_basic = undefined;
+        var responsiveHelper_datatable_fixed_column = undefined;
+        var responsiveHelper_datatable_col_reorder = undefined;
+        var responsiveHelper_datatable_tabletools = undefined;
 
-				/*
-				$.ajax({
-					url : '/manager/selectManager',
-					data : {},
-					cache : false,
-					type : "get",
-					dataType : 'json',
-					success : function(data) {
-						
-						
-					},
-					error : function(xhr, status, error) {
-					}
-				});
-				*/
-			}
+        var breakpointDefinition = {
+            tablet: 1024,
+            phone: 480
+        };
+        table = $('#dt_basic').DataTable({
+            sDom: "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>" +
+                "t" +
+                "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+            autoWidth: true,
+            preDrawCallback: function() {
+                // Initialize the responsive datatables helper once.
+                if (!responsiveHelper_dt_basic) {
+                    responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
+                }
+            },
+            data: [],
+            rowCallback: function(nRow) {
+                responsiveHelper_dt_basic.createExpandIcon(nRow);
+            },
+            drawCallback: function(oSettings) {
+                responsiveHelper_dt_basic.respond();
+            },
+            columns: [{
+                data: "manager_idx"
+            }, {
+                data: "manager_id"
+            }, {
+                data: "manager_nm"
+            }, {
+                data: "manager_pw"
+            }, {
+                data: "email"
+            }, {
+                data: "phone"
+            }, {
+                data: "grade"
+            }],
+            columnDefs: [{
+                "targets": [0],
+                "data": "manager_idx",
+                "render": function(data, type, row, meta) {
+                    return '<input type="radio" name="manager_rdo" id="' + row["manager_idx"] + '" value="' + row["manager_idx"] + '">';
+                }
+            }]
+        });
 
-		</script>
 
-	</body>
+
+    }
+
+    function doSearch() {
+
+        var data = [{ "manager_idx": 1, "manager_id": "smart", "manager_nm": "오정호@#", "email": "masay338@gmail.com", "phone": "01049015584", "manager_pw": "123456789@", "grade": 1 }, { "manager_idx": 8, "manager_id": "문창민", "manager_nm": "", "email": null, "phone": null, "manager_pw": "123456789", "grade": 3 }, { "manager_idx": 9, "manager_id": "김흥식", "manager_nm": "", "email": null, "phone": null, "manager_pw": "123456789", "grade": 3 }, { "manager_idx": 10, "manager_id": "송근성", "manager_nm": "", "email": null, "phone": null, "manager_pw": "as@1468512", "grade": 3 }, { "manager_idx": 11, "manager_id": "홍석표", "manager_nm": "", "email": null, "phone": null, "manager_pw": "0528", "grade": 3 }, { "manager_idx": 14, "manager_id": "최빛나", "manager_nm": "", "email": null, "phone": null, "manager_pw": "a26588455", "grade": 3 }, { "manager_idx": 16, "manager_id": "배진수", "manager_nm": "", "email": null, "phone": null, "manager_pw": "0805", "grade": 3 }, { "manager_idx": 17, "manager_id": "smart2", "manager_nm": "", "email": null, "phone": null, "manager_pw": "123456789", "grade": 2 }, { "manager_idx": 23, "manager_id": "백선웅", "manager_nm": "", "email": null, "phone": null, "manager_pw": "cls9944", "grade": 3 }, { "manager_idx": 24, "manager_id": "이정수", "manager_nm": "", "email": null, "phone": null, "manager_pw": "kkangs81", "grade": 3 }, { "manager_idx": 25, "manager_id": "황교철", "manager_nm": "황교철", "email": "", "phone": "", "manager_pw": "1q2w3e", "grade": 3 }, { "manager_idx": 27, "manager_id": "이민욱", "manager_nm": "", "email": null, "phone": null, "manager_pw": "alsdnr1", "grade": 3 }, { "manager_idx": 28, "manager_id": "이수호", "manager_nm": "", "email": null, "phone": null, "manager_pw": "hoya3031", "grade": 3 }, { "manager_idx": 29, "manager_id": "양한", "manager_nm": "", "email": null, "phone": null, "manager_pw": "hanhan11", "grade": 3 }, { "manager_idx": 30, "manager_id": "이상훈", "manager_nm": "", "email": null, "phone": null, "manager_pw": "ghrja123", "grade": 3 }, { "manager_idx": 31, "manager_id": "노효성", "manager_nm": "", "email": null, "phone": null, "manager_pw": "ami01ami", "grade": 3 }, { "manager_idx": 33, "manager_id": "김정기", "manager_nm": "", "email": null, "phone": null, "manager_pw": "reyals00", "grade": 3 }, { "manager_idx": 34, "manager_id": "이영진", "manager_nm": "", "email": null, "phone": null, "manager_pw": "asd1016", "grade": 3 }, { "manager_idx": 35, "manager_id": "정인석", "manager_nm": "", "email": null, "phone": null, "manager_pw": "jis2896", "grade": 3 }, { "manager_idx": 36, "manager_id": "guest", "manager_nm": "", "email": null, "phone": null, "manager_pw": "1234", "grade": 4 }, { "manager_idx": 37, "manager_id": "박준순", "manager_nm": "", "email": null, "phone": null, "manager_pw": "qq1234", "grade": 3 }, { "manager_idx": 38, "manager_id": "이대웅", "manager_nm": "", "email": null, "phone": null, "manager_pw": "1818", "grade": 3 }, { "manager_idx": 39, "manager_id": "김종욱", "manager_nm": "", "email": null, "phone": null, "manager_pw": "1188015rla", "grade": 3 }];
+
+        _data = data;
+
+        table.clear();
+        table.rows.add(data).draw();
+
+        /*
+        $.ajax({
+        	url : '/manager/selectManager',
+        	data : {},
+        	cache : false,
+        	type : "get",
+        	dataType : 'json',
+        	success : function(data) {
+        		
+        		
+        	},
+        	error : function(xhr, status, error) {
+        	}
+        });
+        */
+    }
+    </script>
+</body>
 
 </html>
