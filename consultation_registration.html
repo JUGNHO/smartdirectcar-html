@@ -147,7 +147,191 @@
 
 			<!-- MAIN CONTENT -->
 			<div id="content">
-				상담신청 목록
+				<section id="widget-grid" class="">
+				
+					<!-- row -->
+					<div class="row">
+
+						<!-- NEW WIDGET START -->
+						<article class="col-sm-12 col-md-12 col-lg-12">
+				
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-red" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-togglebutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+				
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+				
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-pencil-square-o"></i> </span>
+									<h2>관리자 상담등록</h2>
+				
+								</header>
+				
+								<!-- widget div-->
+								<div>
+				
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+				
+									</div>
+									<!-- end widget edit box -->
+				
+									<!-- widget content -->
+									<div class="widget-body">
+				
+										<form class="form-horizontal" id="writeForm" method="post">
+											
+											<fieldset>
+												<!-- <legend>관리자 상담등록</legend> -->
+												<div class="form-group">
+													<label class="col-md-2 control-label">구입방법</label>
+													<div class="col-md-10">
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="buy-way" checked>
+															<span>리스</span> 
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="buy-way">
+															<span>장기렌트</span>  
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="buy-way">
+															<span>신차할부</span> 
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="buy-way">
+															<span>할부형렌트</span> 
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">이름</label>
+													<div class="col-md-10">
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="name-path" checked>
+															<span>전화문의</span> 
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="name-path">
+															<span>옐로아이디</span>  
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="name-path">
+															<span>다나와핫딜</span> 
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label"></label>
+													<div class="col-md-10">
+														<input class="form-control" placeholder="이름" id="name" type="text">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">연락처</label>
+													<div class="col-md-10">
+														<input class="form-control" placeholder="연락처" id="tel" type="text" width="50%">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">차종</label>
+													<div class="col-md-10">
+														<input class="form-control" placeholder="희망차종" id="carInfo" type="text" width="50%">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">고객구분</label>
+													<div class="col-md-10">
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="custom-gubun" checked>
+															<span>개인</span> 
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="custom-gubun">
+															<span>개인사업자</span>  
+														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="custom-gubun">
+															<span>법인</span> 
+														</label>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">기간</label>
+													<div class="col-md-10">
+														<select class="form-control" id="peirod">
+															<option>선택하세요.</option>
+															<option>24개월</option>
+															<option>36개월</option>
+															<option>48개월</option>
+															<option>60개월</option>
+														</select> 
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">요청사항</label>
+													<!-- widget div-->
+													<div class="col-md-10">
+														<!-- widget edit box -->
+														<div class="jarviswidget-editbox">
+															<!-- This area used as dropdown edit box -->
+														</div>
+														<!-- end widget edit box -->
+														<!-- widget content -->
+														<div class="summernote"></div>
+														<!-- end widget content -->
+													</div>
+													<!-- end widget div -->
+												</div>
+											</fieldset>
+
+											<div class="form-actions">
+												<div class="row">
+													<div class="col-md-4 text-left">
+														<a class="btn btn-default" type="submit" href="hot_deal_management.html">
+															<i class="fa fa-list"></i>
+															목록으로
+														</a>
+													</div>
+													<div class="col-md-8">
+														<button class="btn btn-primary" type="submit">
+															<i class="fa fa-save"></i>
+															저장
+														</button>
+													</div>
+												</div>
+											</div>
+				
+										</form>
+				
+									</div>
+									<!-- end widget content -->
+				
+								</div>
+								<!-- end widget div -->
+				
+							</div>
+							<!-- end widget -->
+				
+						</article>
+						<!-- WIDGET END -->
+				
+					</div>
+				
+					<!-- end row -->
+				
+				</section>
+				<!-- end widget grid -->
 			</div>
 			<!-- END MAIN CONTENT -->
 
@@ -188,26 +372,48 @@
 		<!-- END SHORTCUT AREA -->
 
 		<!--================================================== -->
-
-		<!--================================================== -->
 		<!-- smartdirect script loader-->
 		<script src="js/smartdirectcar-common-jsloader.js"></script>
 		
-		<!-- Append External JS here-->
-		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@-->
-		<!-- ./Append External JS here-->
-		
+		<!-- PAGE RELATED PLUGIN(S) -->
+		<script src="js/plugin/summernote/summernote.min.js"></script>
+
 		<script>
 
-			// Menu Nav 
-			loadNavMenu('consultation_registration');
+		// Menu Nav 
+		loadNavMenu('consultation_registration');
 
-			$(document).ready(function() {
+		$(document).ready(function() {
 
-				// DO NOT REMOVE : GLOBAL FUNCTIONS!
-				pageSetUp();
+			// DO NOT REMOVE : GLOBAL FUNCTIONS!
+			pageSetUp();
+			/* // DOM Position key index //
+	
+			l - Length changing (dropdown)
+			f - Filtering input (search)
+			t - The Table! (datatable)
+			i - Information (records)
+			p - Pagination (paging)
+			r - pRocessing 
+			< and > - div elements
+			<"#id" and > - div with an id
+			<"class" and > - div with a class
+			<"#id.class" and > - div with an id and class
+			
+			Also see: http://legacy.datatables.net/usage/features
+			*/	
 
+			/*
+			 * SUMMERNOTE EDITOR
+			 */
+			
+			$('.summernote').summernote({
+				height : 180,
+				focus : false,
+				tabsize : 2
 			});
+
+		});
 
 		</script>
 
