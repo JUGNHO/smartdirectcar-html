@@ -146,10 +146,10 @@ function loadNavMenu(pageId){
 	html.push('	   		<a href="#"><i class="fa fa-lg fa-fw fa-group"></i> <span class="menu-item-parent">Manager Management</span></a>');
 	html.push('	   		<ul>');
 	html.push('	   			<li id="employee_management">');
-	html.push('		   			<a href="employee_management.html" title="Employee Management"><i class="fa fa-lg fa-fw fa-user"></i> <span class="menu-item-parent">직원 관리</span></a>');
+	html.push('		   			<a href="employee_management.html" title="Employee Management"><i class="fa fa-lg fa-fw fa-user"></i> <span class="menu-item-parent">직원관리</span></a>');
 	html.push('	   			</li>');
 	html.push('	   			<li id="employee_organization">');
-	html.push('		   			<a href="employee_organization.html" title="Employee Organization"><i class="fa fa-lg fa-fw fa-sitemap"></i> <span class="menu-item-parent">조직도 관리</span></a>');
+	html.push('		   			<a href="employee_organization.html" title="Employee Organization"><i class="fa fa-lg fa-fw fa-sitemap"></i> <span class="menu-item-parent">조직도관리</span></a>');
 	html.push('	   			</li>');
 	html.push('	   		</ul>');
 	html.push('	   </li>');
@@ -158,10 +158,10 @@ function loadNavMenu(pageId){
 	html.push('	   		<a href="#"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Home Management</span></a>');
 	html.push('	   		<ul>');
 	html.push('	   			<li id="hot_deal_management">');
-	html.push('					<a href="hot_deal_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-fire"></i> <span class="menu-item-parent">핫딜 관리</span></a>');
+	html.push('					<a href="hot_deal_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-fire"></i> <span class="menu-item-parent">핫딜관리</span></a>');
 	html.push('	   			</li>');
 	html.push('	   			<li id="post_goods_management">');
-	html.push('		   			<a href="post_goods_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-clipboard"></i> <span class="menu-item-parent">출고 후기</span></a>');
+	html.push('		   			<a href="post_goods_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-clipboard"></i> <span class="menu-item-parent">출고후기</span></a>');
 	html.push('	   			</li>');
 	html.push('	   			<li id="post_construction_management">');
 	html.push('		   			<a href="post_construction_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-wrench"></i> <span class="menu-item-parent">시공후기</span></a>');
@@ -185,7 +185,7 @@ function loadNavMenu(pageId){
 	html.push('					<a href="#" title="HotDeal"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">마스터 코드 관리(예정)</span></a>');
 	html.push('	   			</li>');
 	html.push('	   			<li id="car_management">');
-	html.push('		   			<a href="car_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-car"></i> <span class="menu-item-parent">차량 관리</span></a>');
+	html.push('		   			<a href="car_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-car"></i> <span class="menu-item-parent">차량관리</span></a>');
 	html.push('	   			</li>');
 	html.push('	   		</ul>');
 	html.push('	   	</li>');
@@ -217,12 +217,12 @@ var loadFooter = function(){
 
 }();
 
+var pageTye = "full_numbers"; 
 function drawPagination(listCnt){
 
 	var html = [];
 	var viewCnt = 20;
 	var pageCnt = parseInt(listCnt % viewCnt) > 0 ? parseInt(listCnt / viewCnt) + 1 : parseInt(listCnt / viewCnt);
-	var active = "active";
 
 	html.push('	<div class="col-sm-6 col-xs-12 hidden-xs">');
 	html.push('		<div class="dataTables_info" id="dt_basic_info" role="status" aria-live="polite">Showing ');
@@ -231,21 +231,60 @@ function drawPagination(listCnt){
 	html.push('			<span class="text-primary">'+listCnt+'</span> entries');
 	html.push('		</div>');
 	html.push('</div>');
+
 	html.push('<div class="col-xs-12 col-sm-6">');
-	html.push('		<div class="dataTables_paginate paging_simple_numbers" id="dt_basic_paginate" listCnt='+listCnt+' viewCnt='+viewCnt+'>');
+	html.push('		<div class="dataTables_paginate paging_full_numbers" id="dt_basic_paginate" listCnt='+listCnt+' viewCnt='+viewCnt+'>');
 	html.push('			<ul class="pagination pagination-sm">');
 
-	html.push('				<li class="paginate_button previous disabled" aria-controls="dt_basic" id="dt_basic_previous">');
-	html.push('    				<a href="javascript:controlPagination(\'p\');">Previous</a>');
+	if(pageTye == "full_numbers"){
+		html.push('				<li class="paginate_button first disabled" aria-controls="dt_basic" tabindex="0" id="dt_basic_first">');
+		html.push('    				<a href="#">First</a>');
+		html.push('				</li>');
+	}
+	html.push('				<li class="paginate_button previous disabled" aria-controls="dt_basic" tabindex="0" id="dt_basic_previous">');
+	html.push('    				<a href="#">Previous</a>');
 	html.push('				</li>');
 
-	for (var i = 0; i < pageCnt; i++) {
+	//html = html.concat(reorderPagination(pageCnt));
 
+	html.push('				<li class="paginate_button next" aria-controls="dt_basic" tabindex="0" id="dt_basic_next">');
+	html.push('	   				<a href="#">Next</a>');
+	html.push('				</li>');
+
+	if(pageTye == "full_numbers"){
+		html.push('				<li class="paginate_button last" aria-controls="dt_basic" tabindex="0" id="dt_basic_last">');
+		html.push('    				<a href="#">Last</a>');
+		html.push('				</li>');
+	}
+
+	html.push('			</ul>');
+	html.push('		</div>');
+	html.push('	</div>');
+
+	$(".dt-toolbar-footer").html(html.join(""));
+	//$("#" + pageId).addClass("active");
+
+	$('.paginate_button').click(function(){
+		controlPagination(this);
+		return false;
+	});
+
+	//alert($(".pagination").children("li").length);
+
+}
+
+function reorderPagination(pageCnt){
+	var html = [];
+	var active = "active";
+
+	var stTabIdx = $(".pagination").children("li").length;
+	var stLiIdx = pageTye == "full_numbers" ? 2 : 1;
+
+	for (var i = stTabIdx; i < pageCnt; i++) {
 		var tabindex = i+1;
-
 		if(tabindex <= 6 || tabindex == pageCnt){
 			html.push('				<li class="paginate_button '+active+'" aria-controls="dt_basic" tabindex="'+tabindex+'">');
-			html.push('					<a href="javascript:controlPagination('+tabindex+');">'+tabindex+'</a>');
+			html.push('					<a href="#">'+tabindex+'</a>');
 			html.push('				</li>');
 		}else if(tabindex == pageCnt-1){
 			html.push('				<li class="paginate_button disabled" aria-controls="datatable_col_reorder" tabindex="0">');
@@ -254,45 +293,68 @@ function drawPagination(listCnt){
 		}
 		active = "";
 	}
-	html.push('				<li class="paginate_button next" aria-controls="dt_basic" id="dt_basic_next">');
-	html.push('	   				<a href="javascript:controlPagination(\'n\');">Next</a>');
-	html.push('				</li>');
-	html.push('			</ul>');
-	html.push('		</div>');
-	html.push('	</div>');
+	return html;
 
-	$(".dt-toolbar-footer").html(html.join(""));
-	//$("#" + pageId).addClass("active");
+
+
+	var li = $(".pagination").children("li")
+/*undefined
+li[2]
+<li class=​"paginate_button active" aria-controls=​"dt_basic" tabindex=​"1">​…​</li>​<a href=​"#">​1​</a>​</li>​
+var test = li[2]
+undefined
+$(test).attr("tabindex",0)
+
+*/
+
 }
 
-function controlPagination(selIdx){
+function controlPagination(obj){
 
-	var currentIdx = $(".paginate_button.active").attr("tabindex");
-	var listCnt = $("#dt_basic_paginate").attr("listCnt");
-	var viewCnt = $("#dt_basic_paginate").attr("viewCnt");
+	var selIdx = Number($(obj).children().text());
+	var currentIdx = Number($(".paginate_button.active").children().text());
+	var listCnt = Number($("#dt_basic_paginate").attr("listCnt"));
+	var viewCnt = Number($("#dt_basic_paginate").attr("viewCnt"));
 	var pageCnt = parseInt(listCnt % viewCnt) > 0 ? parseInt(listCnt / viewCnt) + 1 : parseInt(listCnt / viewCnt);
 
-	if(selIdx == 'p')selIdx = Number(currentIdx) - 1;
-	else if(selIdx == 'n')selIdx = Number(currentIdx) + 1;
+	if($(obj).hasClass("previous"))selIdx = currentIdx - 1;
+	else if($(obj).hasClass("next"))selIdx = currentIdx + 1;
 
 	if(selIdx <= 1){
+		$("#dt_basic_first").addClass("disabled");
 		$("#dt_basic_previous").addClass("disabled");
 		$("#dt_basic_next").removeClass("disabled");
+		$("#dt_basic_last").removeClass("disabled");
 		selIdx = 1;
 	}else if(selIdx >= pageCnt){
+		$("#dt_basic_first").removeClass("disabled");
 		$("#dt_basic_previous").removeClass("disabled");
 		$("#dt_basic_next").addClass("disabled");
+		$("#dt_basic_last").addClass("disabled");
 		selIdx = pageCnt;
 	}else{
+		$("#dt_basic_first").removeClass("disabled");
 		$("#dt_basic_previous").removeClass("disabled");
 		$("#dt_basic_next").removeClass("disabled");
+		$("#dt_basic_last").removeClass("disabled");
+	}
+
+	if(selIdx <= 4){
+
+	}else if(selIdx >= pageCnt-4){
+
+	}else{
+
 	}
 
 	$(".paginate_button.active").removeClass("active");
-	$(".paginate_button[tabindex="+selIdx+"]").addClass('active');
+	$(obj).addClass('active');
 
-	$("#dt_basic_info span").eq(0).text("20");
-	$("#dt_basic_info span").eq(1).text("20");
+	var stPageIdx = viewCnt*(selIdx-1);
+	$("#dt_basic_info span").eq(0).text(stPageIdx+1);
+
+	var enPageIdx = stPageIdx+viewCnt > listCnt ? listCnt : stPageIdx+viewCnt;
+	$("#dt_basic_info span").eq(1).text(enPageIdx);
 
 
 
