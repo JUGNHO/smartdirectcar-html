@@ -21,3 +21,13 @@
  .widget-body-toolbar{
  	margin: 0 0 0 0;
  }
+
+.search_field{
+	display: block;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(0,0,0,.2);
+    font-size: 16px;
+    font-weight: 300;
+    color: #222;
+    margin: 8px 1px;
+}
