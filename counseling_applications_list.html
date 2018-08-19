@@ -18,8 +18,8 @@
     <!-- SmartAdmin RTL Support  -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
     <!-- We recommend you use "your_style.css" to override SmartAdmin
-             specific styles this will also ensure you retrain your customization with each SmartAdmin update.
-        <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+             specific styles this will also ensure you retrain your customization with each SmartAdmin update.-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> 
     <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
     <!-- Date range picker-->
     <link rel="stylesheet" type="text/css" href="css/plugins/daterangepicker/daterangepicker.css" />
@@ -127,7 +127,7 @@
         <!-- MAIN CONTENT -->
         <div id="content">
             <div class="widget-body-toolbar no-margin">
-                <div class="row">
+                <div class="row search_field">
                     <div class="col-md-3 col-lg-3">
                         <label class="font-normal">등록일 From ~ To</label>
                         <div class="input-group">
@@ -214,7 +214,7 @@
                                 <!-- widget edit box -->
                                 <div class="jarviswidget-editbox">
                                     <!-- This area used as dropdown edit box -->
-                                    <input class="form-control" type="text">
+                                    <!-- <input class="form-control" type="text"> -->
                                 </div>
                                 <!-- end widget edit box -->
                                 <!-- widget content -->
@@ -223,12 +223,12 @@
                                         <thead>
                                             <tr>
                                                 <th data-class="expand">#</th>
-                                                <th><i class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i>등록일</th>
-                                                <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>신청자</th>
-                                                <th data-hide="phone,tablet"><i class="fa fa-fw fa-car text-muted hidden-md hidden-sm hidden-xs"></i> 차종</th>
-                                                <th data-hide="phone,tablet"><i class="fa fa-fw fa-phone text-muted hidden-md hidden-sm hidden-xs"></i> Phone</th>
-                                                <th data-hide="phone,tablet"><i class="fa fa-fw fa-envelope text-muted hidden-md hidden-sm hidden-xs"></i> Email</th>
-                                                <th data-hide="phone,tablet"><i class="fa fa-fw fa-user-circle text-muted hidden-md hidden-sm hidden-xs"></i> 관리담당(상담원)</th>
+                                                <th>등록일</th>
+                                                <th>신청자</th>
+                                                <th data-hide="phone,tablet">차종</th>
+                                                <th data-hide="phone,tablet">Phone</th>
+                                                <th data-hide="phone,tablet">Email</th>
+                                                <th data-hide="phone,tablet">관리담당(상담원)</th>
                                                 <th data-hide="phone,tablet">상태</th>
                                             </tr>
                                         </thead>
