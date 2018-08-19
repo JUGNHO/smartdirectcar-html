@@ -636,6 +636,15 @@
                 "width": "7%"
             }],
             columnDefs: [{
+                "targets": [0],
+                "data": "idx",
+                "render": function(data, type, row, meta) {
+                    return '<label class="checkbox"><input type="checkbox" name="checkbox" checked="checked"><i></i>'+data+'</label>';
+
+
+
+                }
+            },{
                 "targets": [2],
                 "data": "name",
                 "render": function(data, type, row, meta) {
