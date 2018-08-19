@@ -222,6 +222,7 @@
                                     <table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
                                         <thead>
                                             <tr>
+                                                <th data-class="expand"></th>
                                                 <th data-class="expand">#</th>
                                                 <th>등록일</th>
                                                 <th>신청자</th>
@@ -625,6 +626,7 @@
             //      ],
             //     "sSwfPath": "js/plugin/datatables/swf/copy_csv_xls_pdf.swf"
             // },
+            order: [[ 1, "desc" ]],
             autoWidth: true,
             preDrawCallback: function() {
                 // Initialize the responsive datatables helper once.
@@ -641,6 +643,9 @@
                 responsiveHelper_dt_basic.respond();
             },
             columns: [{
+                data: "",
+                "width": "3%"
+            },{
                 data: "idx",
                 "width": "7%"
             }, {
@@ -668,10 +673,7 @@
                 "targets": [0],
                 "data": "idx",
                 "render": function(data, type, row, meta) {
-                    return '<label class="checkbox-inline"><input type="checkbox" class="checkbox style-0"><span>' + data + '</span></label>';
-
-
-
+                    return '<label class="checkbox-inline"><input type="checkbox" class="checkbox style-0" value="'+data+'"><span></span></label>';
                 }
             }, {
                 "targets": [2],
