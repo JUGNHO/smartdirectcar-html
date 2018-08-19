@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
     <!-- We recommend you use "your_style.css" to override SmartAdmin
              specific styles this will also ensure you retrain your customization with each SmartAdmin update.-->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css">
     <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
     <!-- Date range picker-->
     <link rel="stylesheet" type="text/css" href="css/plugins/daterangepicker/daterangepicker.css" />
@@ -42,7 +42,6 @@
     <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
     <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
     <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
-    
 </head>
 <!--
 
@@ -160,7 +159,7 @@
                         <label class="font-normal">상담상태</label>
                         <div class="form-group">
                             <select class="form-control col-md-12" style="width: 100%" name="keyword">
-                                <option value="상담완료">상담완료</option>
+                                <option value="">전체조회</option>
                                 <option value="상담완료">상담완료</option>
                                 <option value="부재">부재</option>
                                 <option value="재상담">재상담</option>
@@ -175,14 +174,15 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-right">
+                        <button class="btn btn-primary" id="btnAssignManager">
+                            <i class="fa fa-user-circle-o"></i> 담당 팀장 할당
+                        </button>
                         <button class="btn btn-primary" id="btnSearchApply">
-                            <i class="fa fa-search"></i>
-                            조회
+                            <i class="fa fa-search"></i> 조회
                         </button>
                     </div>
                 </div>
             </div>
-
             <!-- widget grid -->
             <section id="widget-grid" class="">
                 <!-- row -->
@@ -413,12 +413,10 @@
                             <label><i class="fa fa-asterisk fa-1x" style="color: red;"></i> 관리메모</label>
                             <textarea class="form-control" placeholder="상담 신청 내용을 등록하세요." rows="5"></textarea>
                         </div>
-                        
                         <div class="form-group">
                             <label>견적서 파일 업로드</label>
                             <form action="upload.php" class="dropzone" id="mydropzone"></form>
                         </div>
-
                         <!-- <div>
                             <p id="dropzone">여기에 견적서를 업로드 해주세요!</p>
                             <p>
@@ -447,7 +445,6 @@
                         </div>
     -->
                     </fieldset>
-                       
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="fa fa-ban"></i> 취소</button>
@@ -461,6 +458,37 @@
         </div>
     </div>
     <!-- /.modal -->
+    <!-- -->
+    <div class="modal fade" id="assignManagerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title"><i class="fa fa-user-circle-o fa-1x" style="color: darkred;"></i> 팀장 할당 </h3>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <div class="row">
+                            <label><i class="fa fa-asterisk fa-1x" style="color: red;"></i> 배정 팀장</label>
+                            <select class="form-control" id="select-1">
+                                <option value="미지정">미지정 </option>
+                                <option value="김규호">김규호 (영업 1팀장) (미처리 할당수 : 10)</option>
+                                <option value="황성훈">황성훈 (영업 2팀장) (미처리 할당수 : 11)</option>
+                                <option value="김종욱">김종욱 (영업 3팀장) (미처리 할당수 : 10)</option>
+                                <option value="이대웅">이대웅 (영업 4팀장) (미처리 할당수 : 0)</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="fa fa-ban"></i> 취소</button>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-save"></i> 저장</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+    </div>
+    <!-- -->
     <!--================================================== -->
     <!-- smartdirect script loader-->
     <script src="js/smartdirectcar-common-jsloader.js"></script>
@@ -470,7 +498,6 @@
     <script src="js/plugin/daterangepicker/daterangepicker.js"></script>
     <!-- DROPZONE -->
     <script src="js/plugin/dropzone/dropzone.min.js"></script>
-
     <!-- ./Append External JS here-->
     <script>
     // Menu Nav 
@@ -489,6 +516,8 @@
 
         //
         doSearch();
+
+        $("#btnAssignManager").on("click", assignManager);
 
         $("#btnSearchApply").on("click", doSearch);
 
@@ -532,7 +561,7 @@
         });
 
         $("#mydropzone").dropzone({
-            autoDiscover:false,
+            autoDiscover: false,
             //url: "/file/post",
             addRemoveLinks: true,
             maxFilesize: 5.0, // MB
@@ -571,9 +600,9 @@
             phone: 480
         };
         table = $('#dt_basic').DataTable({
-            "sDom": "<'dt-toolbar'<'col-sm-6 col-xs-12 hidden-xs'l><'col-xs-12 col-sm-6'f>r>"+
-                    "t"+
-                    "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+            "sDom": "<'dt-toolbar'<'col-sm-6 col-xs-12 hidden-xs'l><'col-xs-12 col-sm-6'f>r>" +
+                "t" +
+                "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 
             // "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-6 hidden-xs'T>r>"+
             // "t"+
@@ -639,12 +668,12 @@
                 "targets": [0],
                 "data": "idx",
                 "render": function(data, type, row, meta) {
-                    return '<label class="checkbox"><input type="checkbox" name="checkbox" checked="checked"><i></i>'+data+'</label>';
+                    return '<label class="checkbox-inline"><input type="checkbox" class="checkbox style-0"><span>' + data + '</span></label>';
 
 
 
                 }
-            },{
+            }, {
                 "targets": [2],
                 "data": "name",
                 "render": function(data, type, row, meta) {
@@ -761,9 +790,6 @@
             phone: $("#phone").val()
         }
 
-
-
-
         // $('#').validate(function(){
         //  submitHandler: function(form) {
         //                  alert("등록 실행!");
@@ -808,6 +834,12 @@
                 error: function(xhr, status, error) {}
             });
         }
+    }
+
+    function assignManager() {
+
+        $("#assignManagerModal").modal("show");
+
     }
 
     var $registerForm = $("#smart-form-register").validate({
@@ -882,8 +914,6 @@
         }
     });
     </script>
-    
-  
 </body>
 
 </html>
