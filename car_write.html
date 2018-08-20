@@ -227,34 +227,6 @@
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-2 control-label">차량등급</label>
-													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2">
-															<option value="2.0">2.0</option>
-															<option value="2.2">2.2</option>
-															<option value="2.5">2.5</option>
-															<option value="3.6">3.6</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label">연료타입</label>
-													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2">
-															<option value="가솔린">가솔린</option>
-															<option value="디젤">디젤</option>
-															<option value="하이브리드">하이브리드</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-md-2 control-label">연비</label>
-													<div class="col-md-10">
-														<input class="form-control" placeholder="연비" type="text">
-													</div>
-												</div>
-												<div class="form-group">
 													<label class="col-md-2 control-label">차량정보</label>
 													<div class="col-md-10">
 														<input class="form-control" placeholder="차량정보" type="text">
@@ -271,7 +243,7 @@
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
 													</div>
-													<label class="col-md-2 control-label">신차종료가</label>
+													<label class="col-md-2 control-label group_label">신차종료가</label>
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
 													</div>
@@ -281,7 +253,7 @@
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
 													</div>
-													<label class="col-md-2 control-label">렌트종료가</label>
+													<label class="col-md-2 control-label group_label">렌트종료가</label>
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
 													</div>
@@ -291,7 +263,7 @@
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
 													</div>
-													<label class="col-md-2 control-label">리스종료가</label>
+													<label class="col-md-2 control-label group_label">리스종료가</label>
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text">
 													</div>
@@ -429,14 +401,14 @@
 			*/	
 
 			/* BRAND INPUT ;*/
-			$("#brandInput").on("change", function() {
-				if(this.value.length > 0)$("#carInput").removeAttr("disabled");
-				else{
-					$("#carInput").attr("disabled","disabled");
-					$("#carInput").val("")
-				}
+			// $("#brandInput").on("change", function() {
+			// 	if(this.value.length > 0)$("#carInput").removeAttr("disabled");
+			// 	else{
+			// 		$("#carInput").attr("disabled","disabled");
+			// 		$("#carInput").val("")
+			// 	}
 
-			});
+			// });
 			/* BRAND INPUT */
 		});
 

@@ -94,6 +94,7 @@ var loadHeader = function(){
 var loadRibbonSection = function(){
 
 	var html = [];
+	//html.push('<div class="row"> ');
 	html.push('<h1 class="page-title txt-color-blueDark"> ');
 	html.push('<span class="ribbon-button-alignment"> ');
 	html.push('	<span id="refresh" class="btn btn-circle btn-default txt-color-blueDark" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title=\'<i class="text-warning fa fa-warning"></i> Warning! This will reset all your widget settings.\' data-html="true">');
@@ -172,9 +173,6 @@ function loadNavMenu(pageId){
 	html.push('	   			<li id="newcar_news_management">');
 	html.push('					<a href="newcar_news_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-newspaper-o "></i> <span class="menu-item-parent">신차소식</span></a>');
 	html.push('	   			</li>');
-	html.push('	   			<li id="comments_management">');
-	html.push('					<a href="comments_management.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-commenting-o"></i> <span class="menu-item-parent">댓글</span></a>');
-	html.push('	   			</li>');
 	html.push('	   		</ul>');
 	html.push('	   	</li>');
 
@@ -192,9 +190,6 @@ function loadNavMenu(pageId){
 
 	html.push('	   <li id="consultation_registration">');
 	html.push('	       <a href="consultation_registration.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">상담 등록</span></a>');
-	html.push('    </li>');
-	html.push('    <li id="cpa_registration">');
-	html.push('        <a href="cpa_registration.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">CPA</span></a>');
 	html.push('    </li>');
 	html.push('</ul>');
 

@@ -211,7 +211,7 @@
 												<div class="form-group">
 													<label class="col-md-2 control-label">브랜드</label>
 													<div class="col-md-10">
-									                    <input class="form-control" id="brand" placeholder="선택하세요." type="text"  list="brandList" disabled="disabled">
+									                    <input class="form-control" id="brand" placeholder="선택하세요." type="text"  list="brandList">
 														<datalist id="brandList">
 									                        <option vlaue="현대">현대</option>
 															<option vlaue="기아">기아</option>
@@ -222,35 +222,6 @@
 															<option vlaue="포르쉐">포르쉐</option>
 									                    </datalist>
 														<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
-												</div>
-
-												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label">차량등급</label>
-													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2" id="grade">
-															<option value="2.0">2.0</option>
-															<option value="2.2">2.2</option>
-															<option value="2.5">2.5</option>
-															<option value="3.6">3.6</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label">연료타입</label>
-													<div class="col-md-10">
-														<select multiple style="width:100%" class="select2" id="fuelType">
-															<option value="가솔린">가솔린</option>
-															<option value="디젤">디젤</option>
-															<option value="하이브리드">하이브리드</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-md-2 control-label">연비</label>
-													<div class="col-md-10">
-														<input class="form-control" placeholder="연비" type="text" id="efficiency">
 													</div>
 												</div>
 												<div class="form-group">
@@ -270,7 +241,7 @@
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="newStPrice">
 													</div>
-													<label class="col-md-2 control-label">신차종료가</label>
+													<label class="col-md-2 control-label group_label">신차종료가</label>
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="newEdPrice">
 													</div>
@@ -280,7 +251,7 @@
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="rentStPrice">
 													</div>
-													<label class="col-md-2 control-label">렌트종료가</label>
+													<label class="col-md-2 control-label group_label">렌트종료가</label>
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="rentEdPrice">
 													</div>
@@ -290,7 +261,7 @@
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="leaseStPrice">
 													</div>
-													<label class="col-md-2 control-label">리스종료가</label>
+													<label class="col-md-2 control-label group_label">리스종료가</label>
 													<div class="col-md-4">
 														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="leaseEdPrice">
 													</div>
@@ -430,9 +401,9 @@
 
 			$("#brand").val("현대");
 			$("#car").val("코나");
-			$("#grade").select2("val", ['2.0','2.2']);
-			$("#fuelType").select2("val", ['가솔린','디젤']);
-			$("#efficiency").val("9~13");
+			//$("#grade").select2("val", ['2.0','2.2']);
+			//$("#fuelType").select2("val", ['가솔린','디젤']);
+			//$("#efficiency").val("9~13");
 			$("#carInfo").val("");
 			//$("#mainImg").val();
 			$("#newStPrice").val("2500");
@@ -444,14 +415,14 @@
 			$("input[name='mainYn']:input[value="+"Y"+"]").attr('checked',true);
 
 			/* BRAND INPUT ;*/
-			$("#brand").on("change", function() {
+			/*$("#brand").on("change", function() {
 				if(this.value.length > 0)$("#car").removeAttr("disabled");
 				else{
 					$("#car").attr("disabled","disabled");
 					$("#car").val("")
 				}
 
-			});
+			});*/
 			/* BRAND INPUT */
 		});
 

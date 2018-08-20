@@ -23,8 +23,8 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
 
 		<!-- We recommend you use "your_style.css" to override SmartAdmin
-		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
-		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update. -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css">
 
 		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
@@ -196,29 +196,29 @@
 												<div class="form-group">
 													<label class="col-md-2 control-label">구입방법</label>
 													<div class="col-md-10">
-														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="buy-way" checked>
+														<label class="checkbox checkbox-inline">
+															<input type="checkbox" class="checkbox" name="buy-way">
 															<span>리스</span> 
 														</label>
-														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="buy-way">
+														<label class="checkbox checkbox-inline">
+															<input type="checkbox" class="checkbox" name="buy-way">
 															<span>장기렌트</span>  
 														</label>
-														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="buy-way">
+														<label class="checkbox checkbox-inline">
+															<input type="checkbox" class="checkbox" name="buy-way">
 															<span>신차할부</span> 
 														</label>
-														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="buy-way">
+														<label class="checkbox checkbox-inline">
+															<input type="checkbox" class="checkbox" name="buy-way">
 															<span>할부형렌트</span> 
 														</label>
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-2 control-label">이름</label>
+													<label class="col-md-2 control-label">문의방법</label>
 													<div class="col-md-10">
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="name-path" checked>
+															<input type="radio" class="radiobox" name="name-path">
 															<span>전화문의</span> 
 														</label>
 														<label class="radio radio-inline">
@@ -229,16 +229,20 @@
 															<input type="radio" class="radiobox" name="name-path">
 															<span>다나와핫딜</span> 
 														</label>
+														<label class="radio radio-inline">
+															<input type="radio" class="radiobox" name="name-path">
+															<span>CPA</span> 
+														</label>
 													</div>
 												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label"></label>
+												<div class="form-group required">
+													<label class="col-md-2 control-label">이름</label>
 													<div class="col-md-10">
 														<input class="form-control" placeholder="이름" id="name" type="text">
 													</div>
 												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label">연락처</label>
+												<div class="form-group required">
+													<label class="col-md-2 required control-label">연락처</label>
 													<div class="col-md-10">
 														<input class="form-control" placeholder="연락처" id="tel" type="text" width="50%">
 													</div>
@@ -253,7 +257,7 @@
 													<label class="col-md-2 control-label">고객구분</label>
 													<div class="col-md-10">
 														<label class="radio radio-inline">
-															<input type="radio" class="radiobox" name="custom-gubun" checked>
+															<input type="radio" class="radiobox" name="custom-gubun">
 															<span>개인</span> 
 														</label>
 														<label class="radio radio-inline">
@@ -402,6 +406,26 @@
 			
 			Also see: http://legacy.datatables.net/usage/features
 			*/	
+
+			$("input[type=radio]").click(function() {
+			    // Get the storedValue
+			    var previousValue = $(this).data('storedValue');
+			    // if previousValue = true then
+			    //     Step 1: toggle radio button check mark.
+			    //     Step 2: save data-StoredValue as false to indicate radio button is unchecked.
+			    if (previousValue) {
+			      $(this).prop('checked', !previousValue);
+			      $(this).data('storedValue', !previousValue);
+			    }
+			    // If previousValue is other than true
+			    //    Step 1: save data-StoredValue as true to for currently checked radio button.
+			    //    Step 2: save data-StoredValue as false for all non-checked radio buttons. 
+			    else{
+			      $(this).data('storedValue', true);
+			      $("input[type=radio]:not(:checked)").data("storedValue", false);
+			    }
+			});
+
 
 			/*
 			 * SUMMERNOTE EDITOR

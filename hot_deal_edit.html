@@ -211,56 +211,28 @@
 											<fieldset>
 												<legend><input class="form-control" placeholder="핫딜명" type="text" id="title"></legend>
 												<div class="form-group">
-													<label class="col-md-2 control-label">브랜드</label>
+													<label class="col-md-2 control-label">차량명</label>
 													<div class="col-md-10">
-									                    <input class="form-control" id="brand" placeholder="선택하세요." type="text"  list="brandList">
-														<datalist id="brandList" >
-									                        <option vlaue="현대">현대</option>
-															<option vlaue="기아">기아</option>
-															<option vlaue="제네니스">제네니스</option>
-															<option vlaue="BMW">BMW</option>
-															<option vlaue="아우디">아우디</option>
-															<option vlaue="링컨">링컨</option>
-															<option vlaue="포르쉐">포르쉐</option>
-									                    </datalist>
-														<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
-												</div>
-
+														<input class="form-control" placeholder="차량명" type="text" id="car">
+													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-2 control-label">차량명</label>
-													<div class="col-md-5">
-														<input class="form-control" id="car" placeholder="브랜드를 선택하세요." type="text"  list="carList">
-														<datalist id="carList">
-									                        <option vlaue="싼타페TM">싼타페TM</option>
-															<option vlaue="아반떼">아반떼</option>
-															<option vlaue="그랜저IG">그랜저IG</option>
-															<option vlaue="투싼">투싼</option>
-															<option vlaue="LF쏘나타 뉴라이즈">LF쏘나타 뉴라이즈</option>
-															<option vlaue="코나">코나</option>
-															<option vlaue="i30">i30</option>
-									                    </datalist>
-														<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
+													<label class="col-md-2 control-label">차량등급</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="차량등급" type="text" id="grade">
 													</div>
-													<div class="col-md-5">
-														<input class="form-control" placeholder="모델명" id="model" type="text">
+													<label class="col-md-2 control-label group_label">차량옵션</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="차량옵션" type="text" id="option">
 													</div>
 												</div>
-												<!--div class="form-group">
-													<label class="col-md-2 control-label">차량정보</label>
-													<div class="col-md-10">
-														<input class="form-control" placeholder="차량정보" type="text">
-													</div>
-												</div-->
 												<div class="form-group">
 													<label class="col-md-2 control-label">대표이미지</label>
-													<div class="col-md-10">
+													<div class="col-md-4">
 														<input type="file" class="btn btn-default col-xs-12" id="mainImg">
 													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-md-2 control-label">리스트이미지</label>
-													<div class="col-md-10">
+													<label class="col-md-2 control-label group_label">리스트이미지</label>
+													<div class="col-md-4">
 														<input type="file" class="btn btn-default col-xs-12" id=listImg">
 													</div>
 												</div>
@@ -280,13 +252,23 @@
 													<!-- end widget div -->
 												</div>
 												<div class="form-group">
+													<label class="col-md-2 control-label">신차시작가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="newStPrice">
+													</div>
+													<label class="col-md-2 control-label group_label">신차종료가</label>
+													<div class="col-md-4">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="newEdPrice">
+													</div>
+												</div>
+												<div class="form-group">
 													<label class="col-md-2 control-label">핫딜시작가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="stPrice">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="hotStPrice">
 													</div>
-													<label class="col-md-2 control-label">핫딜종료가</label>
+													<label class="col-md-2 control-label group_label">핫딜종료가</label>
 													<div class="col-md-4">
-														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="edPrice">
+														<input class="form-control" placeholder="숫자만 입력하세요." type="text" id="hotEdPrice">
 													</div>
 												</div>
 												<div class="form-group">
@@ -429,25 +411,27 @@
 			
 
 			$("#title").val("[장기렌트]무보증 48개월 핫딜!");
-			$("#brand").val("현대");
 			$("#car").val("싼타페TM");
-			$("#model").val("가솔린 2.0");
+			$("#grade").val("가솔린 2.0");
+			$("#option").val("UVO 3.0");
 			//$("#mainImg").val();
 			//$("#listImg").val();
 			$("#contents").text("저장된 내역 뿌리기~~~");
-			$("#stPrice").val("51만원");
-			$("#edPrice").val("71만원");
+			$("#newStPrice").val("61만원");
+			$("#newEdPrice").val("85만원");
+			$("#hotStPrice").val("51만원");
+			$("#hotEdPrice").val("71만원");
 			$("input[name='mainYn']:input[value="+"Y"+"]").attr('checked',true);
 
 			/* BRAND INPUT ;*/
-			$("#brand").on("change", function() {
+			/*$("#brand").on("change", function() {
 				if(this.value.length > 0)$("#car").removeAttr("disabled");
 				else{
 					$("#car").attr("disabled","disabled");
 					$("#car").val("")
 				}
 
-			});
+			});*/
 
 
 			$('.summernote').summernote({

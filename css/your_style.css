@@ -31,3 +31,38 @@
     color: #222;
     margin: 8px 1px;
 }
+
+.cust_img_thumb{
+	border: 1px solid #ddd;
+	margin: 0 1px;
+	padding: 5px;
+}
+
+.h100{
+	height: 150px;
+}
+
+.required .control-label:after {
+  content:"*";color:red;
+}
+
+@media (max-width:991px) {
+    .group_label {
+        margin-top:10px;
+    }
+}
+@media (min-width: 992px) {
+    .group_label {
+        margin-top:0px;
+    }
+}
+
+.jarviswidget-color-blueDark .nav-tabs li:not(.active) a,.jarviswidget-color-blueDark>header>.jarviswidget-ctrls a {
+    color: #818181!important;
+}
+
+@media (min-width: 0px){
+	.page-title {
+	    display: block;
+	}
+}
