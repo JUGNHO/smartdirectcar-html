@@ -95,9 +95,9 @@ var loadRibbonSection = function(){
 
 	var html = [];
 	//html.push('<div class="row"> ');
-	html.push('<h1 class="page-title txt-color-blueDark"> ');
+	html.push('<h1 class="cust-page-title txt-color-blueDark"> ');
 	html.push('<span class="ribbon-button-alignment"> ');
-	html.push('	<span id="refresh" class="btn btn-circle btn-default txt-color-blueDark" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title=\'<i class="text-warning fa fa-warning"></i> Warning! This will reset all your widget settings.\' data-html="true">');
+	html.push('	<span id="refresh" class="btn cust-btn-circle btn-default txt-color-blueDark" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title=\'<i class="text-warning fa fa-warning"></i> Warning! This will reset all your widget settings.\' data-html="true">');
 	html.push('		<i class="fa fa-refresh"></i>');
 	html.push('	</span> ');
 	html.push('</span>');

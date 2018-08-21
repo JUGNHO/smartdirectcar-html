@@ -125,70 +125,71 @@
         <!-- END RIBBON -->
         <!-- MAIN CONTENT -->
         <div id="content">
-            <div class="widget-body-toolbar no-margin">
-                <div class="row search_field">
-                    <div class="col-md-3 col-lg-3">
-                        <label class="font-normal">등록일 From ~ To</label>
-                        <div class="input-group">
-                            <input class="form-control" id="fromDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
-                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            <input class="form-control" id="toDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
-                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3">
-                        <label class="font-normal">담당자</label>
-                        <div class="form-group">
-                            <select class="form-control col-md-12" style="width: 100%" name="keyword">
-                                <option value="">전체 조회 </option>
-                                <option value="김규호">김규호 (미처리 : 0 total : 5)</option>
-                                <option value="황성훈">황성훈 (미처리 : 0 total : 5)</option>
-                                <option value="김종욱">김종욱 (미처리 : 1 total : 6)</option>
-                                <option value="이대웅">이대웅 (미처리 : 0 total : 8)</option>
-                                <option value="박준순">박준순 (미처리 : 0 total : 7)</option>
-                                <option value="정인석">정인석 (미처리 : 0 total : 8)</option>
-                                <option value="이영진">이영진 (미처리 : 0 total : 5)</option>
-                                <option value="김정기">김정기 (미처리 : 0 total : 5)</option>
-                                <option value="노효성">노효성 (미처리 : 0 total : 4)</option>
-                                <option value="이상훈">이상훈 (미처리 : 0 total : 6)</option>
-                                <option value="양한">양한 (미처리 : 0 total : 5)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3">
-                        <label class="font-normal">상담상태</label>
-                        <div class="form-group">
-                            <select class="form-control col-md-12" style="width: 100%" name="keyword">
-                                <option value="">전체조회</option>
-                                <option value="상담완료">상담완료</option>
-                                <option value="부재">부재</option>
-                                <option value="재상담">재상담</option>
-                                <option value="진행중">진행중</option>
-                                <option value="가망고객">가망고객</option>
-                                <option value="계약완료">계약완료</option>
-                                <option value="출고완료">출고완료</option>
-                                <option value="취소">취소</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-right">
-                        <button class="btn btn-primary" id="btnAssignManager">
-                            <i class="fa fa-user-circle-o"></i> 담당 팀장 할당
-                        </button>
-                        <button class="btn btn-primary" id="btnSearchApply">
-                            <i class="fa fa-search"></i> 조회
-                        </button>
-                    </div>
-                </div>
-            </div>
             <!-- widget grid -->
             <section id="widget-grid" class="">
                 <!-- row -->
                 <div class="row">
                     <!-- NEW WIDGET START -->
                     <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="widget-body-toolbar no-margin">
+                            <div class="row search-field">
+                                <div class="col-md-4 col-lg-4 search-field-first">
+                                    <label class="font-normal">등록일 From ~ To</label>
+                                    <div class="input-group">
+                                        <input class="form-control" id="fromDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
+                                        <span class="input-group-addon between-input-group-btn"><i class="fa fa-calendar"></i></span>
+                                        <span class="input-group-addon between-input-group-label">~</span>
+                                        <input class="form-control" id="toDate" name="datefilter" type="text" placeholder="Select a date" readonly="readonly">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <label class="font-normal group-label">담당자</label>
+                                    <div class="form-group">
+                                        <select class="form-control col-md-12" style="width: 100%" name="keyword">
+                                            <option value="">전체 조회 </option>
+                                            <option value="김규호">김규호 (미처리 : 0 total : 5)</option>
+                                            <option value="황성훈">황성훈 (미처리 : 0 total : 5)</option>
+                                            <option value="김종욱">김종욱 (미처리 : 1 total : 6)</option>
+                                            <option value="이대웅">이대웅 (미처리 : 0 total : 8)</option>
+                                            <option value="박준순">박준순 (미처리 : 0 total : 7)</option>
+                                            <option value="정인석">정인석 (미처리 : 0 total : 8)</option>
+                                            <option value="이영진">이영진 (미처리 : 0 total : 5)</option>
+                                            <option value="김정기">김정기 (미처리 : 0 total : 5)</option>
+                                            <option value="노효성">노효성 (미처리 : 0 total : 4)</option>
+                                            <option value="이상훈">이상훈 (미처리 : 0 total : 6)</option>
+                                            <option value="양한">양한 (미처리 : 0 total : 5)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <label class="font-normal">상담상태</label>
+                                    <div class="form-group">
+                                        <select class="form-control col-md-12" style="width: 100%" name="keyword">
+                                            <option value="">전체조회</option>
+                                            <option value="상담완료">상담완료</option>
+                                            <option value="부재">부재</option>
+                                            <option value="재상담">재상담</option>
+                                            <option value="진행중">진행중</option>
+                                            <option value="가망고객">가망고객</option>
+                                            <option value="계약완료">계약완료</option>
+                                            <option value="출고완료">출고완료</option>
+                                            <option value="취소">취소</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 text-right search-field-button">
+                                    <button class="btn btn-primary" id="btnAssignManager">
+                                        <i class="fa fa-user-circle-o"></i> 담당 팀장 할당
+                                    </button>
+                                    <button class="btn btn-primary" id="btnSearchApply">
+                                        <i class="fa fa-search"></i> 조회
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Widget ID (each widget will need unique ID)-->
                         <div class="jarviswidget jarviswidget-color-red" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-deletebutton="false">
                             <!-- widget options:

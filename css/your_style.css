@@ -22,7 +22,7 @@
  	margin: 0 0 0 0;
  }
 
-.search_field{
+.search-field{
 	display: block;
     padding: 8px 0;
     border-bottom: 1px dashed rgba(0,0,0,.2);
@@ -32,7 +32,7 @@
     margin: 8px 1px;
 }
 
-.cust_img_thumb{
+.cust-img-thumb{
 	border: 1px solid #ddd;
 	margin: 0 1px;
 	padding: 5px;
@@ -46,23 +46,74 @@
   content:"*";color:red;
 }
 
+.cust-btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 16px;
+    line-height: 18px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.cust-page-title {
+    margin: 12px 0 8px;
+}
+
+.cust-page-title span {
+    font-size: 16px;
+    color: #333;
+    display: inline-block;
+    vertical-align: 1px;
+}
+
+.between-input-group-btn {
+	border-left: 0; 
+	/*border-right: 0;*/
+}
+
+.between-input-group-label {
+    background-color: #fff;
+    border: 0;
+}
+
+
 @media (max-width:991px) {
-    .group_label {
+    .group-label {
         margin-top:10px;
     }
+
+    .search-field-button {
+		margin-right:10px;
+    }
+
+    
 }
 @media (min-width: 992px) {
-    .group_label {
+    .group-label {
         margin-top:0px;
     }
+
+    .search-field-first{
+		margin-left:-10px;
+	}
 }
 
 .jarviswidget-color-blueDark .nav-tabs li:not(.active) a,.jarviswidget-color-blueDark>header>.jarviswidget-ctrls a {
     color: #818181!important;
 }
 
-@media (min-width: 0px){
-	.page-title {
-	    display: block;
-	}
+@media (max-width: 767px) {
+    #content,#ribbon{
+    	padding: 0;
+    }
+
+    #ribbon{
+    	border-bottom: 0;
+    	border-top: 0;
+    	background: #f0f0f0;
+    }
 }
+
