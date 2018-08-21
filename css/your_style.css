@@ -43,7 +43,18 @@
 }
 
 .required .control-label:after {
-  content:"*";color:red;
+  content: "*";
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.text-red {
+    color: red;
+}
+
+.font-weight-bold{
+    font-weight: bold;
 }
 
 .cust-btn-circle {
@@ -87,9 +98,17 @@
     text-align: right;
 }
 
-
+.dropzone {
+    height: 250px;
+    min-height: 0px !important;
+}
 
 @media (max-width:991px) {
+    
+    .between-control-label {
+        margin-top:10px;
+    }
+
     .group-label {
         margin-top:10px;
     }
@@ -101,8 +120,12 @@
     
 }
 @media (min-width: 992px) {
+    .between-control-label {
+        margin-top:0;
+    }
+
     .group-label {
-        margin-top:0px;
+        margin-top:10px;
     }
 
     .search-field-first{
@@ -168,7 +191,7 @@
 	#sparks {
         text-align: center;
         padding: 10px 0;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         background: rgba(255,255,255,.15);
     }
 }

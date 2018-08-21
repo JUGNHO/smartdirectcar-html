@@ -122,7 +122,7 @@ var loadRibbonSection = function(){
 	html.push('<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>');
 	html.push('</span> -->');
 	html.push('</div>');
-	html.push('	<div class="col-xs-7 col-sm-7 col-md-7 col-lg-8 hide">');
+	html.push('	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-8 hide">');
 	html.push('		<ul id="sparks" class="">');
 	html.push('			<li class="sparks-info">');
 	html.push('			<a href="counseling_applications_list.html">');
@@ -237,8 +237,8 @@ function loadNavMenu(pageId){
 	if(pageId != "index"){
 		$("#ribbon .row").children().eq(0).addClass("col-md-12");
 	}else{
-		$("#ribbon .row").children().eq(0).removeClass("col-md-12");
-		$("#ribbon .row").children().eq(0).addClass("col-xs-5 col-sm-5 col-md-5 col-lg-4");
+		$("#ribbon .row").children().eq(0).removeClass("col-md-10");
+		$("#ribbon .row").children().eq(0).addClass("col-xs-12 col-sm-5 col-md-5 col-lg-4");
 		$("#ribbon .row").children().eq(1).removeClass("hide");
 	}
 	

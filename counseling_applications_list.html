@@ -682,6 +682,12 @@
                 "render": function(data, type, row, meta) {
                     return '<a href="javascript:showDetailModal(\'' + row["idx"] + '\');">' + data + '</a>';
                 }
+            }, {
+                "targets": [7],
+                "data": "manager",
+                "render": function(data, type, row, meta) {
+                    return '<select class="form-control" id="select-1" style="padding-left: 8px;"><option value="미지정">미지정 </option><option value="김규호">김규호 (미처리 : 0 total : 5)</option><option value="황성훈">황성훈 (미처리 : 0 total : 5)</option><option value="김종욱">김종욱 (미처리 : 1 total : 6)</option><option value="이대웅">이대웅 (미처리 : 0 total : 8)</option></select>';
+                }
             }]
 
         });
@@ -720,8 +726,8 @@
     // }
 
     function showDetailModal(idx) {
-
-        var rowData = _data.filter(function(item) {
+        window.location.href = 'counseling_applications_view.html';
+        /*var rowData = _data.filter(function(item) {
             return (item.manager_idx == idx)
         })
 
@@ -744,6 +750,7 @@
         $("#btnInsertManager").addClass("hide");
 
         $('#myModal').modal('show');
+        */
 
     }
 
