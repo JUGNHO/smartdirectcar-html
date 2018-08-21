@@ -4,7 +4,7 @@ var loadHeader = function(){
 
 	html.push('<div id="logo-group">');
 	html.push('	<!-- PLACE YOUR LOGO HERE -->');
-	html.push('	<span id="logo" style="margin-top:7px;"> <img src="img/logo1.png" alt="SmartAdmin"> </span>');
+	html.push('	<span id="logo"> <img src="img/logo1.png" alt="SmartAdmin"> </span>');
 	html.push('	<!-- END LOGO PLACEHOLDER -->');
 	html.push('</div>');
 	html.push('<!-- projects dropdown -->');
@@ -32,18 +32,18 @@ var loadHeader = function(){
 	html.push('<!-- end projects dropdown -->');
 	html.push('<!-- pulled right: nav area -->');
 	html.push('<div class="pull-right">');
-	html.push('	');
+	html.push('');
 	html.push('	<!-- collapse menu button -->');
 	html.push('	<div id="hide-menu" class="btn-header pull-right">');
 	html.push('		<span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>');
 	html.push('	</div>');
 	html.push('	<!-- end collapse menu -->');
-	html.push('	');
+	html.push('');
 	html.push('	<!-- #MOBILE -->');
 	html.push('	<!-- Top menu profile link : this shows only when top menu is active -->');
 	html.push('	<ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">');
 	html.push('		<li class="">');
-	html.push('			<a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown"> ');
+	html.push('			<a href="javascript:void(0);" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown"> ');
 	html.push('				<img src="img/avatars/sunny.png" alt="John Doe" class="online" />  ');
 	html.push('			</a>');
 	html.push('			<ul class="dropdown-menu pull-right">');
@@ -91,19 +91,23 @@ var loadHeader = function(){
 
 }();
 
+
 var loadRibbonSection = function(){
 
 	var html = [];
-	//html.push('<div class="row"> ');
+
+	html.push('<div class="row"> ');
+	html.push('<div class="col-md-10"> ');
 	html.push('<h1 class="cust-page-title txt-color-blueDark"> ');
 	html.push('<span class="ribbon-button-alignment"> ');
 	html.push('	<span id="refresh" class="btn cust-btn-circle btn-default txt-color-blueDark" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title=\'<i class="text-warning fa fa-warning"></i> Warning! This will reset all your widget settings.\' data-html="true">');
 	html.push('		<i class="fa fa-refresh"></i>');
 	html.push('	</span> ');
 	html.push('</span>');
-	html.push('');
 	html.push('<!-- breadcrumb -->');
-	html.push('	Home <span>> Dashboard</span>');
+	html.push('<span class="ribbon-span" id="menuTitle"></span>');
+	html.push('<span class="ribbon-span"></span>');
+	html.push('<span></span>');
 	html.push('<!-- end breadcrumb -->');
 	html.push('</h1>');
 	html.push('');
@@ -117,10 +121,33 @@ var loadRibbonSection = function(){
 	html.push('<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>');
 	html.push('<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>');
 	html.push('</span> -->');
+	html.push('</div>');
+	html.push('	<div class="col-xs-7 col-sm-7 col-md-7 col-lg-8 hide">');
+	html.push('		<ul id="sparks" class="">');
+	html.push('			<li class="sparks-info">');
+	html.push('			<a href="counseling_applications_list.html">');
+	html.push('				<h5> 신규문의 <span class="txt-color-blue"><i class="fa fa-car"></i>&nbsp;20</span></h5>');
+	html.push('			</a>');	
+	html.push('			</li>');
+	html.push('			<li class="sparks-info">');
+	html.push('			<a href="used_car_management.html">');
+	html.push('				<h5> 중고차문의 <span class="txt-color-greenDark"><i class="fa fa-dashboard"></i>&nbsp;2</span></h5>');
+	html.push('			</a>');
+	html.push('			</li>');
+	html.push('			<li class="sparks-info">');
+	html.push('			<a href="counseling_applications_list.html">');
+	html.push('				<h5> 미처리 <span class="txt-color-red"><i class="fa fa-warning"></i>&nbsp;50</span></h5>');
+	html.push('			</a>');
+	html.push('		</ul>');
+	html.push('	</div>');
+
+	
+	html.push('</div>');
 
 	$("div#ribbon").html(html.join(""));
 
 }();
+
 
 function loadNavMenu(pageId){
 
@@ -132,7 +159,7 @@ function loadNavMenu(pageId){
 	html.push('	   </li>');
 
 	html.push('	   <li>');
-	html.push('	   		<a href="#"><i class="fa fa-lg fa-fw fa-list"></i> <span class="menu-item-parent">SmartDirect Request</span></a>');
+	html.push('	   		<a href="javascript:void(0);"><i class="fa fa-lg fa-fw fa-list"></i> <span class="menu-item-parent">SmartDirect Request</span></a>');
 	html.push('	   		<ul>');
 	html.push('	   			<li id="counseling_applications_list">');
 	html.push('		   			<a href="counseling_applications_list.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-external-link-square"></i> <span class="menu-item-parent">신규 상담신청</span></a>');
@@ -144,7 +171,7 @@ function loadNavMenu(pageId){
 	html.push('	   </li>');
 
 	html.push('	   <li>');
-	html.push('	   		<a href="#"><i class="fa fa-lg fa-fw fa-group"></i> <span class="menu-item-parent">Manager Management</span></a>');
+	html.push('	   		<a href="javascript:void(0);"><i class="fa fa-lg fa-fw fa-group"></i> <span class="menu-item-parent">Manager Management</span></a>');
 	html.push('	   		<ul>');
 	html.push('	   			<li id="employee_management">');
 	html.push('		   			<a href="employee_management.html" title="Employee Management"><i class="fa fa-lg fa-fw fa-user"></i> <span class="menu-item-parent">직원관리</span></a>');
@@ -156,7 +183,7 @@ function loadNavMenu(pageId){
 	html.push('	   </li>');
 
 	html.push('	   <li>');
-	html.push('	   		<a href="#"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Home Management</span></a>');
+	html.push('	   		<a href="javascript:void(0);"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Home Management</span></a>');
 	html.push('	   		<ul>');
 	html.push('	   			<li id="hot_deal_management">');
 	html.push('					<a href="hot_deal_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-fire"></i> <span class="menu-item-parent">핫딜관리</span></a>');
@@ -177,10 +204,10 @@ function loadNavMenu(pageId){
 	html.push('	   	</li>');
 
 	html.push('	   <li>');
-	html.push('	   		<a href="#"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">Master Management</span></a>');
+	html.push('	   		<a href="javascript:void(0);"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">Master Management</span></a>');
 	html.push('	   		<ul>');
 	html.push('	   			<li id="master_code_management">');
-	html.push('					<a href="#" title="HotDeal"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">마스터 코드 관리(예정)</span></a>');
+	html.push('					<a href="javascript:void(0);" title="HotDeal"><i class="fa fa-lg fa-fw fa-wrench"></i> <span class="menu-item-parent">마스터 코드 관리(예정)</span></a>');
 	html.push('	   			</li>');
 	html.push('	   			<li id="car_management">');
 	html.push('		   			<a href="car_management.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-car"></i> <span class="menu-item-parent">차량관리</span></a>');
@@ -193,9 +220,29 @@ function loadNavMenu(pageId){
 	html.push('    </li>');
 	html.push('</ul>');
 
-	$("nav").html(html.join(""));
+	$("nav").html(html.join(""))
 	$("#" + pageId).addClass("active");
 
+
+	//$('nav').load(document.URL,function() {
+    //console.log($("#"+pageId).text());
+
+    var menuTitle = $("#"+pageId).parent().prev().text();
+
+	$("#menuTitle").text(menuTitle != "" ? menuTitle : " Home");
+	$("#menuTitle").next().text(" > ");
+	$("#menuTitle").next().next().text($("#"+pageId).text());
+
+	html.push('<div class="col-xs-5 col-sm-5 col-md-12 col-lg-4"> ');
+	if(pageId != "index"){
+		$("#ribbon .row").children().eq(0).addClass("col-md-12");
+	}else{
+		$("#ribbon .row").children().eq(0).removeClass("col-md-12");
+		$("#ribbon .row").children().eq(0).addClass("col-xs-5 col-sm-5 col-md-5 col-lg-4");
+		$("#ribbon .row").children().eq(1).removeClass("hide");
+	}
+	
+  	//});
 }
 
 var loadFooter = function(){
@@ -233,22 +280,22 @@ function drawPagination(listCnt){
 
 	if(pageTye == "full_numbers"){
 		html.push('				<li class="paginate_button first disabled" aria-controls="dt_basic" tabindex="0" id="dt_basic_first">');
-		html.push('    				<a href="#">First</a>');
+		html.push('    				<a href="javascript:void(0);">First</a>');
 		html.push('				</li>');
 	}
 	html.push('				<li class="paginate_button previous disabled" aria-controls="dt_basic" tabindex="0" id="dt_basic_previous">');
-	html.push('    				<a href="#">Previous</a>');
+	html.push('    				<a href="javascript:void(0);">Previous</a>');
 	html.push('				</li>');
 
 	//html = html.concat(reorderPagination(pageCnt));
 
 	html.push('				<li class="paginate_button next" aria-controls="dt_basic" tabindex="0" id="dt_basic_next">');
-	html.push('	   				<a href="#">Next</a>');
+	html.push('	   				<a href="javascript:void(0);">Next</a>');
 	html.push('				</li>');
 
 	if(pageTye == "full_numbers"){
 		html.push('				<li class="paginate_button last" aria-controls="dt_basic" tabindex="0" id="dt_basic_last">');
-		html.push('    				<a href="#">Last</a>');
+		html.push('    				<a href="javascript:void(0);">Last</a>');
 		html.push('				</li>');
 	}
 
@@ -279,11 +326,11 @@ function reorderPagination(pageCnt){
 		var tabindex = i+1;
 		if(tabindex <= 6 || tabindex == pageCnt){
 			html.push('				<li class="paginate_button '+active+'" aria-controls="dt_basic" tabindex="'+tabindex+'">');
-			html.push('					<a href="#">'+tabindex+'</a>');
+			html.push('					<a href="javascript:void(0);">'+tabindex+'</a>');
 			html.push('				</li>');
 		}else if(tabindex == pageCnt-1){
 			html.push('				<li class="paginate_button disabled" aria-controls="datatable_col_reorder" tabindex="0">');
-			html.push('					<a href="#">…</a>');
+			html.push('					<a href="javascript:void(0);">…</a>');
 			html.push('				</li>');
 		}
 		active = "";
