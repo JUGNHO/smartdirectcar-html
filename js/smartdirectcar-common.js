@@ -4,7 +4,7 @@ var loadHeader = function(){
 
 	html.push('<div id="logo-group">');
 	html.push('	<!-- PLACE YOUR LOGO HERE -->');
-	html.push('	<span id="logo"> <img src="img/logo1.png" alt="SmartAdmin"> </span>');
+	html.push('	<span id="logo" style="margin-top:7px;"> <img src="img/logo1.png" alt="SmartAdmin"> </span>');
 	html.push('	<!-- END LOGO PLACEHOLDER -->');
 	html.push('</div>');
 	html.push('<!-- projects dropdown -->');
