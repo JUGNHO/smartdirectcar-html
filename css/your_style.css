@@ -95,7 +95,7 @@
     }
 
     .search-field-button {
-		margin-right:10px;
+		margin-right:8px;
     }
 
     
@@ -106,12 +106,12 @@
     }
 
     .search-field-first{
-		margin-left:-10px;
+		margin-left:-8px;
 	}
 }
 
-.jarviswidget-color-blueDark .nav-tabs li:not(.active) a,.jarviswidget-color-blueDark>header>.jarviswidget-ctrls a {
-    color: #818181!important;
+.jarviswidget-color-purple .nav-tabs li:not(.active) a,.jarviswidget-color-purple>header>.jarviswidget-ctrls a {
+    color: #8b8a8c!important;
 }
 
 #logo{
@@ -146,6 +146,22 @@
         margin-bottom: 15px;
         background: rgba(255,255,255,.15);
     }
+}
+
+.dashboard-info{
+    padding-top: 10px;
+}
+
+.nav {
+    background-color: #fff;/*eff0f0*/
+}
+
+.margin-left-m1{
+    margin-left: -1px;
+}
+
+.display-initial{
+    display: initial;
 }
 
 @media only screen and (max-width: 479px) and (min-width: 320px){

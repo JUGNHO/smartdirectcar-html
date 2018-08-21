@@ -155,7 +155,7 @@
 						<article class="col-sm-12 sortable-grid ui-sortable">
 
 							<!-- Widget ID (each widget will need unique ID)-->
-							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-20" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false">
+							<div class="jarviswidget jarviswidget-color-purple" id="wid-id-20" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
 								<!-- widget options:
 								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 
@@ -171,7 +171,7 @@
 								-->
 
 								<header role="heading">
-									<span class="widget-icon"> <i class="fa fa-align-justify"></i> </span>
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
 									<h2>직원별 상담신청 할당 및 처리 수  </h2>
 									<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
 
@@ -182,7 +182,7 @@
 
 
 											<button class="btn dropdown-toggle btn-xs btn-success">
-												View List  <i class="fa fa-arrow-circle-right"></i>
+												상세보기 <i class="fa fa-arrow-circle-right"></i>
 											</button>
 											
 										</div>
@@ -201,7 +201,7 @@
 										<div class="btn-group">
 
 											<button class="btn dropdown-toggle btn-xs btn-success">
-												View List  <i class="fa fa-arrow-circle-right"></i>
+												상세보기 <i class="fa fa-arrow-circle-right"></i>
 											</button>
 										</div>
 									</div>
@@ -210,9 +210,15 @@
 
 
 								<ul class="nav nav-tabs">
-									<li class="active"><a data-toggle="tab" href="#home">영업 1팀 </a></li>
-									<li><a data-toggle="tab" href="#menu1">영업 2팀</a></li>
-									<li><a data-toggle="tab" href="#menu2">영업 3팀</a></li>
+									<li class="active">
+										<a data-toggle="tab" aria-expanded="true" href="#home" >영업 1팀 <span class="badge bg-color-blue txt-color-white">22</span></a>
+									</li>
+									<li class="margin-left-m1">
+										<a data-toggle="tab" aria-expanded="true" href="#menu1">영업 2팀 <span class="badge bg-color-blue txt-color-white">13</span></a>
+									</li>
+									<li>
+										<a data-toggle="tab" aria-expanded="true" href="#menu2">영업 3팀 <span class="badge bg-color-blue txt-color-white">24</span></a>
+									</li>
 								</ul>
 
 								<div class="tab-content">
@@ -221,11 +227,18 @@
 										<div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
 											<div class="panel panel-blue">
 												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a1.jpg" style="display: initial;">
-													<h4 style="font-weight: bold;">문선민</h4>
-													<p>상담신청 완료율 20% <br> 전체 10 ( 처리 2/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 8</span>) </p>
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a1.jpg">
+													<p class="dashboard-info">
+														<!-- <span class="font-md"><strong>문선민</strong></span>	<br> -->
+														<span><strong>문선민</strong> : </span>	
+														<span class="">&nbsp;전체 10&nbsp;(&nbsp;</span>
+														<span class="label label-success"><strong>처리 2</strong></span>
+														<span class="">/</span>
+														<span class="label label-danger"><strong>미처리 8</strong></span>
+														&nbsp;)
+													</p>
 													<div class="progress progress-striped active" rel="tooltip" data-original-title="20%" data-placement="top">
-														<div class="progress-bar bg-color-teal" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
 													</div>
 													<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 												</div>
@@ -235,7 +248,70 @@
 				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
 											<div class="panel panel-blue">
 												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a2.jpg" style="display: initial;">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a2.jpg">
+													<p class="dashboard-info">
+
+														<span><i class="fa fa-user"></i>&nbsp;<strong>문선민</strong> : </span>	
+														<span class="">&nbsp;전체 10&nbsp;(&nbsp;</span>
+														<span class="text text-success"><strong>처리 2</strong></span>
+														<span class="">/</span>
+														<span class="text text-danger"><strong>미처리 8</strong></span>
+														&nbsp;)
+													</p>
+													<div class="progress progress-striped active" rel="tooltip" data-original-title="40%" data-placement="top">
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="40" aria-valuenow="40" style="width: 40%;">40%</div>
+													</div>
+												</div>
+											</div>
+				                        </div>
+
+				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
+											<div class="panel panel-blue">
+												<div class="panel-body text-center">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a3.jpg">
+													<h4 style="font-weight: bold;">이혜영</h4>
+													<p>상담신청 완료율 70% <br> 전체 10 ( 처리 7/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 3</span>) </p>
+													<div class="progress progress-striped active" rel="tooltip" data-original-title="70%" data-placement="top">
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="70" aria-valuenow="70" style="width: 70%;">70%</div>
+													</div>
+												</div>
+											</div>
+				                        </div>
+
+				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
+											<div class="panel panel-blue">
+												<div class="panel-body text-center">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a7.jpg">
+													<h4 style="font-weight: bold;">Nicki Smith</h4>
+													<p>
+														상담신청 완료율 20% <br> 전체 10 ( 처리 2/ 
+														<span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 10</span>) 
+													</p>
+													<div class="progress progress-striped active" rel="tooltip" data-original-title="20%" data-placement="top">
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+													</div>
+												</div>
+											</div>
+				                        </div>
+
+				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
+											<div class="panel panel-blue">
+												<div class="panel-body text-center">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a1.jpg">
+													<h4 style="font-weight: bold;">문선민</h4>
+													<p>상담신청 완료율 20% <br> 전체 10 ( 처리 2/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 8</span>) </p>
+													<div class="progress progress-striped active" rel="tooltip" data-original-title="20%" data-placement="top">
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+													</div>
+													<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+												</div>
+											</div>
+				                        </div>
+
+				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
+											<div class="panel panel-blue">
+												<div class="panel-body text-center">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a2.jpg">
 													<h4 style="font-weight: bold;">조진권</h4>
 													<p>상담신청 완료율 50% <br> 전체 10 ( 처리 5/ <span clsss="card-span-font" style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 5</span>) </p>
 													<div class="progress progress-striped active" rel="tooltip" data-original-title="50%" data-placement="top">
@@ -248,11 +324,11 @@
 				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
 											<div class="panel panel-blue">
 												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a3.jpg" style="display: initial;">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a3.jpg">
 													<h4 style="font-weight: bold;">이혜영</h4>
 													<p>상담신청 완료율 70% <br> 전체 10 ( 처리 7/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 3</span>) </p>
 													<div class="progress progress-striped active" rel="tooltip" data-original-title="70%" data-placement="top">
-														<div class="progress-bar bg-color-blue" data-transitiongoal="70" aria-valuenow="70" style="width: 70%;">70%</div>
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="70" aria-valuenow="70" style="width: 70%;">70%</div>
 													</div>
 												</div>
 											</div>
@@ -261,70 +337,14 @@
 				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
 											<div class="panel panel-blue">
 												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a7.jpg" style="display: initial;">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a7.jpg">
 													<h4 style="font-weight: bold;">Nicki Smith</h4>
 													<p>
 														상담신청 완료율 20% <br> 전체 10 ( 처리 2/ 
 														<span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 10</span>) 
 													</p>
 													<div class="progress progress-striped active" rel="tooltip" data-original-title="20%" data-placement="top">
-														<div class="progress-bar bg-color-red" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
-													</div>
-												</div>
-											</div>
-				                        </div>
-
-				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
-											<div class="panel panel-blue">
-												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a1.jpg" style="display: initial;">
-													<h4 style="font-weight: bold;">문선민</h4>
-													<p>상담신청 완료율 20% <br> 전체 10 ( 처리 2/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 8</span>) </p>
-													<div class="progress progress-striped active" rel="tooltip" data-original-title="20%" data-placement="top">
-														<div class="progress-bar bg-color-teal" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
-													</div>
-													<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-												</div>
-											</div>
-				                        </div>
-
-				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
-											<div class="panel panel-blue">
-												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a2.jpg" style="display: initial;">
-													<h4 style="font-weight: bold;">조진권</h4>
-													<p>상담신청 완료율 50% <br> 전체 10 ( 처리 5/ <span clsss="card-span-font" style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 5</span>) </p>
-													<div class="progress progress-striped active" rel="tooltip" data-original-title="50%" data-placement="top">
-														<div class="progress-bar bg-color-blueLight" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">50%</div>
-													</div>
-												</div>
-											</div>
-				                        </div>
-
-				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
-											<div class="panel panel-blue">
-												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a3.jpg" style="display: initial;">
-													<h4 style="font-weight: bold;">이혜영</h4>
-													<p>상담신청 완료율 70% <br> 전체 10 ( 처리 7/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 3</span>) </p>
-													<div class="progress progress-striped active" rel="tooltip" data-original-title="70%" data-placement="top">
-														<div class="progress-bar bg-color-blue" data-transitiongoal="70" aria-valuenow="70" style="width: 70%;">70%</div>
-													</div>
-												</div>
-											</div>
-				                        </div>
-
-				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
-											<div class="panel panel-blue">
-												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a7.jpg" style="display: initial;">
-													<h4 style="font-weight: bold;">Nicki Smith</h4>
-													<p>
-														상담신청 완료율 20% <br> 전체 10 ( 처리 2/ 
-														<span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 10</span>) 
-													</p>
-													<div class="progress progress-striped active" rel="tooltip" data-original-title="20%" data-placement="top">
-														<div class="progress-bar bg-color-red" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
 													</div>
 												</div>
 											</div>
@@ -337,11 +357,11 @@
 										<div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
 											<div class="panel panel-blue">
 												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a7.jpg" style="display: initial;">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a7.jpg">
 													<h4 style="font-weight: bold;">에릭 존슨</h4>
 													<p>상담신청 완료율 20% <br> 전체 10 ( 처리 2/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 8</span>) </p>
 													<div class="progress progress-striped active" rel="tooltip" data-original-title="20%" data-placement="top">
-														<div class="progress-bar bg-color-teal" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="20" aria-valuenow="20" style="width: 20%;">20%</div>
 													</div>
 													<!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 												</div>
@@ -351,7 +371,7 @@
 				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
 											<div class="panel panel-blue">
 												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a6.jpg" style="display: initial;">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a6.jpg">
 													<h4 style="font-weight: bold;">루시 리우</h4>
 													<p>상담신청 완료율 50% <br> 전체 10 ( 처리 5/ <span clsss="card-span-font" style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 5</span>) </p>
 													<div class="progress progress-striped active" rel="tooltip" data-original-title="50%" data-placement="top">
@@ -364,11 +384,11 @@
 				                        <div class="col-lg-3 col-md-4 col-sm-6 col-sm-6">
 											<div class="panel panel-blue">
 												<div class="panel-body text-center">
-													<img alt="image" class="img-responsive img-rounded" src="img/avatars/a2.jpg" style="display: initial;">
+													<img alt="image" class="img-responsive img-rounded display-initial" src="img/avatars/a2.jpg">
 													<h4 style="font-weight: bold;">조진권</h4>
 													<p>상담신청 완료율 70% <br> 전체 10 ( 처리 7/ <span style="color:red;font-style:italic;font-weight: bold;font-size:20px;">미처리 3</span>) </p>
 													<div class="progress progress-striped active" rel="tooltip" data-original-title="70%" data-placement="top">
-														<div class="progress-bar bg-color-blue" data-transitiongoal="70" aria-valuenow="70" style="width: 70%;">70%</div>
+														<div class="progress-bar bg-color-blueLight" data-transitiongoal="70" aria-valuenow="70" style="width: 70%;">70%</div>
 													</div>
 												</div>
 											</div>
@@ -394,7 +414,7 @@
 
 							<!-- Widget ID (each widget will need unique ID)-->
 
-							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-30" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false">
+							<div class="jarviswidget jarviswidget-color-purple" id="wid-id-30" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
 
 							<!-- <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-x" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false" role="widget"> -->
 								<!-- widget options:
@@ -411,7 +431,7 @@
 
 								-->
 								<header role="heading">
-									<span class="widget-icon"> <i class="fa fa-align-justify"></i> </span>
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
 									<h2>일별 상담신청현황 </h2>
 									<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
 
@@ -422,7 +442,7 @@
 
 
 											<button class="btn dropdown-toggle btn-xs btn-success">
-												View List  <i class="fa fa-arrow-circle-right"></i>
+												상세보기 <i class="fa fa-arrow-circle-right"></i>
 											</button>
 											
 										</div>
@@ -576,7 +596,7 @@
 						<article class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sortable-grid ui-sortable">
 
 							<!-- Widget ID (each widget will need unique ID)-->
-							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-40" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false">
+							<div class="jarviswidget jarviswidget-color-purple" id="wid-id-40" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
 
 							
 								<!-- widget options:
@@ -593,7 +613,7 @@
 
 								-->
 								<header role="heading">
-									<span class="widget-icon"> <i class="fa fa-align-justify"></i> </span>
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
 									<h2>일별 방문자 수 </h2>
 									<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
 
@@ -604,7 +624,7 @@
 
 
 											<button class="btn dropdown-toggle btn-xs btn-success">
-												View List <i class="fa fa-arrow-circle-right"></i>
+												상세보기<i class="fa fa-arrow-circle-right"></i>
 											</button>
 											
 										</div>
