@@ -573,6 +573,20 @@
 
     });
 
+var memberList = [
+            {"id" : "김규호","text" : "김규호 (미처리 : 0 total : 5)"},
+            {"id" : "황성훈","text" : "황성훈 (미처리 : 0 total : 5)"},
+            {"id" : "김종욱","text" : "김종욱 (미처리 : 1 total : 6)"},
+            {"id" : "이대웅","text" : "이대웅 (미처리 : 0 total : 8)"},
+            {"id" : "박준순","text" : "박준순 (미처리 : 0 total : 7)"},
+            {"id" : "정인석","text" : "정인석 (미처리 : 0 total : 8)"},
+            {"id" : "이영진","text" : "이영진 (미처리 : 0 total : 5)"},
+            {"id" : "김정기","text" : "김정기 (미처리 : 0 total : 5)"},
+            {"id" : "노효성","text" : "노효성 (미처리 : 0 total : 4)"},
+            {"id" : "이상훈","text" : "이상훈 (미처리 : 0 total : 6)"},
+            {"id" : "양한","text" : "양한 (미처리 : 0 total : 5)"}
+        ];
+
     function initTable() {
 
         /* // DOM Position key index //
@@ -601,6 +615,7 @@
             tablet: 1024,
             phone: 480
         };
+
         table = $('#dt_basic').DataTable({
             "sDom": "<'dt-toolbar'<'col-sm-6 col-xs-12 hidden-xs'l><'col-xs-12 col-sm-6'f>r>" +
                 "t" +
@@ -672,6 +687,7 @@
             }],
             columnDefs: [{
                 "targets": [0],
+                "className" : "select-checkbox",
                 "data": "idx",
                 "render": function(data, type, row, meta) {
                     return '<label class="checkbox-inline"><input type="checkbox" class="checkbox style-0" value="'+data+'"><span></span></label>';
@@ -686,7 +702,31 @@
                 "targets": [7],
                 "data": "manager",
                 "render": function(data, type, row, meta) {
-                    return '<select class="form-control" id="select-1" style="padding-left: 8px;"><option value="미지정">미지정 </option><option value="김규호">김규호 (미처리 : 0 total : 5)</option><option value="황성훈">황성훈 (미처리 : 0 total : 5)</option><option value="김종욱">김종욱 (미처리 : 1 total : 6)</option><option value="이대웅">이대웅 (미처리 : 0 total : 8)</option></select>';
+
+                    var option = '';
+                    var noMember = '<option value="">미지정</option>';
+                    $(memberList).each(function() {
+                        var selected = '';//this.id == data ? ' selected' : '';
+
+                        if(this.id == data){
+                            selected = ' selected';
+                            noMember = '';
+                        }
+
+                        option = option + '<option value="'+ this.id +'"'+ (this.id == data ? ' selected' : '') +'>'+this.text+'</option>';
+                    });
+
+                    var disabled = true;
+                    if(row.status == "미지정" || row.status == "신규문의")disabled =  false;
+                    var disabledHtml = disabled ? 'disabled = "disabled"' : '';
+                    var html = '<div class="icon-addon addon-sm">'+
+                                '<select class="form-control" name="select-1" style="padding-left: 8px;"'+ disabledHtml + '>'+
+                                noMember +
+                                option+
+                                '</select>'+
+                                '</div>';
+
+                    return html;
                 }
             }]
 
