@@ -288,6 +288,20 @@ function drawPagination(listCnt){
 	html.push('				</li>');
 
 	//html = html.concat(reorderPagination(pageCnt));
+	var active = "active";
+	for (var i = 0; i < pageCnt; i++) {
+		var tabindex = i+1;
+		if(tabindex < 6  || tabindex == pageCnt){
+			html.push('				<li class="paginate_button '+active+'" aria-controls="dt_basic" tabindex="'+tabindex+'">');
+			html.push('					<a href="javascript:void(0);">'+tabindex+'</a>');
+			html.push('				</li>');
+		}else if(tabindex == pageCnt-1){
+			html.push('				<li class="paginate_button disabled" aria-controls="dt_basic" tabindex="0">');
+			html.push('					<a href="javascript:void(0);">…</a>');
+			html.push('				</li>');
+		}
+		active = "";
+	}
 
 	html.push('				<li class="paginate_button next" aria-controls="dt_basic" tabindex="0" id="dt_basic_next">');
 	html.push('	   				<a href="javascript:void(0);">Next</a>');
@@ -315,39 +329,74 @@ function drawPagination(listCnt){
 
 }
 
-function reorderPagination(pageCnt){
+function reorderPagination(currentIdx, selIdx){
 	var html = [];
 	var active = "active";
+	var gijunIdx = 4;
 
-	var stTabIdx = $(".pagination").children("li").length;
-	var stLiIdx = pageTye == "full_numbers" ? 2 : 1;
+	var stTab = $("#dt_basic_previous").next();
+	var stTabIdx = Number(stTab.text()); //$(".pagination li[tabindex=1]").next()
+	var edTab = $("#dt_basic_next").prev();
+	var edTabIdx = Number(edTab.text());
 
-	for (var i = stTabIdx; i < pageCnt; i++) {
-		var tabindex = i+1;
-		if(tabindex <= 6 || tabindex == pageCnt){
-			html.push('				<li class="paginate_button '+active+'" aria-controls="dt_basic" tabindex="'+tabindex+'">');
-			html.push('					<a href="javascript:void(0);">'+tabindex+'</a>');
-			html.push('				</li>');
-		}else if(tabindex == pageCnt-1){
-			html.push('				<li class="paginate_button disabled" aria-controls="datatable_col_reorder" tabindex="0">');
-			html.push('					<a href="javascript:void(0);">…</a>');
-			html.push('				</li>');
-		}
-		active = "";
+	var minIdx = stTabIdx+gijunIdx;
+	var maxIdx = edTabIdx-gijunIdx;
+	var reload = true;
+
+	var tabs = stTab.nextAll().slice( 0, minIdx );
+
+	//페이징을 안해도 되는경우...
+
+	if( (currentIdx < minIdx && selIdx < minIdx) || (currentIdx > maxIdx && selIdx > maxIdx))reload = false;
+	/*if( (currentIdx <= minIdx && selIdx > minIdx) ||  //오른쪽..
+		(currentIdx <= maxIdx && selIdx > maxIdx) || //왼쪽...
+		((currentIdx > gijunIdx && currentIdx <= maxIdx) && ((selIdx > minIdx && selIdx < maxIdx)||(selIdx >= minIdx && selIdx <= maxIdx))) )reload = true;
+	*/
+
+/*	console.log("case 1 \n");
+	console.log(currentIdx <= gijunIdx);
+	console.log(selIdx > gijunIdx);
+	console.log("case 2 \n");
+	console.log(currentIdx > maxIdx);
+	console.log(selIdx <= maxIdx);
+	console.log("case 3 \n");
+	console.log(currentIdx > gijunIdx && currentIdx <= maxIdx);
+	console.log(selIdx < minIdx && selIdx > maxIdx);*/
+
+	if(reload){
+		var tabIdx = 0;
+		if(selIdx < minIdx)tabIdx = 2;
+		else if(selIdx > maxIdx)tabIdx = maxIdx;
+		else tabIdx = selIdx-1;
+
+		console.log("selIdx:"+selIdx+", tabIdx:"+tabIdx+", minIdx:"+minIdx+", maxIdx:"+maxIdx);
+
+		$(tabs).each(function( index ) {
+			var tab = $(this);
+		  	tab.children("a").blur();
+			
+			console.log("index :"+index);
+			//console.log(index < gijunIdx && selIdx < minIdx);
+			//console.log(index > 0 && selIdx > maxIdx);
+			//console.log((index < gijunIdx && index > 0 ) && (selIdx >= minIdx && selIdx <= maxIdx))
+
+		  	if( (index < gijunIdx && selIdx < minIdx) || 
+				(index > 0 && selIdx > maxIdx) || 
+				((index < gijunIdx && index > 0 ) && (selIdx >= minIdx && selIdx <= maxIdx)) ){
+
+		  		tab.removeClass("disabled");
+				tab.attr("tabindex",tabIdx);
+				tab.children("a").text(tabIdx);
+
+				tabIdx++;
+		
+			}else{
+				tab.addClass("disabled");
+				tab.attr("tabindex","0");
+				tab.children("a").text("...");
+			}
+		});
 	}
-	return html;
-
-
-
-	var li = $(".pagination").children("li")
-/*undefined
-li[2]
-<li class=​"paginate_button active" aria-controls=​"dt_basic" tabindex=​"1">​…​</li>​<a href=​"#">​1​</a>​</li>​
-var test = li[2]
-undefined
-$(test).attr("tabindex",0)
-
-*/
 
 }
 
@@ -357,10 +406,12 @@ function controlPagination(obj){
 	var currentIdx = Number($(".paginate_button.active").children().text());
 	var listCnt = Number($("#dt_basic_paginate").attr("listCnt"));
 	var viewCnt = Number($("#dt_basic_paginate").attr("viewCnt"));
-	var pageCnt = parseInt(listCnt % viewCnt) > 0 ? parseInt(listCnt / viewCnt) + 1 : parseInt(listCnt / viewCnt);
+	var pageCnt = parseInt(listCnt % viewCnt) > 0 ? parseInt(listCnt / viewCnt) + 1 : parseInt(listCnt / viewCnt); 
 
 	if($(obj).hasClass("previous"))selIdx = currentIdx - 1;
 	else if($(obj).hasClass("next"))selIdx = currentIdx + 1;
+	else if($(obj).hasClass("first"))selIdx = 1;
+	else if($(obj).hasClass("last"))selIdx = pageCnt;
 
 	if(selIdx <= 1){
 		$("#dt_basic_first").addClass("disabled");
@@ -381,39 +432,18 @@ function controlPagination(obj){
 		$("#dt_basic_last").removeClass("disabled");
 	}
 
-	if(selIdx <= 4){
+	//$(obj).addClass('active');
 
-	}else if(selIdx >= pageCnt-4){
-
-	}else{
-
-	}
+	reorderPagination(currentIdx, selIdx);
 
 	$(".paginate_button.active").removeClass("active");
-	$(obj).addClass('active');
+	$(".pagination li[tabindex="+selIdx+"]").addClass('active');
 
 	var stPageIdx = viewCnt*(selIdx-1);
 	$("#dt_basic_info span").eq(0).text(stPageIdx+1);
 
 	var enPageIdx = stPageIdx+viewCnt > listCnt ? listCnt : stPageIdx+viewCnt;
 	$("#dt_basic_info span").eq(1).text(enPageIdx);
-
-
-
-
-
-
-
-/*
-	if(gubun == 'p'){
-
-	}else if(gubun == 'n'){
-
-	}else{
-
-	}*/
-
-
 
 	//searchList();
 }
