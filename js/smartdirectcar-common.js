@@ -215,6 +215,22 @@ function loadNavMenu(pageId){
 	html.push('	   		</ul>');
 	html.push('	   	</li>');
 
+	html.push('	   <li>');
+	html.push('	   		<a href="javascript:void(0);"><i class="fa fa-lg fa-fw fa-bar-chart"></i> <span class="menu-item-parent">Report</span></a>');
+	html.push('	   		<ul>');
+	html.push('	   			<li id="daily_apply_count_view">');
+	html.push('					<a href="daily_apply_count_view.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-car"></i> <span class="menu-item-parent">일별 상담신청</span></a>');
+	html.push('	   			</li>');
+	html.push('	   			<li id="daily_visit_count_view">');
+	html.push('		   			<a href="daily_visit_count_view.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-car"></i> <span class="menu-item-parent">일별 방문자수</span></a>');
+	html.push('	   			</li>');
+	html.push('	   			<li id="user_kpi_view">');
+	html.push('		   			<a href="user_kpi_view.html" title="HotDeal"><i class="fa fa-lg fa-fw  fa-car"></i> <span class="menu-item-parent">팀별/직원별 실적</span></a>');
+	html.push('	   			</li>');
+	html.push('	   		</ul>');
+	html.push('	   	</li>');
+
+
 	html.push('	   <li id="consultation_registration">');
 	html.push('	       <a href="consultation_registration.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">상담 등록</span></a>');
 	html.push('    </li>');

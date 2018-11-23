@@ -8,6 +8,10 @@ document.write('<!-- JS TOUCH : include this plugin for mobile drag / drop touch
 document.write('<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> ');
 document.write('<!-- BOOTSTRAP JS -->');
 document.write('<script src="js/bootstrap/bootstrap.min.js"></script>');
+document.write('<!-- MOMENT JS -->');
+document.write('<script src="js/plugin/moment/moment.min.js"></script>');
+document.write('<!-- bootstrap-datetimepicker JS -->');
+document.write('<script src="js/plugin/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>');
 document.write('<!-- CUSTOM NOTIFICATION -->');
 document.write('<script src="js/notification/SmartNotification.min.js"></script>');
 document.write('<!-- JARVIS WIDGETS -->');
