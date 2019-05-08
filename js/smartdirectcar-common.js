@@ -234,6 +234,25 @@ function loadNavMenu(pageId){
 	html.push('	   <li id="consultation_registration">');
 	html.push('	       <a href="consultation_registration.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">상담 등록</span></a>');
 	html.push('    </li>');
+
+	html.push('	   <li>');
+	html.push('	   		<a href="javascript:void(0);"><i class="fa fa-lg fa-fw fa-apple"></i><i class="fa fa-lg fa-fw fa-android"></i> <span class="menu-item-parent">APP Management</span></a>');
+	html.push('	   		<ul>');
+	html.push('	   			<li id="app_car_option_management">');
+	html.push('					<a href="app_car_option_management.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-car"></i> <span class="menu-item-parent">자동차 옵션 마스터</span></a>');
+	html.push('	   			</li>');
+	html.push('	   			<li id="app_car_price_management">');
+	html.push('		   			<a href="app_car_price_management.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-money"></i> <span class="menu-item-parent">자동차 가격 등록 </span></a>');
+	html.push('	   			</li>');
+	html.push('	   			<li id="app_events_management">');
+	html.push('		   			<a href="app_events_management.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-volume-up"></i> <span class="menu-item-parent">이벤트 관리</span></a>');
+	html.push('	   			</li>');
+	html.push('	   			<li id="app_faq_management">');
+	html.push('		   			<a href="app_faq_management.html" title="HotDeal"><i class="fa fa-lg fa-fw fa-question-circle"></i> <span class="menu-item-parent">FaQ 관리</span></a>');
+	html.push('	   			</li>');
+	html.push('	   		</ul>');
+	html.push('	   	</li>');
+
 	html.push('</ul>');
 
 	$("nav").html(html.join(""))
